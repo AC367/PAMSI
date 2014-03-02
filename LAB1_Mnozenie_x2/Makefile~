@@ -1,0 +1,56 @@
+__start__: obj kalkulator_zm
+	./kalkulator_zm
+
+CPPFLAGS=-Wall -pedantic -Iinc -c
+LDFLAGS=-Wall
+
+
+
+obj:
+	mkdir obj
+
+kalkulator_zm: obj/main.o obj/zespolone.o obj/SlownikZmiennych.o obj/StosNazwArgumentow.o\
+                   obj/KalkulatorRPN.o
+	g++ ${LDFLAGS} -o kalkulator_zm obj/main.o obj/zespolone.o obj/SlownikZmiennych.o\
+                          obj/StosNazwArgumentow.o obj/KalkulatorRPN.o
+
+obj/main.o: src/main.cpp inc/SlownikZmiennych.hh
+	g++ ${CPPFLAGS} -o obj/main.o src/main.cpp
+
+obj/zespolone.o: src/zespolone.cpp inc/zespolone.hh
+	g++ -c -Wall -pedantic -g -Iinc -o obj/zespolone.o src/zespolone.cpp
+	
+obj/SlownikZmiennych.o: src/SlownikZmiennych.cpp inc/SlownikZmiennych.hh
+	g++ ${CPPFLAGS} -o obj/SlownikZmiennych.o src/SlownikZmiennych.cpp
+
+obj/StosNazwArgumentow.o: src/StosNazwArgumentow.cpp inc/StosNazwArgumentow.hh
+	g++ ${CPPFLAGS} -o obj/StosNazwArgumentow.o src/StosNazwArgumentow.cpp
+
+obj/KalkulatorRPN.o: src/KalkulatorRPN.cpp inc/KalkulatorRPN.hh
+	g++ ${CPPFLAGS} -o obj/KalkulatorRPN.o src/KalkulatorRPN.cpp
+
+clean:
+	rm -f kalkulator_zm obj/* core*
+
+
+doc: __generuj_doc__
+
+__generuj_doc__:
+	cd ../dox;  make
+
+help:
+	@echo
+	@echo "  Lista podcelow dla polecenia make"
+	@echo 
+	@echo "        - (wywolanie bez specyfikacji celu) wymusza"
+	@echo "          kompilacje i uruchomienie programu."
+	@echo "  clean - usuwa produkty kompilacji oraz program"
+	@echo "  doc   - powoduje generowanie dokumentacji"
+	@echo "  help  - wyswietla niniejszy komunikat"
+	@echo
+	@echo " Przykladowe wywolania dla poszczegolnych wariantow. "
+	@echo "  make           # kompilacja i uruchomienie programu."
+	@echo "  make clean     # usuwa produkty kompilacji."
+	@echo "  make doc       # generuje dokumentacje w doc/html"
+	@echo
+ 

@@ -1,12 +1,22 @@
 var NAVTREE =
 [
-  [ "Mnozenie", "index.html", [
-    [ "Strona główna", "index.html", null ],
-    [ "Pliki", null, [
-      [ "Lista plików", "files.html", "files" ],
-      [ "Składowe plików", "globals.html", [
+  [ "My Project", "index.html", [
+    [ "Main Page", "index.html", null ],
+    [ "Classes", null, [
+      [ "Class List", "annotated.html", "annotated" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ],
+        [ "Related Functions", "functions_rela.html", null ]
+      ] ]
+    ] ],
+    [ "Files", null, [
+      [ "File List", "files.html", "files" ],
+      [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Funkcje", "globals_func.html", null ]
+        [ "Functions", "globals_func.html", null ]
       ] ]
     ] ]
   ] ]

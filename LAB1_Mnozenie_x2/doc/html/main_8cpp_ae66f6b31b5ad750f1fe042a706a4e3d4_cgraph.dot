@@ -9,9 +9,7 @@ digraph G
   Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="Uruchom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8hh.html#ac1e549037ac5915fb1018a206697594d",tooltip="Funkcja uruchamiajaca algorytm."];
   Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="Dane::Mnozenie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_dane.html#ad651a90415d5253f5e2a0354a741dc7d",tooltip="Wykonuje operacje mnozenia."];
-  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="Dane::Porownanie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_dane.html#a83f86229196e9c4349433e18e89b2e3d",tooltip="Porownuje dwa obiekty klasy Dane."];
-  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node6 [label="Zapis",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8hh.html#a26b47c1c0a853ec6e39c299da7eff8b3",tooltip="Funkcja zapisujaca do pliku."];
+  Node4 [label="Dane::Porownanie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_dane.html#a83f86229196e9c4349433e18e89b2e3d",tooltip="Porownuje dwa obiekty klasy Dane."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Zapis",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8hh.html#a26b47c1c0a853ec6e39c299da7eff8b3",tooltip="Funkcja zapisujaca do pliku."];
 }

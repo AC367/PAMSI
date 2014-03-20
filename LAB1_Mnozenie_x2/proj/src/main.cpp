@@ -70,6 +70,7 @@ int main()
 		goto miejsce_skoku1;
 	}
 	wektor1.Wczytywanie("plik1.txt", wektor1);
+	wekt_tmp=wektor1;
 	ilosc_elementow=wektor1.Wektor[0];
 	wektor2.Wczytywanie("plik2.txt", wektor2);
 	cout<<endl<<"Ile liczb ma sie znalezc w pliku?: ";
@@ -79,9 +80,9 @@ int main()
 	{
 		if(ilosc_liczb>ilosc_elementow)
 		{
-			for(int i=0; i<=(ilosc_liczb-ilosc_elementow)/10; i++)
+			for(int i=1; i<=(ilosc_liczb-ilosc_elementow)/10; i++)
 			{
-				wektor1=wektor1+wektor1;
+				wektor1=wektor1+wekt_tmp;
 			}
 		}
 		else if(ilosc_liczb<ilosc_elementow)
@@ -105,6 +106,6 @@ int main()
 	//cout<<"Wektor drugi po wczytaniu: "<<endl<<wektor2<<endl<<endl;
 	czas=Uruchom(ilosc_powtorzen, wektor1, wektor2);
 	czas_sredni=czas/ilosc_powtorzen;
-	Zapis(czas_sredni, ilosc_powtorzen, ilosc_elementow);
+	Zapis(czas_sredni, ilosc_powtorzen, ilosc_liczb);
 	return 0;
 }

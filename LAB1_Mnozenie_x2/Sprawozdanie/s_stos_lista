@@ -1,0 +1,9 @@
+set terminal png
+set output 's_stos_lista.png'
+set title "Zaleznosc czasu od ilosci danych - stos implementowany tablica"
+set xlabel "ilosc danych"
+set ylabel "czas [s]"
+set xrange [0 :  1500] 
+set grid
+plot 'stos_lista.txt' using 1 : 2 smooth bezier
+unset output

@@ -1,0 +1,14 @@
+Ilosc elementow;Ilosc powtorzen algorytmu;Sredni czas wykonywania algorytmu;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+10;100;0.0001;sekund
+100;100;0.0078;sekund
+1000;100;0.9556;sekund
+1500;100;2.1854;sekund;

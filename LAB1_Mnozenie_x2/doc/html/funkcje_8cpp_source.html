@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>My Project: /home/arek/PAMSI/LAB1_Mnozenie_x2/proj/src/funkcje.cpp Source File</title>
+<title>Stos i kolejka: /home/arek/PAMSI/LAB1_Mnozenie_x2/proj/src/funkcje.cpp Source File</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -28,10 +28,10 @@
   
   
   <td style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Stos i kolejka
    
    </div>
-   <div id="projectbrief">LAB_2</div>
+   
   </td>
   
   
@@ -74,7 +74,7 @@
 <div class="title">/home/arek/PAMSI/LAB1_Mnozenie_x2/proj/src/funkcje.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="funkcje_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="funkcje_8hh.html" title="Zawiera deklaracje funkcji, klase Dane oraz instrukcje zalaczenia bibliotek.">funkcje.hh</a>&quot;</span>
+<a href="funkcje_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="kolejka__lista_8hh.html" title="Zawiera deklaracje metod, klase Kolejka_lista oraz instrukcje zalaczenia bibliotek.">kolejka_lista.hh</a>&quot;</span>
 <a name="l00002"></a>00002 
 <a name="l00008"></a><a class="code" href="funkcje_8cpp.html#a399582d6055e12e20bbd4e3b7c96e0d1">00008</a> istream&amp; <a class="code" href="funkcje_8cpp.html#a399582d6055e12e20bbd4e3b7c96e0d1">operator &gt;&gt; </a>(istream &amp;in, <a class="code" href="class_dane.html" title="Klasa definiujaca obiekt Dane.">Dane</a>&amp; wekt)
 <a name="l00009"></a>00009 {
@@ -268,43 +268,51 @@
 <a name="l00197"></a>00197         clock_t s,f;
 <a name="l00198"></a>00198         <span class="keywordtype">double</span> czas=0;
 <a name="l00199"></a>00199         <span class="keywordtype">int</span> pierwszy_el, drugi_el, element;
-<a name="l00200"></a>00200         <a class="code" href="class_dane.html" title="Klasa definiujaca obiekt Dane.">Dane</a> wektor_pogladowy;
-<a name="l00201"></a>00201         
-<a name="l00202"></a>00202         <span class="comment">//********ELEMENTY INTERFEJSU WLACZANE DO PROGRAMU W ZALEZNOSCI OD TESTOWANEJ FUNKCJI********</span>
-<a name="l00203"></a>00203         
-<a name="l00204"></a>00204         <span class="comment">//cout&lt;&lt;endl&lt;&lt;&quot;Podaj element, ktory ma zostac dodany do wektora: &quot;;</span>
-<a name="l00205"></a>00205         <span class="comment">//cin&gt;&gt;element;</span>
-<a name="l00206"></a>00206         <span class="comment">//cout&lt;&lt;endl&lt;&lt;&quot;Podaj elementy do zamiany&quot;&lt;&lt;endl;</span>
-<a name="l00207"></a>00207         <span class="comment">//cout&lt;&lt;&quot;Pierwszy element: &quot;;</span>
-<a name="l00208"></a>00208         <span class="comment">//cin&gt;&gt;pierwszy_el;</span>
-<a name="l00209"></a>00209         <span class="comment">//cout&lt;&lt;endl&lt;&lt;&quot;Drugi element: &quot;;</span>
-<a name="l00210"></a>00210         <span class="comment">//cin&gt;&gt;drugi_el;</span>
-<a name="l00211"></a>00211         
-<a name="l00212"></a>00212         s=clock();
-<a name="l00213"></a>00213         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;ilosc_powtorzen; i++)
-<a name="l00214"></a>00214                 wektor1.<a class="code" href="class_dane.html#ad651a90415d5253f5e2a0354a741dc7d" title="Wykonuje operacje mnozenia.">Mnozenie</a>(wektor1);
-<a name="l00215"></a>00215         <span class="comment">//*********FUNKCJE PROGRAMU DO TESTOWANIA********</span>
-<a name="l00216"></a>00216                 <span class="comment">//wektor1.Zamien_elementy(wektor1, pierwszy_el, drugi_el);</span>
-<a name="l00217"></a>00217                 <span class="comment">//wektor1.Odwroc_kolejnosc(wektor1);</span>
-<a name="l00218"></a>00218                 <span class="comment">//wektor1.Dodaj_element(wektor1, element);</span>
-<a name="l00219"></a>00219                 <span class="comment">//wektor1.Dodaj_elementy(wektor1, wektor2);</span>
-<a name="l00220"></a>00220                 <span class="comment">//wektor1==wektor2;</span>
-<a name="l00221"></a>00221                 <span class="comment">//wektor1=wektor2;</span>
-<a name="l00222"></a>00222                 <span class="comment">//wektor1=wektor2+wektor1;</span>
-<a name="l00223"></a>00223         f=clock();
-<a name="l00224"></a>00224         cout&lt;&lt;endl&lt;&lt;<span class="stringliteral">&quot;Wektor koncowy: &quot;</span>&lt;&lt;endl&lt;&lt;wektor1&lt;&lt;endl&lt;&lt;endl;
-<a name="l00225"></a>00225         wektor1.<a class="code" href="class_dane.html#a83f86229196e9c4349433e18e89b2e3d" title="Porownuje dwa obiekty klasy Dane.">Porownanie</a>(wektor1, wektor2);
-<a name="l00226"></a>00226         czas=(double)(f-s)/(double)(CLOCKS_PER_SEC);
-<a name="l00227"></a>00227         cout&lt;&lt;endl&lt;&lt;endl&lt;&lt;<span class="stringliteral">&quot;CZAS: &quot;</span>&lt;&lt;czas&lt;&lt;<span class="stringliteral">&quot; sekund&quot;</span>&lt;&lt;endl;
-<a name="l00228"></a>00228         <span class="keywordflow">return</span> czas;
-<a name="l00229"></a>00229 }
+<a name="l00200"></a>00200         <a class="code" href="class_stos__tablica.html" title="Klasa definiujaca stos zaimplementowana przy pomocy tablicy.">Stos_tablica</a> stos_tablica;
+<a name="l00201"></a>00201         <a class="code" href="class_stos__lista.html" title="Klasa definiujaca stos zaimplementowany przy pomocy listy.">Stos_lista</a> stos_lista;
+<a name="l00202"></a>00202         <a class="code" href="class_kolejka__tablica.html" title="Klasa definiujaca kolejke zaimplementowana przy pomocy tablicy.">Kolejka_tablica</a> kolejka_tablica;
+<a name="l00203"></a>00203         <a class="code" href="class_kolejka__lista.html" title="Klasa definiujaca kolejke zaimplementowana przy pomocy listy.">Kolejka_lista</a> kolejka_lista;
+<a name="l00204"></a>00204         
+<a name="l00205"></a>00205         <span class="comment">//********ELEMENTY INTERFEJSU WLACZANE DO PROGRAMU W ZALEZNOSCI OD TESTOWANEJ FUNKCJI********</span>
+<a name="l00206"></a>00206         
+<a name="l00207"></a>00207         <span class="comment">//cout&lt;&lt;endl&lt;&lt;&quot;Podaj element, ktory ma zostac dodany do wektora: &quot;;</span>
+<a name="l00208"></a>00208         <span class="comment">//cin&gt;&gt;element;</span>
+<a name="l00209"></a>00209         <span class="comment">//cout&lt;&lt;endl&lt;&lt;&quot;Podaj elementy do zamiany&quot;&lt;&lt;endl;</span>
+<a name="l00210"></a>00210         <span class="comment">//cout&lt;&lt;&quot;Pierwszy element: &quot;;</span>
+<a name="l00211"></a>00211         <span class="comment">//cin&gt;&gt;pierwszy_el;</span>
+<a name="l00212"></a>00212         <span class="comment">//cout&lt;&lt;endl&lt;&lt;&quot;Drugi element: &quot;;</span>
+<a name="l00213"></a>00213         <span class="comment">//cin&gt;&gt;drugi_el;</span>
+<a name="l00214"></a>00214         
+<a name="l00215"></a>00215         s=clock();
+<a name="l00216"></a>00216         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;ilosc_powtorzen; i++)
+<a name="l00217"></a>00217                 <span class="comment">//stos_tablica.Push(wektor1);</span>
+<a name="l00218"></a>00218                 <span class="comment">//stos_tablica.Pop();</span>
+<a name="l00219"></a>00219                 <span class="comment">//stos_tablica.Wypisz();</span>
+<a name="l00220"></a>00220                 <span class="comment">//stos_lista.Push(wektor1);</span>
+<a name="l00221"></a>00221                 <span class="comment">//stos_lista.Wielkosc_stosu();</span>
+<a name="l00222"></a>00222                 <span class="comment">//kolejka_tablica.Enqueue(wektor1);</span>
+<a name="l00223"></a>00223                 <span class="comment">//kolejka_tablica.Wypisz();</span>
+<a name="l00224"></a>00224                 <span class="comment">//kolejka_tablica.Dequeue();</span>
+<a name="l00225"></a>00225                 <span class="comment">//kolejka_tablica.Wypisz();</span>
+<a name="l00226"></a>00226                 <span class="comment">//kolejka_lista.Enqueue(wektor1);</span>
+<a name="l00227"></a>00227                 <span class="comment">//kolejka_lista.Wyswietl();</span>
+<a name="l00228"></a>00228                 <span class="comment">//kolejka_lista.Dequeue();</span>
+<a name="l00229"></a>00229                 <span class="comment">//kolejka_lista.Wyswietl();</span>
+<a name="l00230"></a>00230                 <span class="comment">//kolejka_lista.Size();</span>
+<a name="l00231"></a>00231         f=clock();
+<a name="l00232"></a>00232         <span class="comment">//cout&lt;&lt;endl&lt;&lt;&quot;Wektor koncowy: &quot;&lt;&lt;endl&lt;&lt;wektor1&lt;&lt;endl&lt;&lt;endl;</span>
+<a name="l00233"></a>00233         wektor1.<a class="code" href="class_dane.html#a83f86229196e9c4349433e18e89b2e3d" title="Porownuje dwa obiekty klasy Dane.">Porownanie</a>(wektor1, wektor2);
+<a name="l00234"></a>00234         czas=(double)(f-s)/(double)(CLOCKS_PER_SEC);
+<a name="l00235"></a>00235         cout&lt;&lt;endl&lt;&lt;endl&lt;&lt;<span class="stringliteral">&quot;CZAS: &quot;</span>&lt;&lt;czas&lt;&lt;<span class="stringliteral">&quot; sekund&quot;</span>&lt;&lt;endl;
+<a name="l00236"></a>00236         <span class="keywordflow">return</span> czas;
+<a name="l00237"></a>00237 }
 </pre></div></div><!-- contents -->
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="funkcje_8cpp.html">funkcje.cpp</a>      </li>
 
-    <li class="footer">Generated on Sun Mar 9 2014 19:16:19 for My Project by
+    <li class="footer">Generated on Wed Mar 19 2014 12:18:38 for Stos i kolejka by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

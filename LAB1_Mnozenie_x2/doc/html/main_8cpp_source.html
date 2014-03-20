@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>My Project: /home/arek/PAMSI/LAB1_Mnozenie_x2/proj/src/main.cpp Source File</title>
+<title>Stos i kolejka: /home/arek/PAMSI/LAB1_Mnozenie_x2/proj/src/main.cpp Source File</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -28,10 +28,10 @@
   
   
   <td style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Stos i kolejka
    
    </div>
-   <div id="projectbrief">LAB_2</div>
+   
   </td>
   
   
@@ -93,51 +93,52 @@
 <a name="l00070"></a>00070                 <span class="keywordflow">goto</span> miejsce_skoku1;
 <a name="l00071"></a>00071         }
 <a name="l00072"></a>00072         wektor1.<a class="code" href="class_dane.html#a9866194fa136e3ae90a72124fd2dc8cc" title="Wczytuje dane z pliku.">Wczytywanie</a>(<span class="stringliteral">&quot;plik1.txt&quot;</span>, wektor1);
-<a name="l00073"></a>00073         ilosc_elementow=wektor1.<a class="code" href="class_dane.html#aa8148a6368fb47fb1f08e88514561cf4">Wektor</a>[0];
-<a name="l00074"></a>00074         wektor2.<a class="code" href="class_dane.html#a9866194fa136e3ae90a72124fd2dc8cc" title="Wczytuje dane z pliku.">Wczytywanie</a>(<span class="stringliteral">&quot;plik2.txt&quot;</span>, wektor2);
-<a name="l00075"></a>00075         cout&lt;&lt;endl&lt;&lt;<span class="stringliteral">&quot;Ile liczb ma sie znalezc w pliku?: &quot;</span>;
-<a name="l00076"></a>00076         cin&gt;&gt;ilosc_liczb;
-<a name="l00077"></a>00077         miejsce_skoku2:
-<a name="l00078"></a>00078         <span class="keywordflow">if</span>(ilosc_liczb!=ilosc_elementow &amp;&amp; ilosc_liczb&gt;0)
-<a name="l00079"></a>00079         {
-<a name="l00080"></a>00080                 <span class="keywordflow">if</span>(ilosc_liczb&gt;ilosc_elementow)
-<a name="l00081"></a>00081                 {
-<a name="l00082"></a>00082                         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;=(ilosc_liczb-ilosc_elementow)/10; i++)
-<a name="l00083"></a>00083                         {
-<a name="l00084"></a>00084                                 wektor1=wektor1+wektor1;
-<a name="l00085"></a>00085                         }
-<a name="l00086"></a>00086                 }
-<a name="l00087"></a>00087                 <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ilosc_liczb&lt;ilosc_elementow)
-<a name="l00088"></a>00088                 {
-<a name="l00089"></a>00089                         wektor1.<a class="code" href="class_dane.html#aa8148a6368fb47fb1f08e88514561cf4">Wektor</a>[0]=ilosc_liczb;
-<a name="l00090"></a>00090                         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;=ilosc_liczb; i++)
-<a name="l00091"></a>00091                         {
-<a name="l00092"></a>00092                                 wektor1.<a class="code" href="class_dane.html#aa8148a6368fb47fb1f08e88514561cf4">Wektor</a>.pop_back();
-<a name="l00093"></a>00093                         }
-<a name="l00094"></a>00094                 }
-<a name="l00095"></a>00095         }
-<a name="l00096"></a>00096         <span class="keywordflow">if</span>(ilosc_liczb&lt;=0)
-<a name="l00097"></a>00097         {
-<a name="l00098"></a>00098                 cout&lt;&lt;<span class="stringliteral">&quot;Ilosc liczb moze wynosic od 1 do 10 lub wielokrotnosci dziesiatki&quot;</span>&lt;&lt;endl;
-<a name="l00099"></a>00099                 cout&lt;&lt;<span class="stringliteral">&quot;Ile liczb ma sie znalezc w pliku?: &quot;</span>;
-<a name="l00100"></a>00100                 cin&gt;&gt;ilosc_liczb;
-<a name="l00101"></a>00101                 <span class="keywordflow">goto</span> miejsce_skoku2;
-<a name="l00102"></a>00102         }
-<a name="l00103"></a>00103         
-<a name="l00104"></a>00104         <span class="comment">//cout&lt;&lt;&quot;Wektor pierwszy po wczytaniu: &quot;&lt;&lt;endl&lt;&lt;wektor1&lt;&lt;endl&lt;&lt;endl;</span>
-<a name="l00105"></a>00105         <span class="comment">//cout&lt;&lt;&quot;Wektor drugi po wczytaniu: &quot;&lt;&lt;endl&lt;&lt;wektor2&lt;&lt;endl&lt;&lt;endl;</span>
-<a name="l00106"></a>00106         czas=<a class="code" href="funkcje_8hh.html#ac1e549037ac5915fb1018a206697594d" title="Funkcja uruchamiajaca algorytm.">Uruchom</a>(ilosc_powtorzen, wektor1, wektor2);
-<a name="l00107"></a>00107         czas_sredni=czas/ilosc_powtorzen;
-<a name="l00108"></a>00108         <a class="code" href="funkcje_8hh.html#a26b47c1c0a853ec6e39c299da7eff8b3" title="Funkcja zapisujaca do pliku.">Zapis</a>(czas_sredni, ilosc_powtorzen, ilosc_elementow);
-<a name="l00109"></a>00109         <span class="keywordflow">return</span> 0;
-<a name="l00110"></a>00110 }
+<a name="l00073"></a>00073         wekt_tmp=wektor1;
+<a name="l00074"></a>00074         ilosc_elementow=wektor1.<a class="code" href="class_dane.html#aa8148a6368fb47fb1f08e88514561cf4">Wektor</a>[0];
+<a name="l00075"></a>00075         wektor2.<a class="code" href="class_dane.html#a9866194fa136e3ae90a72124fd2dc8cc" title="Wczytuje dane z pliku.">Wczytywanie</a>(<span class="stringliteral">&quot;plik2.txt&quot;</span>, wektor2);
+<a name="l00076"></a>00076         cout&lt;&lt;endl&lt;&lt;<span class="stringliteral">&quot;Ile liczb ma sie znalezc w pliku?: &quot;</span>;
+<a name="l00077"></a>00077         cin&gt;&gt;ilosc_liczb;
+<a name="l00078"></a>00078         miejsce_skoku2:
+<a name="l00079"></a>00079         <span class="keywordflow">if</span>(ilosc_liczb!=ilosc_elementow &amp;&amp; ilosc_liczb&gt;0)
+<a name="l00080"></a>00080         {
+<a name="l00081"></a>00081                 <span class="keywordflow">if</span>(ilosc_liczb&gt;ilosc_elementow)
+<a name="l00082"></a>00082                 {
+<a name="l00083"></a>00083                         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; i&lt;=(ilosc_liczb-ilosc_elementow)/10; i++)
+<a name="l00084"></a>00084                         {
+<a name="l00085"></a>00085                                 wektor1=wektor1+wekt_tmp;
+<a name="l00086"></a>00086                         }
+<a name="l00087"></a>00087                 }
+<a name="l00088"></a>00088                 <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ilosc_liczb&lt;ilosc_elementow)
+<a name="l00089"></a>00089                 {
+<a name="l00090"></a>00090                         wektor1.<a class="code" href="class_dane.html#aa8148a6368fb47fb1f08e88514561cf4">Wektor</a>[0]=ilosc_liczb;
+<a name="l00091"></a>00091                         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;=ilosc_liczb; i++)
+<a name="l00092"></a>00092                         {
+<a name="l00093"></a>00093                                 wektor1.<a class="code" href="class_dane.html#aa8148a6368fb47fb1f08e88514561cf4">Wektor</a>.pop_back();
+<a name="l00094"></a>00094                         }
+<a name="l00095"></a>00095                 }
+<a name="l00096"></a>00096         }
+<a name="l00097"></a>00097         <span class="keywordflow">if</span>(ilosc_liczb&lt;=0)
+<a name="l00098"></a>00098         {
+<a name="l00099"></a>00099                 cout&lt;&lt;<span class="stringliteral">&quot;Ilosc liczb moze wynosic od 1 do 10 lub wielokrotnosci dziesiatki&quot;</span>&lt;&lt;endl;
+<a name="l00100"></a>00100                 cout&lt;&lt;<span class="stringliteral">&quot;Ile liczb ma sie znalezc w pliku?: &quot;</span>;
+<a name="l00101"></a>00101                 cin&gt;&gt;ilosc_liczb;
+<a name="l00102"></a>00102                 <span class="keywordflow">goto</span> miejsce_skoku2;
+<a name="l00103"></a>00103         }
+<a name="l00104"></a>00104         
+<a name="l00105"></a>00105         <span class="comment">//cout&lt;&lt;&quot;Wektor pierwszy po wczytaniu: &quot;&lt;&lt;endl&lt;&lt;wektor1&lt;&lt;endl&lt;&lt;endl;</span>
+<a name="l00106"></a>00106         <span class="comment">//cout&lt;&lt;&quot;Wektor drugi po wczytaniu: &quot;&lt;&lt;endl&lt;&lt;wektor2&lt;&lt;endl&lt;&lt;endl;</span>
+<a name="l00107"></a>00107         czas=<a class="code" href="funkcje_8hh.html#ac1e549037ac5915fb1018a206697594d" title="Funkcja uruchamiajaca algorytm.">Uruchom</a>(ilosc_powtorzen, wektor1, wektor2);
+<a name="l00108"></a>00108         czas_sredni=czas/ilosc_powtorzen;
+<a name="l00109"></a>00109         <a class="code" href="funkcje_8hh.html#a26b47c1c0a853ec6e39c299da7eff8b3" title="Funkcja zapisujaca do pliku.">Zapis</a>(czas_sredni, ilosc_powtorzen, ilosc_elementow);
+<a name="l00110"></a>00110         <span class="keywordflow">return</span> 0;
+<a name="l00111"></a>00111 }
 </pre></div></div><!-- contents -->
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a>      </li>
 
-    <li class="footer">Generated on Sun Mar 9 2014 19:16:19 for My Project by
+    <li class="footer">Generated on Wed Mar 19 2014 12:18:38 for Stos i kolejka by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

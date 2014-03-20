@@ -1,4 +1,4 @@
-#include "funkcje.hh"
+#include "kolejka_lista.hh"
 
 /*!
  * \file
@@ -184,10 +184,9 @@ void Zapis (double czas_sredni, int ilosc_powt, int ilosc_elementow)
 {
 	ofstream plik_zapisany;
 	
-	plik_zapisany.open("Wynik.csv", ios::app);
-	plik_zapisany<<"Ilosc elementow;"<<ilosc_elementow<<";";
-	plik_zapisany<<"Ilosc powtorzen algorytmu;"<<ilosc_powt<<";";
-	plik_zapisany<<"Sredni czas wykonywania algorytmu;"<<czas_sredni<<";sekund;"<<endl;
+	plik_zapisany.open("Wynik_kolejka_lista.csv", ios::app);
+	//plik_zapisany<<"Ilosc elementow;"<<"Ilosc powtorzen algorytmu;"<<"Sredni czas wykonywania algorytmu;"<<endl;
+	plik_zapisany<<ilosc_elementow<<";"<<ilosc_powt<<";"<<czas_sredni<<";sekund;"<<endl;
 	
 	plik_zapisany.close();
 }
@@ -197,7 +196,10 @@ double Uruchom(int ilosc_powtorzen, Dane wektor1, Dane wektor2)
 	clock_t s,f;
 	double czas=0;
 	int pierwszy_el, drugi_el, element;
-	Dane wektor_pogladowy;
+	Stos_tablica stos_tablica;
+	Stos_lista stos_lista;
+	Kolejka_tablica kolejka_tablica;
+	Kolejka_lista kolejka_lista;
 	
 	//********ELEMENTY INTERFEJSU WLACZANE DO PROGRAMU W ZALEZNOSCI OD TESTOWANEJ FUNKCJI********
 	
@@ -211,18 +213,21 @@ double Uruchom(int ilosc_powtorzen, Dane wektor1, Dane wektor2)
 	
 	s=clock();
 	for(int i=0; i<ilosc_powtorzen; i++)
-		wektor1.Mnozenie(wektor1);
-	//*********FUNKCJE PROGRAMU DO TESTOWANIA********
-		//wektor1.Zamien_elementy(wektor1, pierwszy_el, drugi_el);
-		//wektor1.Odwroc_kolejnosc(wektor1);
-		//wektor1.Dodaj_element(wektor1, element);
-		//wektor1.Dodaj_elementy(wektor1, wektor2);
-		//wektor1==wektor2;
-		//wektor1=wektor2;
-		//wektor1=wektor2+wektor1;
+		//stos_tablica.Push(wektor1);
+		//stos_tablica.Pop();
+		//stos_tablica.Wypisz();
+		//stos_lista.Push(wektor1);
+		//stos_lista.Wielkosc_stosu();
+		//kolejka_tablica.Enqueue(wektor1);
+		//kolejka_tablica.Wypisz();
+		//kolejka_tablica.Dequeue();
+		kolejka_lista.Enqueue(wektor1);
+		//kolejka_lista.Wyswietl();
+		//kolejka_lista.Dequeue();
+		//kolejka_lista.Size();
 	f=clock();
-	cout<<endl<<"Wektor koncowy: "<<endl<<wektor1<<endl<<endl;
-	wektor1.Porownanie(wektor1, wektor2);
+	//cout<<endl<<"Wektor koncowy: "<<endl<<wektor1<<endl<<endl;
+	//wektor1.Porownanie(wektor1, wektor2);
 	czas=(double)(f-s)/(double)(CLOCKS_PER_SEC);
 	cout<<endl<<endl<<"CZAS: "<<czas<<" sekund"<<endl;
 	return czas;

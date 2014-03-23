@@ -1,4 +1,4 @@
-#include "kolejka_lista.hh"
+#include "sortowanie.hh"
 
 /*!
  * \file

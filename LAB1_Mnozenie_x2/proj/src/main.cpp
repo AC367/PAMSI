@@ -1,4 +1,4 @@
-#include "funkcje.hh"
+#include "sortowanie.hh"
 
 /*!
  * \mainpage
@@ -69,7 +69,7 @@ int main()
 		cin>>ilosc_powtorzen;
 		goto miejsce_skoku1;
 	}
-	wektor1.Wczytywanie("plik1.txt", wektor1);
+	wektor1.Wczytywanie("sortowanie.txt", wektor1);
 	wekt_tmp=wektor1;
 	ilosc_elementow=wektor1.Wektor[0];
 	wektor2.Wczytywanie("plik2.txt", wektor2);

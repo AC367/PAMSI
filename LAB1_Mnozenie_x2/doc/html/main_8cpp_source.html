@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Stos i kolejka: /home/arek/PAMSI/LAB1_Mnozenie_x2/proj/src/main.cpp Source File</title>
+<title>Algorytmy sortujace: main.cpp Source File</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -28,7 +28,7 @@
   
   
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stos i kolejka
+   <div id="projectname">Algorytmy sortujace
    
    </div>
    
@@ -71,10 +71,10 @@
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">/home/arek/PAMSI/LAB1_Mnozenie_x2/proj/src/main.cpp</div>  </div>
+<div class="title">main.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="main_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="funkcje_8hh.html" title="Zawiera deklaracje funkcji, klase Dane oraz instrukcje zalaczenia bibliotek.">funkcje.hh</a>&quot;</span>
+<a href="main_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="sortowanie_8hh.html" title="Zawiera deklaracje funkcji sortujacych oraz instrukcje zalaczenia bibliotek.">sortowanie.hh</a>&quot;</span>
 <a name="l00002"></a>00002 
 <a name="l00056"></a><a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">00056</a> <span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Wywoluje odpowiednie funkcje.">main</a>()
 <a name="l00057"></a>00057 {       
@@ -92,7 +92,7 @@
 <a name="l00069"></a>00069                 cin&gt;&gt;ilosc_powtorzen;
 <a name="l00070"></a>00070                 <span class="keywordflow">goto</span> miejsce_skoku1;
 <a name="l00071"></a>00071         }
-<a name="l00072"></a>00072         wektor1.<a class="code" href="class_dane.html#a9866194fa136e3ae90a72124fd2dc8cc" title="Wczytuje dane z pliku.">Wczytywanie</a>(<span class="stringliteral">&quot;plik1.txt&quot;</span>, wektor1);
+<a name="l00072"></a>00072         wektor1.<a class="code" href="class_dane.html#a9866194fa136e3ae90a72124fd2dc8cc" title="Wczytuje dane z pliku.">Wczytywanie</a>(<span class="stringliteral">&quot;sortowanie.txt&quot;</span>, wektor1);
 <a name="l00073"></a>00073         wekt_tmp=wektor1;
 <a name="l00074"></a>00074         ilosc_elementow=wektor1.<a class="code" href="class_dane.html#aa8148a6368fb47fb1f08e88514561cf4">Wektor</a>[0];
 <a name="l00075"></a>00075         wektor2.<a class="code" href="class_dane.html#a9866194fa136e3ae90a72124fd2dc8cc" title="Wczytuje dane z pliku.">Wczytywanie</a>(<span class="stringliteral">&quot;plik2.txt&quot;</span>, wektor2);
@@ -129,7 +129,7 @@
 <a name="l00106"></a>00106         <span class="comment">//cout&lt;&lt;&quot;Wektor drugi po wczytaniu: &quot;&lt;&lt;endl&lt;&lt;wektor2&lt;&lt;endl&lt;&lt;endl;</span>
 <a name="l00107"></a>00107         czas=<a class="code" href="funkcje_8hh.html#ac1e549037ac5915fb1018a206697594d" title="Funkcja uruchamiajaca algorytm.">Uruchom</a>(ilosc_powtorzen, wektor1, wektor2);
 <a name="l00108"></a>00108         czas_sredni=czas/ilosc_powtorzen;
-<a name="l00109"></a>00109         <a class="code" href="funkcje_8hh.html#a26b47c1c0a853ec6e39c299da7eff8b3" title="Funkcja zapisujaca do pliku.">Zapis</a>(czas_sredni, ilosc_powtorzen, ilosc_elementow);
+<a name="l00109"></a>00109         <a class="code" href="funkcje_8hh.html#a26b47c1c0a853ec6e39c299da7eff8b3" title="Funkcja zapisujaca do pliku.">Zapis</a>(czas_sredni, ilosc_powtorzen, ilosc_liczb);
 <a name="l00110"></a>00110         <span class="keywordflow">return</span> 0;
 <a name="l00111"></a>00111 }
 </pre></div></div><!-- contents -->
@@ -138,7 +138,7 @@
     <ul>
       <li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a>      </li>
 
-    <li class="footer">Generated on Wed Mar 19 2014 12:18:38 for Stos i kolejka by
+    <li class="footer">Generated on Sun Mar 23 2014 07:33:06 for Algorytmy sortujace by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

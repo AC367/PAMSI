@@ -1,23 +1,23 @@
 var NAVTREE =
 [
-  [ "Stos i kolejka", "index.html", [
-    [ "Main Page", "index.html", null ],
-    [ "Classes", null, [
-      [ "Class List", "annotated.html", "annotated" ],
-      [ "Class Index", "classes.html", null ],
-      [ "Class Members", "functions.html", [
+  [ "Sortowanie", "index.html", [
+    [ "Strona główna", "index.html", null ],
+    [ "Klasy", null, [
+      [ "Lista klas", "annotated.html", "annotated" ],
+      [ "Indeks klas", "classes.html", null ],
+      [ "Składowe klas", "functions.html", [
         [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ],
-        [ "Related Functions", "functions_rela.html", null ]
+        [ "Funkcje", "functions_func.html", null ],
+        [ "Zmienne", "functions_vars.html", null ],
+        [ "Funkcje powiązane", "functions_rela.html", null ]
       ] ]
     ] ],
-    [ "Files", null, [
-      [ "File List", "files.html", "files" ],
-      [ "File Members", "globals.html", [
+    [ "Pliki", null, [
+      [ "Lista plików", "files.html", "files" ],
+      [ "Składowe plików", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ]
+        [ "Funkcje", "globals_func.html", null ],
+        [ "Zmienne", "globals_vars.html", null ]
       ] ]
     ] ]
   ] ]

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Stos i kolejka: /home/arek/PAMSI/LAB1_Mnozenie_x2/proj/src/stos_lista.cpp Source File</title>
+<title>Algorytmy sortujace: stos_lista.cpp Source File</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -28,7 +28,7 @@
   
   
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stos i kolejka
+   <div id="projectname">Algorytmy sortujace
    
    </div>
    
@@ -71,108 +71,109 @@
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">/home/arek/PAMSI/LAB1_Mnozenie_x2/proj/src/stos_lista.cpp</div>  </div>
+<div class="title">stos_lista.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="stos__lista_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="stos__tablica_8hh.html" title="Zawiera deklaracje metod, klase Stos_lista oraz instrukcje zalaczenia bibliotek.">stos_tablica.hh</a>&quot;</span>
+<a href="stos__lista_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="sortowanie_8hh.html" title="Zawiera deklaracje funkcji sortujacych oraz instrukcje zalaczenia bibliotek.">sortowanie.hh</a>&quot;</span>
 <a name="l00002"></a>00002 
-<a name="l00009"></a><a class="code" href="class_stos__lista.html#ac7f453eea7c8f563d84068002c6c3d6d">00009</a> <a class="code" href="class_stos__lista.html#ac7f453eea7c8f563d84068002c6c3d6d" title="Konstruktor.">Stos_lista::Stos_lista</a>()
-<a name="l00010"></a>00010 {
-<a name="l00011"></a>00011         _pierwszy=NULL;
-<a name="l00012"></a>00012 }
-<a name="l00013"></a>00013 
-<a name="l00014"></a><a class="code" href="class_stos__lista.html#a2ea239a1b5c70eec5b5ae7fc770bf15a">00014</a> <a class="code" href="class_stos__lista.html#a2ea239a1b5c70eec5b5ae7fc770bf15a" title="Destruktor.">Stos_lista::~Stos_lista</a>() 
-<a name="l00015"></a>00015 {       
-<a name="l00016"></a>00016         <span class="keywordflow">if</span> (_pierwszy==NULL) 
-<a name="l00017"></a>00017                 <span class="keywordflow">return</span>;
-<a name="l00018"></a>00018         <span class="keywordflow">else</span>
-<a name="l00019"></a>00019         {       
-<a name="l00020"></a>00020                 Element_stosu* tmp=<span class="keyword">new</span> Element_stosu();         
-<a name="l00021"></a>00021                 
-<a name="l00022"></a>00022                 <span class="keywordflow">while</span>(_pierwszy)
-<a name="l00023"></a>00023                 {
-<a name="l00024"></a>00024                         tmp=_pierwszy;
-<a name="l00025"></a>00025                         _pierwszy=tmp-&gt;_nastepny;
-<a name="l00026"></a>00026                         <span class="keyword">delete</span> tmp;
-<a name="l00027"></a>00027                 }
-<a name="l00028"></a>00028         }
-<a name="l00029"></a>00029 }
-<a name="l00030"></a>00030 
-<a name="l00031"></a><a class="code" href="class_stos__lista.html#a0a12a6e3e6748a789e43934793917738">00031</a> <span class="keywordtype">void</span> <a class="code" href="class_stos__lista.html#a0a12a6e3e6748a789e43934793917738" title="Dodaje elementy do stosu.">Stos_lista::Push</a>(<a class="code" href="class_dane.html" title="Klasa definiujaca obiekt Dane.">Dane</a> wekt)
-<a name="l00032"></a>00032 {       
-<a name="l00033"></a>00033         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; i&lt;=wekt.<a class="code" href="class_dane.html#aa8148a6368fb47fb1f08e88514561cf4">Wektor</a>[0]; i++)
-<a name="l00034"></a>00034         {
-<a name="l00035"></a>00035                 Element_stosu *nowy=<span class="keyword">new</span> Element_stosu();
-<a name="l00036"></a>00036                 nowy-&gt;_wartosc=wekt.<a class="code" href="class_dane.html#aa8148a6368fb47fb1f08e88514561cf4">Wektor</a>[i];
-<a name="l00037"></a>00037                 <span class="keywordflow">if</span>(_pierwszy==0)
-<a name="l00038"></a>00038                         _pierwszy=nowy;
-<a name="l00039"></a>00039                 <span class="keywordflow">else</span>
-<a name="l00040"></a>00040                 {
-<a name="l00041"></a>00041                         Element_stosu *temp=_pierwszy;
-<a name="l00042"></a>00042                         <span class="keywordflow">while</span>(temp-&gt;_nastepny)
-<a name="l00043"></a>00043                         {
-<a name="l00044"></a>00044                                 temp=temp-&gt;_nastepny;
-<a name="l00045"></a>00045                         }
-<a name="l00046"></a>00046                         nowy-&gt;_nastepny=_pierwszy;
-<a name="l00047"></a>00047                         _pierwszy=nowy;
-<a name="l00048"></a>00048                 }
-<a name="l00049"></a>00049         }
-<a name="l00050"></a>00050 }
-<a name="l00051"></a>00051 
-<a name="l00052"></a><a class="code" href="class_stos__lista.html#a338593acee00448c8e9083b23363af63">00052</a> <span class="keywordtype">int</span> <a class="code" href="class_stos__lista.html#a338593acee00448c8e9083b23363af63" title="Zdejmuje element ze stosu.">Stos_lista::Pop</a>()
-<a name="l00053"></a>00053 {       
-<a name="l00054"></a>00054         <span class="keywordtype">int</span> liczba;
-<a name="l00055"></a>00055         Element_stosu* element=_pierwszy;
-<a name="l00056"></a>00056         
-<a name="l00057"></a>00057         <span class="keywordflow">if</span>(_pierwszy==NULL)
-<a name="l00058"></a>00058                 cout&lt;&lt;endl&lt;&lt;<span class="stringliteral">&quot;BLAD! Stos pusty. Nie mozna usunac elementu.&quot;</span>&lt;&lt;endl;
-<a name="l00059"></a>00059         _pierwszy=_pierwszy-&gt;_nastepny;
-<a name="l00060"></a>00060         liczba=element-&gt;_wartosc;
-<a name="l00061"></a>00061         <span class="keyword">delete</span>(element);
-<a name="l00062"></a>00062         <span class="keywordflow">return</span> liczba;
-<a name="l00063"></a>00063 }
-<a name="l00064"></a>00064 
-<a name="l00065"></a><a class="code" href="class_stos__lista.html#ac4a0dce20a28da4c373aeba1e3dc7524">00065</a> <span class="keywordtype">bool</span> <a class="code" href="class_stos__lista.html#ac4a0dce20a28da4c373aeba1e3dc7524" title="Sprawdza czy stos jest pusty.">Stos_lista::IsEmpty</a>() 
-<a name="l00066"></a>00066 {       
-<a name="l00067"></a>00067         <span class="keywordflow">if</span>(_pierwszy==NULL)
-<a name="l00068"></a>00068                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00069"></a>00069         <span class="keywordflow">else</span>
-<a name="l00070"></a>00070                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00071"></a>00071 }
-<a name="l00072"></a>00072 
-<a name="l00073"></a><a class="code" href="class_stos__lista.html#aff392523f7f8b2bad0d8da0d62fa8bac">00073</a> <span class="keywordtype">void</span> <a class="code" href="class_stos__lista.html#aff392523f7f8b2bad0d8da0d62fa8bac" title="Wyswietla stos.">Stos_lista::Wypisz</a>()
-<a name="l00074"></a>00074 {
-<a name="l00075"></a>00075         Element_stosu *temp=<span class="keyword">new</span> Element_stosu();
-<a name="l00076"></a>00076         
-<a name="l00077"></a>00077         temp=_pierwszy;
-<a name="l00078"></a>00078         cout&lt;&lt;<span class="stringliteral">&quot;Zawartosc stosu: &quot;</span>&lt;&lt;endl;
-<a name="l00079"></a>00079         <span class="keywordflow">while</span>(temp)
-<a name="l00080"></a>00080         {
-<a name="l00081"></a>00081                 cout&lt;&lt;temp-&gt;_wartosc&lt;&lt;endl;
-<a name="l00082"></a>00082                 temp=temp-&gt;_nastepny;
-<a name="l00083"></a>00083         }
-<a name="l00084"></a>00084 }
-<a name="l00085"></a>00085 
-<a name="l00086"></a><a class="code" href="class_stos__lista.html#adf575ec0963dc5c9e16c39503f390e77">00086</a> <span class="keywordtype">void</span> <a class="code" href="class_stos__lista.html#adf575ec0963dc5c9e16c39503f390e77" title="Podaje rozmiar stosu.">Stos_lista::Wielkosc_stosu</a>()
-<a name="l00087"></a>00087 {
-<a name="l00088"></a>00088         Element_stosu *temp=<span class="keyword">new</span> Element_stosu();
-<a name="l00089"></a>00089         <span class="keywordtype">int</span> licznik=0;
-<a name="l00090"></a>00090         
-<a name="l00091"></a>00091         temp=_pierwszy;
-<a name="l00092"></a>00092         <span class="keywordflow">while</span>(temp)
-<a name="l00093"></a>00093         {
-<a name="l00094"></a>00094                 temp=temp-&gt;_nastepny;
-<a name="l00095"></a>00095                 licznik++;
-<a name="l00096"></a>00096         }
-<a name="l00097"></a>00097         cout&lt;&lt;<span class="stringliteral">&quot;Wielkosc stosu: &quot;</span>&lt;&lt;licznik&lt;&lt;endl;
-<a name="l00098"></a>00098 }
+<a name="l00003"></a>00003 
+<a name="l00010"></a><a class="code" href="class_stos__lista.html#ac7f453eea7c8f563d84068002c6c3d6d">00010</a> <a class="code" href="class_stos__lista.html#ac7f453eea7c8f563d84068002c6c3d6d" title="Konstruktor.">Stos_lista::Stos_lista</a>()
+<a name="l00011"></a>00011 {
+<a name="l00012"></a>00012         _pierwszy=NULL;
+<a name="l00013"></a>00013 }
+<a name="l00014"></a>00014 
+<a name="l00015"></a><a class="code" href="class_stos__lista.html#a2ea239a1b5c70eec5b5ae7fc770bf15a">00015</a> <a class="code" href="class_stos__lista.html#a2ea239a1b5c70eec5b5ae7fc770bf15a" title="Destruktor.">Stos_lista::~Stos_lista</a>() 
+<a name="l00016"></a>00016 {       
+<a name="l00017"></a>00017         <span class="keywordflow">if</span> (_pierwszy==NULL) 
+<a name="l00018"></a>00018                 <span class="keywordflow">return</span>;
+<a name="l00019"></a>00019         <span class="keywordflow">else</span>
+<a name="l00020"></a>00020         {       
+<a name="l00021"></a>00021                 Element_stosu* tmp=<span class="keyword">new</span> Element_stosu();         
+<a name="l00022"></a>00022                 
+<a name="l00023"></a>00023                 <span class="keywordflow">while</span>(_pierwszy)
+<a name="l00024"></a>00024                 {
+<a name="l00025"></a>00025                         tmp=_pierwszy;
+<a name="l00026"></a>00026                         _pierwszy=tmp-&gt;_nastepny;
+<a name="l00027"></a>00027                         <span class="keyword">delete</span> tmp;
+<a name="l00028"></a>00028                 }
+<a name="l00029"></a>00029         }
+<a name="l00030"></a>00030 }
+<a name="l00031"></a>00031 
+<a name="l00032"></a><a class="code" href="class_stos__lista.html#a0a12a6e3e6748a789e43934793917738">00032</a> <span class="keywordtype">void</span> <a class="code" href="class_stos__lista.html#a0a12a6e3e6748a789e43934793917738" title="Dodaje elementy do stosu.">Stos_lista::Push</a>(<a class="code" href="class_dane.html" title="Klasa definiujaca obiekt Dane.">Dane</a> wekt)
+<a name="l00033"></a>00033 {       
+<a name="l00034"></a>00034         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; i&lt;=wekt.<a class="code" href="class_dane.html#aa8148a6368fb47fb1f08e88514561cf4">Wektor</a>[0]; i++)
+<a name="l00035"></a>00035         {
+<a name="l00036"></a>00036                 Element_stosu *nowy=<span class="keyword">new</span> Element_stosu();
+<a name="l00037"></a>00037                 nowy-&gt;_wartosc=wekt.<a class="code" href="class_dane.html#aa8148a6368fb47fb1f08e88514561cf4">Wektor</a>[i];
+<a name="l00038"></a>00038                 <span class="keywordflow">if</span>(_pierwszy==0)
+<a name="l00039"></a>00039                         _pierwszy=nowy;
+<a name="l00040"></a>00040                 <span class="keywordflow">else</span>
+<a name="l00041"></a>00041                 {
+<a name="l00042"></a>00042                         Element_stosu *temp=_pierwszy;
+<a name="l00043"></a>00043                         <span class="keywordflow">while</span>(temp-&gt;_nastepny)
+<a name="l00044"></a>00044                         {
+<a name="l00045"></a>00045                                 temp=temp-&gt;_nastepny;
+<a name="l00046"></a>00046                         }
+<a name="l00047"></a>00047                         nowy-&gt;_nastepny=_pierwszy;
+<a name="l00048"></a>00048                         _pierwszy=nowy;
+<a name="l00049"></a>00049                 }
+<a name="l00050"></a>00050         }
+<a name="l00051"></a>00051 }
+<a name="l00052"></a>00052 
+<a name="l00053"></a><a class="code" href="class_stos__lista.html#a338593acee00448c8e9083b23363af63">00053</a> <span class="keywordtype">int</span> <a class="code" href="class_stos__lista.html#a338593acee00448c8e9083b23363af63" title="Zdejmuje element ze stosu.">Stos_lista::Pop</a>()
+<a name="l00054"></a>00054 {       
+<a name="l00055"></a>00055         <span class="keywordtype">int</span> liczba;
+<a name="l00056"></a>00056         Element_stosu* element=_pierwszy;
+<a name="l00057"></a>00057         
+<a name="l00058"></a>00058         <span class="keywordflow">if</span>(_pierwszy==NULL)
+<a name="l00059"></a>00059                 cout&lt;&lt;endl&lt;&lt;<span class="stringliteral">&quot;BLAD! Stos pusty. Nie mozna usunac elementu.&quot;</span>&lt;&lt;endl;
+<a name="l00060"></a>00060         _pierwszy=_pierwszy-&gt;_nastepny;
+<a name="l00061"></a>00061         liczba=element-&gt;_wartosc;
+<a name="l00062"></a>00062         <span class="keyword">delete</span>(element);
+<a name="l00063"></a>00063         <span class="keywordflow">return</span> liczba;
+<a name="l00064"></a>00064 }
+<a name="l00065"></a>00065 
+<a name="l00066"></a><a class="code" href="class_stos__lista.html#ac4a0dce20a28da4c373aeba1e3dc7524">00066</a> <span class="keywordtype">bool</span> <a class="code" href="class_stos__lista.html#ac4a0dce20a28da4c373aeba1e3dc7524" title="Sprawdza czy stos jest pusty.">Stos_lista::IsEmpty</a>() 
+<a name="l00067"></a>00067 {       
+<a name="l00068"></a>00068         <span class="keywordflow">if</span>(_pierwszy==NULL)
+<a name="l00069"></a>00069                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00070"></a>00070         <span class="keywordflow">else</span>
+<a name="l00071"></a>00071                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00072"></a>00072 }
+<a name="l00073"></a>00073 
+<a name="l00074"></a><a class="code" href="class_stos__lista.html#aff392523f7f8b2bad0d8da0d62fa8bac">00074</a> <span class="keywordtype">void</span> <a class="code" href="class_stos__lista.html#aff392523f7f8b2bad0d8da0d62fa8bac" title="Wyswietla stos.">Stos_lista::Wypisz</a>()
+<a name="l00075"></a>00075 {
+<a name="l00076"></a>00076         Element_stosu *temp=<span class="keyword">new</span> Element_stosu();
+<a name="l00077"></a>00077         
+<a name="l00078"></a>00078         temp=_pierwszy;
+<a name="l00079"></a>00079         cout&lt;&lt;<span class="stringliteral">&quot;Zawartosc stosu: &quot;</span>&lt;&lt;endl;
+<a name="l00080"></a>00080         <span class="keywordflow">while</span>(temp)
+<a name="l00081"></a>00081         {
+<a name="l00082"></a>00082                 cout&lt;&lt;temp-&gt;_wartosc&lt;&lt;endl;
+<a name="l00083"></a>00083                 temp=temp-&gt;_nastepny;
+<a name="l00084"></a>00084         }
+<a name="l00085"></a>00085 }
+<a name="l00086"></a>00086 
+<a name="l00087"></a><a class="code" href="class_stos__lista.html#adf575ec0963dc5c9e16c39503f390e77">00087</a> <span class="keywordtype">void</span> <a class="code" href="class_stos__lista.html#adf575ec0963dc5c9e16c39503f390e77" title="Podaje rozmiar stosu.">Stos_lista::Wielkosc_stosu</a>()
+<a name="l00088"></a>00088 {
+<a name="l00089"></a>00089         Element_stosu *temp=<span class="keyword">new</span> Element_stosu();
+<a name="l00090"></a>00090         <span class="keywordtype">int</span> licznik=0;
+<a name="l00091"></a>00091         
+<a name="l00092"></a>00092         temp=_pierwszy;
+<a name="l00093"></a>00093         <span class="keywordflow">while</span>(temp)
+<a name="l00094"></a>00094         {
+<a name="l00095"></a>00095                 temp=temp-&gt;_nastepny;
+<a name="l00096"></a>00096                 licznik++;
+<a name="l00097"></a>00097         }
+<a name="l00098"></a>00098         cout&lt;&lt;<span class="stringliteral">&quot;Wielkosc stosu: &quot;</span>&lt;&lt;licznik&lt;&lt;endl;
+<a name="l00099"></a>00099 }
 </pre></div></div><!-- contents -->
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="stos__lista_8cpp.html">stos_lista.cpp</a>      </li>
 
-    <li class="footer">Generated on Wed Mar 19 2014 12:18:38 for Stos i kolejka by
+    <li class="footer">Generated on Sun Mar 23 2014 07:33:06 for Algorytmy sortujace by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

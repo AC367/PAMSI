@@ -1,0 +1,9 @@
+set terminal png
+set output 'heapsort2.png'
+set title "Zaleznosc czasu od ilosci danych - heapsort"
+set xlabel "ilosc danych"
+set ylabel "czas [s]"
+set xrange [0 :  100000] 
+set grid
+plot 'heapsort2.txt' using 1 : 2 smooth bezier
+unset output

@@ -1,4 +1,6 @@
-#include "kolejka_lista.hh"
+#include "sortowanie.hh"
+
+
 
 /*!
  * \file
@@ -184,7 +186,7 @@ void Zapis (double czas_sredni, int ilosc_powt, int ilosc_elementow)
 {
 	ofstream plik_zapisany;
 	
-	plik_zapisany.open("Wynik_kolejka_lista.csv", ios::app);
+	plik_zapisany.open("Wynik_mergesort.csv", ios::app);
 	//plik_zapisany<<"Ilosc elementow;"<<"Ilosc powtorzen algorytmu;"<<"Sredni czas wykonywania algorytmu;"<<endl;
 	plik_zapisany<<ilosc_elementow<<";"<<ilosc_powt<<";"<<czas_sredni<<";sekund;"<<endl;
 	
@@ -200,9 +202,9 @@ double Uruchom(int ilosc_powtorzen, Dane wektor1, Dane wektor2)
 	Stos_lista stos_lista;
 	Kolejka_tablica kolejka_tablica;
 	Kolejka_lista kolejka_lista;
+	Dane wektor_p=wektor1;
 	
 	//********ELEMENTY INTERFEJSU WLACZANE DO PROGRAMU W ZALEZNOSCI OD TESTOWANEJ FUNKCJI********
-	
 	//cout<<endl<<"Podaj element, ktory ma zostac dodany do wektora: ";
 	//cin>>element;
 	//cout<<endl<<"Podaj elementy do zamiany"<<endl;
@@ -210,24 +212,16 @@ double Uruchom(int ilosc_powtorzen, Dane wektor1, Dane wektor2)
 	//cin>>pierwszy_el;
 	//cout<<endl<<"Drugi element: ";
 	//cin>>drugi_el;
+	//********************************************************************************************
 	
 	s=clock();
 	for(int i=0; i<ilosc_powtorzen; i++)
-		//stos_tablica.Push(wektor1);
-		//stos_tablica.Pop();
-		//stos_tablica.Wypisz();
-		//stos_lista.Push(wektor1);
-		//stos_lista.Wielkosc_stosu();
-		//kolejka_tablica.Enqueue(wektor1);
-		//kolejka_tablica.Wypisz();
-		//kolejka_tablica.Dequeue();
-		kolejka_lista.Enqueue(wektor1);
-		//kolejka_lista.Wyswietl();
-		//kolejka_lista.Dequeue();
-		//kolejka_lista.Size();
+		//sort_quicksort(wektor1, 1, wektor1.Wektor[0]);
+		sort_mergesort(wektor1, wektor_p, 1, wektor1.Wektor[0]);
+		//sort_heapsort(wektor1, wektor1.Wektor[0]);
 	f=clock();
 	//cout<<endl<<"Wektor koncowy: "<<endl<<wektor1<<endl<<endl;
-	//wektor1.Porownanie(wektor1, wektor2);
+	wektor1.Porownanie(wektor1, wektor2);
 	czas=(double)(f-s)/(double)(CLOCKS_PER_SEC);
 	cout<<endl<<endl<<"CZAS: "<<czas<<" sekund"<<endl;
 	return czas;

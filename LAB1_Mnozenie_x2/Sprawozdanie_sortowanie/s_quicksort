@@ -1,0 +1,9 @@
+set terminal png
+set output 'quicksort2.png'
+set title "Zaleznosc czasu od ilosci danych - quicksort"
+set xlabel "ilosc danych"
+set ylabel "czas [s]"
+set xrange [0 :  500000] 
+set grid
+plot 'quicksort2.txt' using 1 : 2 smooth bezier
+unset output

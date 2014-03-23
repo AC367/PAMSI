@@ -1,4 +1,5 @@
-#include "stos_tablica.hh"
+#include "sortowanie.hh"
+
 
 /*!
  * \file

@@ -5,37 +5,34 @@
  * \brief Zawiera definicje funkcji uzytych w algorytmach sortujacych.
  */
 
-void sort_quicksort(Dane &wekt, int poczatek, int koniec )
+//void sort_quicksort(Dane &wekt, int poczatek, int koniec )
+void sort_quicksort(Dane &wekt, int left, int right)
 {
-	 
-    int l=poczatek;
-    int r=koniec;
-	int pivot=wekt.Wektor[(poczatek+koniec)/2];
-	int tmp, tmp2;
+    int l=left;
+    int r=right-1;
+    int size=right-left;
 
-    if(poczatek!=koniec)
-    { 
-		while(l<=r)
-		{
-           while(wekt.Wektor[l]<pivot)
-				l++;
-           while(wekt.Wektor[r]>pivot)
-				r--;
-           if(l<=r)
-           {
-                tmp=wekt.Wektor[l];
-               	tmp2=wekt.Wektor[r];
-				wekt.Wektor[r]=tmp;
-				wekt.Wektor[l]=tmp2;
-				r--;
-				l++;
+    if (size > 1)
+    {
+        //int pivot = wekt.Wektor[rand() % size + l];
+		int pivot=wekt.Wektor[(left+right)/2];
+        while (l<r)
+        {
+            while (wekt.Wektor[r]>pivot && r>l)
+                r--;
+            while (wekt.Wektor[l] < pivot && l<=r)
+                l++;
+            if (l<r) 
+            {
+                wekt.Zamien_elementy(wekt, l, r);
+                l++;
             }
-		}
-	if(koniec>l)
-		sort_quicksort(wekt, l, koniec);
-    if(poczatek<r)
-		sort_quicksort(wekt, poczatek, r);
-	}
+        }
+
+        sort_quicksort(wekt, left, l);
+        sort_quicksort(wekt, r, right);
+    }
+    //cout<<wekt<<endl;
 }
  
 void sort_heapsort(Dane &wekt, int rozmiar)

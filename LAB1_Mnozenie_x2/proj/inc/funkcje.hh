@@ -3,6 +3,8 @@
 #include <vector>
 #include <string>
 #include <stdlib.h>
+#include <time.h>
+#include <cstdlib>
 using namespace std;
 
 /*!
@@ -222,3 +224,4 @@ double Uruchom(int ilosc_powtorzen, Dane wektor1, Dane wektor2);
  * \param[in] ilosc_elementow - ilosc elementow, na ktorych wykonano operacje.
  */ 
 void Zapis (double czas_sredni, int ilosc_powt, int ilosc_elementow);
+//void Generator(int ilosc_liczb);

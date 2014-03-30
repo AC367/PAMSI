@@ -186,7 +186,7 @@ void Zapis (double czas_sredni, int ilosc_powt, int ilosc_elementow)
 {
 	ofstream plik_zapisany;
 	
-	plik_zapisany.open("Wynik_mergesort.csv", ios::app);
+	plik_zapisany.open("Wynik_quicksort.csv", ios::app);
 	//plik_zapisany<<"Ilosc elementow;"<<"Ilosc powtorzen algorytmu;"<<"Sredni czas wykonywania algorytmu;"<<endl;
 	plik_zapisany<<ilosc_elementow<<";"<<ilosc_powt<<";"<<czas_sredni<<";sekund;"<<endl;
 	
@@ -216,8 +216,8 @@ double Uruchom(int ilosc_powtorzen, Dane wektor1, Dane wektor2)
 	
 	s=clock();
 	for(int i=0; i<ilosc_powtorzen; i++)
-		//sort_quicksort(wektor1, 1, wektor1.Wektor[0]);
-		sort_mergesort(wektor1, wektor_p, 1, wektor1.Wektor[0]);
+		sort_quicksort(wektor1, 1, wektor1.Wektor[0]+1);
+		//sort_mergesort(wektor1, wektor_p, 1, wektor1.Wektor[0]);
 		//sort_heapsort(wektor1, wektor1.Wektor[0]);
 	f=clock();
 	//cout<<endl<<"Wektor koncowy: "<<endl<<wektor1<<endl<<endl;
@@ -226,3 +226,20 @@ double Uruchom(int ilosc_powtorzen, Dane wektor1, Dane wektor2)
 	cout<<endl<<endl<<"CZAS: "<<czas<<" sekund"<<endl;
 	return czas;
 }
+/*
+void Generator(int ilosc_liczb)
+{
+	ofstream plik;
+	int losowa;
+	
+	plik.open("generowany.txt");
+	plik<<ilosc_liczb<<endl;
+	srand((int)time(NULL));
+	for(int i=0; i<ilosc_liczb; i++)
+	{
+		losowa=rand()% ilosc_liczb+1;
+		plik<<losowa<<endl;
+	}
+	plik.close();
+}
+*/

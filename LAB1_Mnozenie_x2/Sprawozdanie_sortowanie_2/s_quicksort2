@@ -1,0 +1,9 @@
+set terminal png
+set output 'quicksort_pes.png'
+set title "Zaleznosc czasu od ilosci danych - quicksort (pesymistyczny)"
+set xlabel "ilosc danych"
+set ylabel "czas [s]"
+set xrange [0 :  500000] 
+set grid
+plot 'quicksort.txt' using 1 : 2 smooth bezier, 'quicksort_rand_pes.txt' using 1 : 2 smooth bezier
+

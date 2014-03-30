@@ -75,6 +75,9 @@ int main()
 	wektor2.Wczytywanie("plik2.txt", wektor2);
 	cout<<endl<<"Ile liczb ma sie znalezc w pliku?: ";
 	cin>>ilosc_liczb;
+	//Generator(ilosc_liczb);
+	//wektor1.Wczytywanie("generowany.txt", wektor1);
+	//wekt_tmp=wektor1;
 	miejsce_skoku2:
 	if(ilosc_liczb!=ilosc_elementow && ilosc_liczb>0)
 	{
@@ -102,6 +105,7 @@ int main()
 		goto miejsce_skoku2;
 	}
 	
+	//wektor1.Wektor[0]=ilosc_liczb;
 	//cout<<"Wektor pierwszy po wczytaniu: "<<endl<<wektor1<<endl<<endl;
 	//cout<<"Wektor drugi po wczytaniu: "<<endl<<wektor2<<endl<<endl;
 	czas=Uruchom(ilosc_powtorzen, wektor1, wektor2);

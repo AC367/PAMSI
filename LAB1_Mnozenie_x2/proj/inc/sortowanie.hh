@@ -13,14 +13,14 @@
  * 
  * Parametry:
  * 
- * \param[in] poczatek - zmienna typu int okresleslajaca poczatkowe pole
+ * \param[in] left - zmienna typu int okresleslajaca poczatkowe pole
  * sortowanej tablicy.
- * \param[in] koniec - zmienna typu int okresleslajaca koncowe pole
+ * \param[in] right - zmienna typu int okresleslajaca koncowe pole
  * sortowanej tablicy.
  * \param[out] wekt - Obiekt klasy Dane, zawierajacy wektor, ktorego
  * zawartosc ma zostac posortowana.
  */ 
-void sort_quicksort(Dane &wekt, int poczatek, int koniec);
+void sort_quicksort(Dane &wekt, int left, int right);
 
 /*!
  * \brief Realizuje sortowanie przez kopcowanie.

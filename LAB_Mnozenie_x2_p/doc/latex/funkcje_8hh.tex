@@ -1,0 +1,101 @@
+\hypertarget{funkcje_8hh}{\section{\-Dokumentacja pliku funkcje.\-hh}
+\label{funkcje_8hh}\index{funkcje.\-hh@{funkcje.\-hh}}
+}
+
+
+\-Zawiera deklaracje funkcji oraz instrukcje zalaczenia bibliotek.  
+
+
+{\ttfamily \#include $<$iostream$>$}\*
+{\ttfamily \#include $<$fstream$>$}\*
+\subsection*{\-Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$ \hyperlink{funkcje_8hh_a8bbf700936be11136643474b49fa1764}{\-Wczytywanie} (const char $\ast$nazwa)
+\begin{DoxyCompactList}\small\item\em \-Wczytuje dane z pliku. \end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{funkcje_8hh_ae11a32cee0192a595fcb71a98c32ee71}{\-Mnozenie} (int tablica\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em \-Wykonuje operacje mnozenia. \end{DoxyCompactList}\item 
+bool \hyperlink{funkcje_8hh_a721a30457d3f93333a2389712ab9153d}{\-Porownanie} (int wynik\mbox{[}$\,$\mbox{]}, int porownanie\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em \-Porownuje dwie tablice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+
+
+\-Definicja w pliku \hyperlink{funkcje_8hh_source}{funkcje.\-hh}.
+
+
+
+\subsection{\-Dokumentacja funkcji}
+\hypertarget{funkcje_8hh_ae11a32cee0192a595fcb71a98c32ee71}{\index{funkcje.\-hh@{funkcje.\-hh}!\-Mnozenie@{\-Mnozenie}}
+\index{\-Mnozenie@{\-Mnozenie}!funkcje.hh@{funkcje.\-hh}}
+\subsubsection[{\-Mnozenie}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ {\bf \-Mnozenie} (
+\begin{DoxyParamCaption}
+\item[{int}]{tablica\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{funkcje_8hh_ae11a32cee0192a595fcb71a98c32ee71}
+\-Funkcja ta ma za zadanie przemnozyc wszystkie elementy podanej tablicy przez 2.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em tablica\mbox{[}$\,$\mbox{]}} & -\/ tablica wartosci, ktore maja zostac wymnozone \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+\-Funkcja zwraca wskaznik na tablice zawierajaca wyniki dzialania. 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 30 pliku funkcje.\-cpp.
+
+\hypertarget{funkcje_8hh_a721a30457d3f93333a2389712ab9153d}{\index{funkcje.\-hh@{funkcje.\-hh}!\-Porownanie@{\-Porownanie}}
+\index{\-Porownanie@{\-Porownanie}!funkcje.hh@{funkcje.\-hh}}
+\subsubsection[{\-Porownanie}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Porownanie} (
+\begin{DoxyParamCaption}
+\item[{int}]{wynik\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{porownanie\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{funkcje_8hh_a721a30457d3f93333a2389712ab9153d}
+\-Funkcja ta ma za zadanie porownac odpowiadajace elementy dwoch tablic o takich samych wymiarach. \-W przypadku znalezienia roznego elementu operacja zostaje przerwana.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em wynik\mbox{[}$\,$\mbox{]}} & -\/ pierwsza z porownywanych tablic \\
+\hline
+\mbox{\tt in}  & {\em porownanie\mbox{[}$\,$\mbox{]}} & -\/ druga z porownywanych tablic \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+\-Funkcja zwraca wartosc true, jesli tablice sa takie same oraz false, jesli posiadaja chociaz jeden rozny element. 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 43 pliku funkcje.\-cpp.
+
+\hypertarget{funkcje_8hh_a8bbf700936be11136643474b49fa1764}{\index{funkcje.\-hh@{funkcje.\-hh}!\-Wczytywanie@{\-Wczytywanie}}
+\index{\-Wczytywanie@{\-Wczytywanie}!funkcje.hh@{funkcje.\-hh}}
+\subsubsection[{\-Wczytywanie}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ {\bf \-Wczytywanie} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{nazwa}
+\end{DoxyParamCaption}
+)}}\label{funkcje_8hh_a8bbf700936be11136643474b49fa1764}
+\-Funkcja ta ma za zadanie wczytac dane, w postaci cyfr, ze wskazanego pliku.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em $\ast$nazwa} & -\/ nazwa wczytywanego pliku, przekazywana przez wskaznik \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+\-Funkcja zwraca wskaznik na tablice wczytanych znakow. 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 8 pliku funkcje.\-cpp.
+

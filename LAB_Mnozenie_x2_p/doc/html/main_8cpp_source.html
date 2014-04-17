@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Mnozenie_1: Plik źródłowy main.cpp</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Mnozenie_1
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">main.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="main_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="funkcje_8hh.html" title="Zawiera deklaracje funkcji oraz instrukcje zalaczenia bibliotek.">funkcje.hh</a>&quot;</span>
+<a name="l00002"></a>00002 
+<a name="l00040"></a><a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">00040</a> <span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Wywoluje odpowiednie funkcje.">main</a>()
+<a name="l00041"></a>00041 {
+<a name="l00042"></a>00042         clock_t s,f;
+<a name="l00043"></a>00043         <span class="keywordtype">double</span> czas=0;
+<a name="l00044"></a>00044         <span class="keywordtype">int</span> *tablicamnozona;
+<a name="l00045"></a>00045         fstream plikporown;
+<a name="l00046"></a>00046         <span class="keywordtype">int</span> wielkosc=10;
+<a name="l00047"></a>00047         <span class="keywordtype">int</span> *tablicaporown;
+<a name="l00048"></a>00048         
+<a name="l00049"></a>00049         tablicamnozona=<a class="code" href="funkcje_8hh.html#a8bbf700936be11136643474b49fa1764" title="Wczytuje dane z pliku.">Wczytywanie</a>(<span class="stringliteral">&quot;plik1.txt&quot;</span>);
+<a name="l00050"></a>00050         s=clock();
+<a name="l00051"></a>00051         <span class="comment">//for(int i=0; i&lt;=200000; i++)</span>
+<a name="l00052"></a>00052         tablicamnozona=<a class="code" href="funkcje_8hh.html#ae11a32cee0192a595fcb71a98c32ee71" title="Wykonuje operacje mnozenia.">Mnozenie</a>(tablicamnozona);
+<a name="l00053"></a>00053         f=clock();
+<a name="l00054"></a>00054         tablicaporown=<a class="code" href="funkcje_8hh.html#a8bbf700936be11136643474b49fa1764" title="Wczytuje dane z pliku.">Wczytywanie</a>(<span class="stringliteral">&quot;plik2.txt&quot;</span>);
+<a name="l00055"></a>00055         <span class="keywordflow">if</span>(<a class="code" href="funkcje_8hh.html#a721a30457d3f93333a2389712ab9153d" title="Porownuje dwie tablice.">Porownanie</a>(tablicamnozona, tablicaporown)==<span class="keyword">true</span>)
+<a name="l00056"></a>00056                 cout&lt;&lt;endl&lt;&lt;endl&lt;&lt;<span class="stringliteral">&quot;WYNIK POPRAWNY&quot;</span>&lt;&lt;endl;
+<a name="l00057"></a>00057         <span class="keywordflow">else</span>
+<a name="l00058"></a>00058                 cout&lt;&lt;endl&lt;&lt;endl&lt;&lt;<span class="stringliteral">&quot;BLAD!&quot;</span>&lt;&lt;endl;
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060         czas=(double)(f-s)/(double)(CLOCKS_PER_SEC);
+<a name="l00061"></a>00061         cout&lt;&lt;endl&lt;&lt;endl&lt;&lt;<span class="stringliteral">&quot;CZAS: &quot;</span>&lt;&lt;czas&lt;&lt;<span class="stringliteral">&quot; sekund&quot;</span>&lt;&lt;endl;
+<a name="l00062"></a>00062         
+<a name="l00063"></a>00063         <span class="keywordflow">return</span> 0;
+<a name="l00064"></a>00064 }
+</pre></div></div><!-- contents -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funkcje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Thu Apr 17 2014 07:41:28 dla Mnozenie_1 programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

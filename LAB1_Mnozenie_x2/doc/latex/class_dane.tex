@@ -1,0 +1,364 @@
+\hypertarget{class_dane}{\section{\-Dokumentacja klasy \-Dane}
+\label{class_dane}\index{\-Dane@{\-Dane}}
+}
+
+
+\-Klasa definiujaca obiekt \hyperlink{class_dane}{\-Dane}.  
+
+
+
+
+{\ttfamily \#include $<$funkcje.\-hh$>$}
+
+\subsection*{\-Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_dane_a9866194fa136e3ae90a72124fd2dc8cc}{\-Wczytywanie} (const char $\ast$nazwa, \hyperlink{class_dane}{\-Dane} \&wekt)
+\begin{DoxyCompactList}\small\item\em \-Wczytuje dane z pliku. \end{DoxyCompactList}\item 
+bool \hyperlink{class_dane_a83f86229196e9c4349433e18e89b2e3d}{\-Porownanie} (\hyperlink{class_dane}{\-Dane} wekt1, \hyperlink{class_dane}{\-Dane} wekt2)
+\begin{DoxyCompactList}\small\item\em \-Porownuje dwa obiekty klasy \hyperlink{class_dane}{\-Dane}. \end{DoxyCompactList}\item 
+void \hyperlink{class_dane_a684a0900c65b3e3174cd3200463be874}{\-Zamien\-\_\-elementy} (\hyperlink{class_dane}{\-Dane} \&wekt, int pierwszy\-\_\-el, int drugi\-\_\-el)
+\begin{DoxyCompactList}\small\item\em \-Wykonuje operacje zamiany miejscami dwoch elementow wektora. \end{DoxyCompactList}\item 
+void \hyperlink{class_dane_a2bfe7d61ac562f0c420526857d097e47}{\-Dodaj\-\_\-element} (\hyperlink{class_dane}{\-Dane} \&wekt, int element)
+\begin{DoxyCompactList}\small\item\em \-Wykonuje operacje dodawania elementu do wektora. \end{DoxyCompactList}\item 
+void \hyperlink{class_dane_a1fa0b3e6a489d37ef07fa3f9dd996af2}{\-Dodaj\-\_\-elementy} (\hyperlink{class_dane}{\-Dane} \&wekt1, \hyperlink{class_dane}{\-Dane} wekt2)
+\begin{DoxyCompactList}\small\item\em \-Wykonuje operacje dodawania dwoch wektorow. \end{DoxyCompactList}\item 
+void \hyperlink{class_dane_ab08ced663f4ec81e4dfb75c69fd6086d}{\-Odwroc\-\_\-kolejnosc} (\hyperlink{class_dane}{\-Dane} \&wekt)
+\begin{DoxyCompactList}\small\item\em \-Wykonuje operacje odwracania kolejnosci. \end{DoxyCompactList}\item 
+void \hyperlink{class_dane_ad651a90415d5253f5e2a0354a741dc7d}{\-Mnozenie} (\hyperlink{class_dane}{\-Dane} \&wekt)
+\begin{DoxyCompactList}\small\item\em \-Wykonuje operacje mnozenia. \end{DoxyCompactList}\item 
+bool \hyperlink{class_dane_ad1c18435a6a4cfbf3f4e9bf8206f2c5b}{operator==} (\hyperlink{class_dane}{\-Dane} wekt2)
+\begin{DoxyCompactList}\small\item\em \-Przeciazony operator porownania. \end{DoxyCompactList}\item 
+\hyperlink{class_dane}{\-Dane} \hyperlink{class_dane_af96bf2caf07a4efa399c33dbcdf8cd8b}{operator=} (\hyperlink{class_dane}{\-Dane} wekt2)
+\begin{DoxyCompactList}\small\item\em \-Przeciazony operator przypisania. \end{DoxyCompactList}\item 
+\hyperlink{class_dane}{\-Dane} \hyperlink{class_dane_a467fa5351b4475311e5a43f95e9695b3}{operator+} (\hyperlink{class_dane}{\-Dane} wekt2)
+\begin{DoxyCompactList}\small\item\em \-Przeciazony operator dodawania. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ int $>$ \hyperlink{class_dane_aa8148a6368fb47fb1f08e88514561cf4}{\-Wektor}
+\end{DoxyCompactItemize}
+\subsection*{\-Przyjaciele}
+\begin{DoxyCompactItemize}
+\item 
+istream \& \hyperlink{class_dane_a399582d6055e12e20bbd4e3b7c96e0d1}{operator$>$$>$} (istream \&in, \hyperlink{class_dane}{\-Dane} \&wekt)
+\begin{DoxyCompactList}\small\item\em \-Przeciazony operator wejscia. \end{DoxyCompactList}\item 
+ostream \& \hyperlink{class_dane_a84cb63c4164f3189c8fefd91e9c21135}{operator$<$$<$} (ostream \&out, const \hyperlink{class_dane}{\-Dane} \&wekt)
+\begin{DoxyCompactList}\small\item\em \-Przeciazony operator wyjscia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+\-Klasa ta zawiera jedno pole, bedace wektorem. 
+
+\-Definicja w linii 21 pliku funkcje.\-hh.
+
+
+
+\subsection{\-Dokumentacja funkcji składowych}
+\hypertarget{class_dane_a2bfe7d61ac562f0c420526857d097e47}{\index{\-Dane@{\-Dane}!\-Dodaj\-\_\-element@{\-Dodaj\-\_\-element}}
+\index{\-Dodaj\-\_\-element@{\-Dodaj\-\_\-element}!Dane@{\-Dane}}
+\subsubsection[{\-Dodaj\-\_\-element}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dane\-::\-Dodaj\-\_\-element} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Dane} \&}]{wekt, }
+\item[{int}]{element}
+\end{DoxyParamCaption}
+)}}\label{class_dane_a2bfe7d61ac562f0c420526857d097e47}
+\-Funkcja ta ma za zadanie dopisac wskazany element na koniec danego wektora, bedacego polem obiektu klasy \hyperlink{class_dane}{\-Dane}.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt out}  & {\em wekt} & -\/ \-Obiekt klasy \hyperlink{class_dane}{\-Dane} przekazywany przez referencje. \-To do niego zostanie dopisana wartosc. \\
+\hline
+\mbox{\tt in}  & {\em element} & -\/ \-Zmienna typu int majaca byc dopisana do wektora. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 105 pliku funkcje.\-cpp.
+
+\hypertarget{class_dane_a1fa0b3e6a489d37ef07fa3f9dd996af2}{\index{\-Dane@{\-Dane}!\-Dodaj\-\_\-elementy@{\-Dodaj\-\_\-elementy}}
+\index{\-Dodaj\-\_\-elementy@{\-Dodaj\-\_\-elementy}!Dane@{\-Dane}}
+\subsubsection[{\-Dodaj\-\_\-elementy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dane\-::\-Dodaj\-\_\-elementy} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Dane} \&}]{wekt1, }
+\item[{{\bf \-Dane}}]{wekt2}
+\end{DoxyParamCaption}
+)}}\label{class_dane_a1fa0b3e6a489d37ef07fa3f9dd996af2}
+\-Funkcja ta ma za zadanie dopisac elementy wskazanego wektora, bedacego polem obiektu klasy \hyperlink{class_dane}{\-Dane}, na koniec innego.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt out}  & {\em wekt1} & -\/ \-Obiekt klasy \hyperlink{class_dane}{\-Dane}, przekazywany przez referencje. \-To do niego zostanie dopisana zawartosc wektora wekt2. \\
+\hline
+\mbox{\tt in}  & {\em wekt2} & -\/ \-Obiekt klasy \hyperlink{class_dane}{\-Dane}, ktory ma zostac dopisany do wekt1. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 110 pliku funkcje.\-cpp.
+
+\hypertarget{class_dane_ad651a90415d5253f5e2a0354a741dc7d}{\index{\-Dane@{\-Dane}!\-Mnozenie@{\-Mnozenie}}
+\index{\-Mnozenie@{\-Mnozenie}!Dane@{\-Dane}}
+\subsubsection[{\-Mnozenie}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dane\-::\-Mnozenie} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Dane} \&}]{wekt}
+\end{DoxyParamCaption}
+)}}\label{class_dane_ad651a90415d5253f5e2a0354a741dc7d}
+\-Funkcja ta ma za zadanie przemnozyc wszystkie elementy podanego wektora przez 2.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt out}  & {\em wekt} & -\/ \-Obiekt klasy \hyperlink{class_dane}{\-Dane} przekazywany przez referencje. \-Jego pole \-Wektor zawiera liczby, ktore maja zostac wymnozone. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 42 pliku funkcje.\-cpp.
+
+\hypertarget{class_dane_ab08ced663f4ec81e4dfb75c69fd6086d}{\index{\-Dane@{\-Dane}!\-Odwroc\-\_\-kolejnosc@{\-Odwroc\-\_\-kolejnosc}}
+\index{\-Odwroc\-\_\-kolejnosc@{\-Odwroc\-\_\-kolejnosc}!Dane@{\-Dane}}
+\subsubsection[{\-Odwroc\-\_\-kolejnosc}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dane\-::\-Odwroc\-\_\-kolejnosc} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Dane} \&}]{wekt}
+\end{DoxyParamCaption}
+)}}\label{class_dane_ab08ced663f4ec81e4dfb75c69fd6086d}
+\-Funkcja ta ma za zadanie zapisac elementy wskazanego wektora, bedacego polem obiektu klasy \hyperlink{class_dane}{\-Dane}, w odwrotnej kolejnosci.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt out}  & {\em wekt1} & -\/ \-Obiekt klasy \hyperlink{class_dane}{\-Dane}, przekazywany przez referencje, na ktorym zostanie wykonana operacja odwracania. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 88 pliku funkcje.\-cpp.
+
+\hypertarget{class_dane_a467fa5351b4475311e5a43f95e9695b3}{\index{\-Dane@{\-Dane}!operator+@{operator+}}
+\index{operator+@{operator+}!Dane@{\-Dane}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Dane} \-Dane\-::operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Dane}}]{wekt2}
+\end{DoxyParamCaption}
+)}}\label{class_dane_a467fa5351b4475311e5a43f95e9695b3}
+\-Przeciazony operator majacy za zadanie dopisac elementy wskazanego wektora, bedacego polem obiektu klasy \hyperlink{class_dane}{\-Dane}, na koniec innego.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em wekt2} & -\/ \-Obiekt klasy \hyperlink{class_dane}{\-Dane}, ktory ma zostac dopisany. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 164 pliku funkcje.\-cpp.
+
+\hypertarget{class_dane_af96bf2caf07a4efa399c33dbcdf8cd8b}{\index{\-Dane@{\-Dane}!operator=@{operator=}}
+\index{operator=@{operator=}!Dane@{\-Dane}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Dane} \-Dane\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Dane}}]{wekt2}
+\end{DoxyParamCaption}
+)}}\label{class_dane_af96bf2caf07a4efa399c33dbcdf8cd8b}
+\-Przeciazony operator majacy za zadanie przypisanie jednemu obiektowi klasy \hyperlink{class_dane}{\-Dane} inny.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em wekt2} & -\/ \-Przypisywany obiekt. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+\-Funkcja zwraca przypisana wartosc. 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 151 pliku funkcje.\-cpp.
+
+\hypertarget{class_dane_ad1c18435a6a4cfbf3f4e9bf8206f2c5b}{\index{\-Dane@{\-Dane}!operator==@{operator==}}
+\index{operator==@{operator==}!Dane@{\-Dane}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Dane\-::operator== (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Dane}}]{wekt2}
+\end{DoxyParamCaption}
+)}}\label{class_dane_ad1c18435a6a4cfbf3f4e9bf8206f2c5b}
+\-Przeciazony operator majacy za zadanie porownywanie ze soba dwoch obiektow klasy \hyperlink{class_dane}{\-Dane}.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em wekt2} & -\/ \-Drugi z porownywanych obiektow. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+\-Funkcja zwraca wartosc true, jesli obiekty sa takie same oraz false, jesli posiadaja chociaz jeden rozny element. 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 123 pliku funkcje.\-cpp.
+
+\hypertarget{class_dane_a83f86229196e9c4349433e18e89b2e3d}{\index{\-Dane@{\-Dane}!\-Porownanie@{\-Porownanie}}
+\index{\-Porownanie@{\-Porownanie}!Dane@{\-Dane}}
+\subsubsection[{\-Porownanie}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Dane\-::\-Porownanie} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Dane}}]{wekt1, }
+\item[{{\bf \-Dane}}]{wekt2}
+\end{DoxyParamCaption}
+)}}\label{class_dane_a83f86229196e9c4349433e18e89b2e3d}
+\-Funkcja ta ma za zadanie porownac odpowiadajace elementy dwoch obiektow klasy \hyperlink{class_dane}{\-Dane} o takich samych wymiarach. \-W przypadku znalezienia roznego elementu operacja zostaje przerwana.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em wekt1} & -\/ \-Pierwszy z porownywanych obiektow. \\
+\hline
+\mbox{\tt in}  & {\em wekt2} & -\/ \-Drugi z porownywanych obiektow. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+\-Funkcja zwraca wartosc true, jesli obiekty sa takie same oraz false, jesli posiadaja chociaz jeden rozny element. 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 59 pliku funkcje.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\hypertarget{class_dane_a9866194fa136e3ae90a72124fd2dc8cc}{\index{\-Dane@{\-Dane}!\-Wczytywanie@{\-Wczytywanie}}
+\index{\-Wczytywanie@{\-Wczytywanie}!Dane@{\-Dane}}
+\subsubsection[{\-Wczytywanie}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dane\-::\-Wczytywanie} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{nazwa, }
+\item[{{\bf \-Dane} \&}]{wekt}
+\end{DoxyParamCaption}
+)}}\label{class_dane_a9866194fa136e3ae90a72124fd2dc8cc}
+\-Funkcja ta ma za zadanie wczytac dane, w postaci cyfr, ze wskazanego pliku.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em nazwa} & -\/ \-Nazwa wczytywanego pliku, przekazywana przez wskaznik. \\
+\hline
+\mbox{\tt out}  & {\em wekt} & -\/ \-Obiekt klasy \hyperlink{class_dane}{\-Dane}, przekazywany przez referencje, do ktorego zostanie wczytana zawartosc pliku. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 32 pliku funkcje.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\hypertarget{class_dane_a684a0900c65b3e3174cd3200463be874}{\index{\-Dane@{\-Dane}!\-Zamien\-\_\-elementy@{\-Zamien\-\_\-elementy}}
+\index{\-Zamien\-\_\-elementy@{\-Zamien\-\_\-elementy}!Dane@{\-Dane}}
+\subsubsection[{\-Zamien\-\_\-elementy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dane\-::\-Zamien\-\_\-elementy} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Dane} \&}]{wekt, }
+\item[{int}]{pierwszy\-\_\-el, }
+\item[{int}]{drugi\-\_\-el}
+\end{DoxyParamCaption}
+)}}\label{class_dane_a684a0900c65b3e3174cd3200463be874}
+\-Funkcja ta ma za zadanie zamienic ze soba miejscami dwa wskazane elementy wektora.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt out}  & {\em wekt} & -\/ \-Obiekt klasy \hyperlink{class_dane}{\-Dane}, przekazywany przez referencje. \-To jego elementy zostana zamienione miejscami. \\
+\hline
+\mbox{\tt in}  & {\em pierwszy\-\_\-el} & -\/ \-Zmienna typu int okreslajaca numer pierwszej z komorek majacych ulec zamianie. \\
+\hline
+\mbox{\tt in}  & {\em drugi\-\_\-el} & -\/ \-Zmienna typu int okreslajaca numer drugiej z komorek majacych ulec zamianie. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 78 pliku funkcje.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+
+
+\subsection{\-Dokumentacja przyjaciół i funkcji związanych}
+\hypertarget{class_dane_a84cb63c4164f3189c8fefd91e9c21135}{\index{\-Dane@{\-Dane}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Dane@{\-Dane}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{const {\bf \-Dane} \&}]{wekt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{class_dane_a84cb63c4164f3189c8fefd91e9c21135}
+\-Przeciazony operator pozwalajacy na wypisywanie wartosci pol obiektow klasy \hyperlink{class_dane}{\-Dane}.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt out}  & {\em out} & -\/ \-Przekazywany przez referencje strumien danych wyjsciowych. \\
+\hline
+\mbox{\tt out}  & {\em wekt} & -\/ \-Obiekt klasy \hyperlink{class_dane}{\-Dane}, przekazywany przez referencje, ktorego pola maja zostac wypisane. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 25 pliku funkcje.\-cpp.
+
+\hypertarget{class_dane_a399582d6055e12e20bbd4e3b7c96e0d1}{\index{\-Dane@{\-Dane}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Dane@{\-Dane}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{in, }
+\item[{{\bf \-Dane} \&}]{wekt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{class_dane_a399582d6055e12e20bbd4e3b7c96e0d1}
+\-Przeciazony operator pozwalajacy na wpisywanie wartosci do pol obiektow klasy \hyperlink{class_dane}{\-Dane}.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em in} & -\/ \-Przekazywany przez referencje strumien danych wejsciowych. \\
+\hline
+\mbox{\tt out}  & {\em wekt} & -\/ \-Obiekt klasy \hyperlink{class_dane}{\-Dane}, ktorego pola maja zostac uzupelnione danymi wjesciowymi. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 10 pliku funkcje.\-cpp.
+
+
+
+\subsection{\-Dokumentacja atrybutów składowych}
+\hypertarget{class_dane_aa8148a6368fb47fb1f08e88514561cf4}{\index{\-Dane@{\-Dane}!\-Wektor@{\-Wektor}}
+\index{\-Wektor@{\-Wektor}!Dane@{\-Dane}}
+\subsubsection[{\-Wektor}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ {\bf \-Dane\-::\-Wektor}}}\label{class_dane_aa8148a6368fb47fb1f08e88514561cf4}
+
+
+\-Definicja w linii 24 pliku funkcje.\-hh.
+
+
+
+\-Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{funkcje_8hh}{funkcje.\-hh}\item 
+\hyperlink{funkcje_8cpp}{funkcje.\-cpp}\end{DoxyCompactItemize}

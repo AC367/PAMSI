@@ -1,0 +1,34 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="kolejka_lista.cpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="sortowanie.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sortowanie_8hh.html",tooltip="Zawiera deklaracje funkcji sortujacych oraz instrukcje zalaczenia bibliotek."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="kolejka_lista.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$kolejka__lista_8hh.html",tooltip="Zawiera deklaracje metod, klase Kolejka_lista oraz instrukcje zalaczenia bibliotek."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="stos_tablica.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stos__tablica_8hh.html",tooltip="Zawiera deklaracje metod, klase Stos_lista oraz instrukcje zalaczenia bibliotek."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="cassert",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="stos_lista.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stos__lista_8hh.html",tooltip="Zawiera deklaracje metod, klase Stos_lista oraz instrukcje zalaczenia bibliotek."];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="kolejka_tablica.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$kolejka__tablica_8hh.html",tooltip="Zawiera deklaracje metod, klase Kolejka_tablica oraz instrukcje zalaczenia bibliotek."];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="funkcje.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8hh.html",tooltip="Zawiera deklaracje funkcji, klase Dane oraz instrukcje zalaczenia bibliotek."];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="iostream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="fstream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="vector",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="stdlib.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="time.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="cstdlib",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

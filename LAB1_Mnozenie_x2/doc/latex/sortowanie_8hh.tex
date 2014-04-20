@@ -1,0 +1,210 @@
+\hypertarget{sortowanie_8hh}{\section{\-Dokumentacja pliku sortowanie.\-hh}
+\label{sortowanie_8hh}\index{sortowanie.\-hh@{sortowanie.\-hh}}
+}
+
+
+\-Zawiera deklaracje funkcji sortujacych oraz instrukcje zalaczenia bibliotek.  
+
+
+{\ttfamily \#include \char`\"{}kolejka\-\_\-lista.\-hh\char`\"{}}\*
+\-Wykres zależności załączania dla sortowanie.\-hh\-:
+\-Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\-:
+\subsection*{\-Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{sortowanie_8hh_af2d29a44df2d1914771a907db2a9cedc}{sort\-\_\-quicksort} (\hyperlink{class_dane}{\-Dane} \&wekt, int left, int right)
+\begin{DoxyCompactList}\small\item\em \-Realizuje sortowanie sybkie. \end{DoxyCompactList}\item 
+void \hyperlink{sortowanie_8hh_aa02edb4bae79f21b06cc8b32e102e42c}{sort\-\_\-heapsort} (\hyperlink{class_dane}{\-Dane} \&wekt, int rozmiar)
+\begin{DoxyCompactList}\small\item\em \-Realizuje sortowanie przez kopcowanie. \end{DoxyCompactList}\item 
+void \hyperlink{sortowanie_8hh_aecf7222db9a72738cf5ccc3fd1bec85e}{sort\-\_\-kopiec} (\hyperlink{class_dane}{\-Dane} \&wekt, int rozmiar, int i)
+\begin{DoxyCompactList}\small\item\em \-Realizuje sortowanie przez scalanie. \end{DoxyCompactList}\item 
+void \hyperlink{sortowanie_8hh_acc216f68e14106ff40811124b2d0d4bb}{sort\-\_\-mergesort} (\hyperlink{class_dane}{\-Dane} \&wekt, \hyperlink{class_dane}{\-Dane} wekt\-\_\-p, int poczatek, int koniec)
+\begin{DoxyCompactList}\small\item\em \-Realizuje sortowanie przez scalanie. \end{DoxyCompactList}\item 
+void \hyperlink{sortowanie_8hh_aadf7f7b96e83a6d27c2e620f667e9609}{sort\-\_\-scal} (\hyperlink{class_dane}{\-Dane} \&wekt, \hyperlink{class_dane}{\-Dane} wekt\-\_\-p, int poczatek, int pivot, int koniec)
+\begin{DoxyCompactList}\small\item\em \-Realizuje sortowanie przez scalanie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+
+
+\-Definicja w pliku \hyperlink{sortowanie_8hh_source}{sortowanie.\-hh}.
+
+
+
+\subsection{\-Dokumentacja funkcji}
+\hypertarget{sortowanie_8hh_aa02edb4bae79f21b06cc8b32e102e42c}{\index{sortowanie.\-hh@{sortowanie.\-hh}!sort\-\_\-heapsort@{sort\-\_\-heapsort}}
+\index{sort\-\_\-heapsort@{sort\-\_\-heapsort}!sortowanie.hh@{sortowanie.\-hh}}
+\subsubsection[{sort\-\_\-heapsort}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf sort\-\_\-heapsort} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Dane} \&}]{wekt, }
+\item[{int}]{rozmiar}
+\end{DoxyParamCaption}
+)}}\label{sortowanie_8hh_aa02edb4bae79f21b06cc8b32e102e42c}
+\-Funkcja ta ma za zadanie stworzyc poczatkowy kopiec, a nastepnie posortowac zawartosc wektora metoda heapsort.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em rozmiar} & -\/ zmienna typu int przechowujaca informacje o rozmiarze sortowanej tablicy. \\
+\hline
+\mbox{\tt out}  & {\em wekt} & -\/ \-Obiekt klasy \hyperlink{class_dane}{\-Dane}, zawierajacy wektor, ktorego zawartosc ma zostac posortowana. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 38 pliku sortowanie.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
+\hypertarget{sortowanie_8hh_aecf7222db9a72738cf5ccc3fd1bec85e}{\index{sortowanie.\-hh@{sortowanie.\-hh}!sort\-\_\-kopiec@{sort\-\_\-kopiec}}
+\index{sort\-\_\-kopiec@{sort\-\_\-kopiec}!sortowanie.hh@{sortowanie.\-hh}}
+\subsubsection[{sort\-\_\-kopiec}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf sort\-\_\-kopiec} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Dane} \&}]{wekt, }
+\item[{int}]{rozmiar, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{sortowanie_8hh_aecf7222db9a72738cf5ccc3fd1bec85e}
+\-Funkcja ta zajmuje sie obsluga kopca.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em rozmiar} & -\/ zmienna typu int przechowujaca informacje o rozmiarze sortowanej tablicy. \\
+\hline
+\mbox{\tt in}  & {\em i} & -\/ pozwalajaca na poruszanie sie po kopcu. \\
+\hline
+\mbox{\tt out}  & {\em wekt} & -\/ \-Obiekt klasy \hyperlink{class_dane}{\-Dane}, zawierajacy tablice, ktorej zawartosc ma zostac posortowana. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 53 pliku sortowanie.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\hypertarget{sortowanie_8hh_acc216f68e14106ff40811124b2d0d4bb}{\index{sortowanie.\-hh@{sortowanie.\-hh}!sort\-\_\-mergesort@{sort\-\_\-mergesort}}
+\index{sort\-\_\-mergesort@{sort\-\_\-mergesort}!sortowanie.hh@{sortowanie.\-hh}}
+\subsubsection[{sort\-\_\-mergesort}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf sort\-\_\-mergesort} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Dane} \&}]{wekt, }
+\item[{{\bf \-Dane}}]{wekt\-\_\-p, }
+\item[{int}]{poczatek, }
+\item[{int}]{koniec}
+\end{DoxyParamCaption}
+)}}\label{sortowanie_8hh_acc216f68e14106ff40811124b2d0d4bb}
+\-Funkcja ta ma za zadanie podzielic wektor na mniejsze wektory.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em poczatek} & -\/ zmienna typu int okresleslajaca poczatkowe pole sortowanej tablicy. \\
+\hline
+\mbox{\tt in}  & {\em koniec} & -\/ zmienna typu int okresleslajaca koncowe pole sortowanej tablicy. \\
+\hline
+\mbox{\tt in}  & {\em wekt} & -\/ \-Pomocniczy obiekt klasy \hyperlink{class_dane}{\-Dane}. \\
+\hline
+\mbox{\tt out}  & {\em wekt} & -\/ \-Obiekt klasy \hyperlink{class_dane}{\-Dane}, zawierajacy tablice, ktorej zawartosc ma zostac posortowana. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 75 pliku sortowanie.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\hypertarget{sortowanie_8hh_af2d29a44df2d1914771a907db2a9cedc}{\index{sortowanie.\-hh@{sortowanie.\-hh}!sort\-\_\-quicksort@{sort\-\_\-quicksort}}
+\index{sort\-\_\-quicksort@{sort\-\_\-quicksort}!sortowanie.hh@{sortowanie.\-hh}}
+\subsubsection[{sort\-\_\-quicksort}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf sort\-\_\-quicksort} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Dane} \&}]{wekt, }
+\item[{int}]{left, }
+\item[{int}]{right}
+\end{DoxyParamCaption}
+)}}\label{sortowanie_8hh_af2d29a44df2d1914771a907db2a9cedc}
+\-Funkcja ta ma za zadanie posortowac wektor metoda quicksort.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em left} & -\/ zmienna typu int okresleslajaca poczatkowe pole sortowanej tablicy. \\
+\hline
+\mbox{\tt in}  & {\em right} & -\/ zmienna typu int okresleslajaca koncowe pole sortowanej tablicy. \\
+\hline
+\mbox{\tt out}  & {\em wekt} & -\/ \-Obiekt klasy \hyperlink{class_dane}{\-Dane}, zawierajacy wektor, ktorego zawartosc ma zostac posortowana. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 9 pliku sortowanie.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\hypertarget{sortowanie_8hh_aadf7f7b96e83a6d27c2e620f667e9609}{\index{sortowanie.\-hh@{sortowanie.\-hh}!sort\-\_\-scal@{sort\-\_\-scal}}
+\index{sort\-\_\-scal@{sort\-\_\-scal}!sortowanie.hh@{sortowanie.\-hh}}
+\subsubsection[{sort\-\_\-scal}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf sort\-\_\-scal} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Dane} \&}]{wekt, }
+\item[{{\bf \-Dane}}]{wekt\-\_\-p, }
+\item[{int}]{poczatek, }
+\item[{int}]{pivot, }
+\item[{int}]{koniec}
+\end{DoxyParamCaption}
+)}}\label{sortowanie_8hh_aadf7f7b96e83a6d27c2e620f667e9609}
+\-Funkcja ta ma za zadanie scalic wektory, jednoczesnie je sortujac, az do uzyskania jednego w pelni posortowanego wektora.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em poczatek} & -\/ zmienna typu int okresleslajaca poczatkowe pole sortowanej tablicy. \\
+\hline
+\mbox{\tt in}  & {\em pivot} & -\/ zmienna typu int okresleslajaca punkt podzialu tablicy. \\
+\hline
+\mbox{\tt in}  & {\em koniec} & -\/ zmienna typu int okresleslajaca koncowe pole sortowanej tablicy. \\
+\hline
+\mbox{\tt in}  & {\em wekt} & -\/ \-Pomocniczy obiekt klasy \hyperlink{class_dane}{\-Dane}. \\
+\hline
+\mbox{\tt out}  & {\em wekt} & -\/ \-Obiekt klasy \hyperlink{class_dane}{\-Dane}, zawierajacy wektor, ktorego zawartosc ma zostac posortowana. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 88 pliku sortowanie.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+

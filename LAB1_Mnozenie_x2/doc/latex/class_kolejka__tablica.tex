@@ -1,0 +1,136 @@
+\hypertarget{class_kolejka__tablica}{\section{\-Dokumentacja klasy \-Kolejka\-\_\-tablica}
+\label{class_kolejka__tablica}\index{\-Kolejka\-\_\-tablica@{\-Kolejka\-\_\-tablica}}
+}
+
+
+\-Klasa definiujaca kolejke zaimplementowana przy pomocy tablicy.  
+
+
+
+
+{\ttfamily \#include $<$kolejka\-\_\-tablica.\-hh$>$}
+
+\subsection*{\-Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_kolejka__tablica_a894412f068b803a5caed20eb0888ace9}{\-Kolejka\-\_\-tablica} ()
+\begin{DoxyCompactList}\small\item\em \-Konstruktor. \end{DoxyCompactList}\item 
+\hyperlink{class_kolejka__tablica_aed741c6c09b16e8989be95ea5fdd3265}{$\sim$\-Kolejka\-\_\-tablica} ()
+\begin{DoxyCompactList}\small\item\em \-Destruktor. \end{DoxyCompactList}\item 
+void \hyperlink{class_kolejka__tablica_a061e78102348432ef0036430c9962bc3}{\-Enqueue} (\hyperlink{class_dane}{\-Dane} wekt)
+\begin{DoxyCompactList}\small\item\em \-Dodaje elementy do kolejki. \end{DoxyCompactList}\item 
+void \hyperlink{class_kolejka__tablica_a15695ac2eb79a4a5cc582da24611b3d7}{\-Wypisz} ()
+\begin{DoxyCompactList}\small\item\em \-Wyswietla kolejke. \end{DoxyCompactList}\item 
+void \hyperlink{class_kolejka__tablica_aeaaac32dfd39b8e939b71842a87bff4b}{\-Dequeue} ()
+\begin{DoxyCompactList}\small\item\em \-Zabiera elementy z kolejki. \end{DoxyCompactList}\item 
+bool \hyperlink{class_kolejka__tablica_a60b76bc952560e33eae90b4baf014410}{\-Is\-Empty} ()
+\begin{DoxyCompactList}\small\item\em \-Sprawdza czy kolejka jest pusta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+\-Klasa ta zawiera pole trzy pola\-: wskaznik na tablice elementow, pole typu int, przechowujace informacje o rozmiarze tablicy oraz zmienna typu unsigned int bedaca licznikiem elementow tablicy. 
+
+\-Definicja w linii 18 pliku kolejka\-\_\-tablica.\-hh.
+
+
+
+\subsection{\-Dokumentacja konstruktora i destruktora}
+\hypertarget{class_kolejka__tablica_a894412f068b803a5caed20eb0888ace9}{\index{\-Kolejka\-\_\-tablica@{\-Kolejka\-\_\-tablica}!\-Kolejka\-\_\-tablica@{\-Kolejka\-\_\-tablica}}
+\index{\-Kolejka\-\_\-tablica@{\-Kolejka\-\_\-tablica}!Kolejka_tablica@{\-Kolejka\-\_\-tablica}}
+\subsubsection[{\-Kolejka\-\_\-tablica}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Kolejka\-\_\-tablica\-::\-Kolejka\-\_\-tablica} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_kolejka__tablica_a894412f068b803a5caed20eb0888ace9}
+\-Kostruktor ten ma za zadanie tworzyc kolejke. 
+
+\-Definicja w linii 31 pliku kolejka\-\_\-tablica.\-cpp.
+
+\hypertarget{class_kolejka__tablica_aed741c6c09b16e8989be95ea5fdd3265}{\index{\-Kolejka\-\_\-tablica@{\-Kolejka\-\_\-tablica}!$\sim$\-Kolejka\-\_\-tablica@{$\sim$\-Kolejka\-\_\-tablica}}
+\index{$\sim$\-Kolejka\-\_\-tablica@{$\sim$\-Kolejka\-\_\-tablica}!Kolejka_tablica@{\-Kolejka\-\_\-tablica}}
+\subsubsection[{$\sim$\-Kolejka\-\_\-tablica}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Kolejka\-\_\-tablica\-::$\sim$\-Kolejka\-\_\-tablica} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_kolejka__tablica_aed741c6c09b16e8989be95ea5fdd3265}
+\-Destruktor ten ma za zadanie usuwac kolejke z pamieci komputera. 
+
+\-Definicja w linii 59 pliku kolejka\-\_\-tablica.\-cpp.
+
+
+
+\subsection{\-Dokumentacja funkcji składowych}
+\hypertarget{class_kolejka__tablica_aeaaac32dfd39b8e939b71842a87bff4b}{\index{\-Kolejka\-\_\-tablica@{\-Kolejka\-\_\-tablica}!\-Dequeue@{\-Dequeue}}
+\index{\-Dequeue@{\-Dequeue}!Kolejka_tablica@{\-Kolejka\-\_\-tablica}}
+\subsubsection[{\-Dequeue}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Kolejka\-\_\-tablica\-::\-Dequeue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_kolejka__tablica_aeaaac32dfd39b8e939b71842a87bff4b}
+\-Funkcja ta ma za zadanie zabrac pierwszy element z kolejki. 
+
+\-Definicja w linii 22 pliku kolejka\-\_\-tablica.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
+\hypertarget{class_kolejka__tablica_a061e78102348432ef0036430c9962bc3}{\index{\-Kolejka\-\_\-tablica@{\-Kolejka\-\_\-tablica}!\-Enqueue@{\-Enqueue}}
+\index{\-Enqueue@{\-Enqueue}!Kolejka_tablica@{\-Kolejka\-\_\-tablica}}
+\subsubsection[{\-Enqueue}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Kolejka\-\_\-tablica\-::\-Enqueue} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Dane}}]{wekt}
+\end{DoxyParamCaption}
+)}}\label{class_kolejka__tablica_a061e78102348432ef0036430c9962bc3}
+\-Funkcja ta ma za zadanie dodac element na koniec kolejki.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em wekt} & -\/ obiekt klasy \hyperlink{class_dane}{\-Dane} zawierajacy liczby, ktore maja znalezc sie w kolejce. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 42 pliku kolejka\-\_\-tablica.\-cpp.
+
+\hypertarget{class_kolejka__tablica_a60b76bc952560e33eae90b4baf014410}{\index{\-Kolejka\-\_\-tablica@{\-Kolejka\-\_\-tablica}!\-Is\-Empty@{\-Is\-Empty}}
+\index{\-Is\-Empty@{\-Is\-Empty}!Kolejka_tablica@{\-Kolejka\-\_\-tablica}}
+\subsubsection[{\-Is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Kolejka\-\_\-tablica\-::\-Is\-Empty} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_kolejka__tablica_a60b76bc952560e33eae90b4baf014410}
+\-Funkcja ta ma za zadanie sprawdzic czy kolejka jest pusta, jesli tak zwraca true, jesli nie -\/ false.
+
+\begin{DoxyReturn}{\-Zwraca}
+true 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 37 pliku kolejka\-\_\-tablica.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\hypertarget{class_kolejka__tablica_a15695ac2eb79a4a5cc582da24611b3d7}{\index{\-Kolejka\-\_\-tablica@{\-Kolejka\-\_\-tablica}!\-Wypisz@{\-Wypisz}}
+\index{\-Wypisz@{\-Wypisz}!Kolejka_tablica@{\-Kolejka\-\_\-tablica}}
+\subsubsection[{\-Wypisz}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Kolejka\-\_\-tablica\-::\-Wypisz} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_kolejka__tablica_a15695ac2eb79a4a5cc582da24611b3d7}
+\-Funkcja ta ma za zadanie wyswietlic zawartosc kolejki. 
+
+\-Definicja w linii 52 pliku kolejka\-\_\-tablica.\-cpp.
+
+
+
+\-Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{kolejka__tablica_8hh}{kolejka\-\_\-tablica.\-hh}\item 
+\hyperlink{kolejka__tablica_8cpp}{kolejka\-\_\-tablica.\-cpp}\end{DoxyCompactItemize}

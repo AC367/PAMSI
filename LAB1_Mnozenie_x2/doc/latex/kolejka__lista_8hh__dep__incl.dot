@@ -1,0 +1,22 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="kolejka_lista.hh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="sortowanie.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sortowanie_8hh.html",tooltip="Zawiera deklaracje funkcji sortujacych oraz instrukcje zalaczenia bibliotek."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="funkcje.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html",tooltip="Zawiera definicje funkcji uzytych w programie."];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="kolejka_lista.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$kolejka__lista_8cpp.html",tooltip="Zawiera definicje funkcji uzywanych przez kolejke zaimplementowana przy pomocy listy - klasa Kolejka_..."];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="kolejka_tablica.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$kolejka__tablica_8cpp.html",tooltip="Zawiera definicje funkcji uzywanych przez kolejke zaimplementowana przy pomocy tablicy - klasa Kolejk..."];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html",tooltip="Zawiera definicje glownej funkcji programu."];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="sortowanie.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sortowanie_8cpp.html",tooltip="Zawiera definicje funkcji uzytych w algorytmach sortujacych."];
+  Node2 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="stos_lista.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stos__lista_8cpp.html",tooltip="Zawiera definicje funkcji uzywanych przez stos zaimplementowana przy pomocy listy - klasa Stos_lista..."];
+  Node2 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="stos_tablica.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stos__tablica_8cpp.html",tooltip="Zawiera definicje funkcji uzywanych przez stos zaimplementowana przy pomocy tablicy - klasa Stos_tabl..."];
+}

@@ -1,0 +1,144 @@
+\hypertarget{class_stos__lista}{\section{\-Dokumentacja klasy \-Stos\-\_\-lista}
+\label{class_stos__lista}\index{\-Stos\-\_\-lista@{\-Stos\-\_\-lista}}
+}
+
+
+\-Klasa definiujaca stos zaimplementowany przy pomocy listy.  
+
+
+
+
+{\ttfamily \#include $<$stos\-\_\-lista.\-hh$>$}
+
+\subsection*{\-Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries \-Element\-\_\-stosu}
+\begin{DoxyCompactList}\small\item\em \-Klasa definiujaca elementy stosu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_stos__lista_a0a12a6e3e6748a789e43934793917738}{\-Push} (\hyperlink{class_dane}{\-Dane} wekt)
+\begin{DoxyCompactList}\small\item\em \-Dodaje elementy do stosu. \end{DoxyCompactList}\item 
+int \hyperlink{class_stos__lista_a338593acee00448c8e9083b23363af63}{\-Pop} ()
+\begin{DoxyCompactList}\small\item\em \-Zdejmuje element ze stosu. \end{DoxyCompactList}\item 
+\hyperlink{class_stos__lista_ac7f453eea7c8f563d84068002c6c3d6d}{\-Stos\-\_\-lista} ()
+\begin{DoxyCompactList}\small\item\em \-Konstruktor. \end{DoxyCompactList}\item 
+\hyperlink{class_stos__lista_a2ea239a1b5c70eec5b5ae7fc770bf15a}{$\sim$\-Stos\-\_\-lista} ()
+\begin{DoxyCompactList}\small\item\em \-Destruktor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_stos__lista_ac4a0dce20a28da4c373aeba1e3dc7524}{\-Is\-Empty} ()
+\begin{DoxyCompactList}\small\item\em \-Sprawdza czy stos jest pusty. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos__lista_aff392523f7f8b2bad0d8da0d62fa8bac}{\-Wypisz} ()
+\begin{DoxyCompactList}\small\item\em \-Wyswietla stos. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos__lista_adf575ec0963dc5c9e16c39503f390e77}{\-Wielkosc\-\_\-stosu} ()
+\begin{DoxyCompactList}\small\item\em \-Podaje rozmiar stosu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+\-Klasa ta zawiera wskaznik na szczyt stosu oraz wewnwtrzna klase definiujaca element zawierajacy informacje o przechowywanej wartosci oraz wskaznik na nastepny element. 
+
+\-Definicja w linii 16 pliku stos\-\_\-lista.\-hh.
+
+
+
+\subsection{\-Dokumentacja konstruktora i destruktora}
+\hypertarget{class_stos__lista_ac7f453eea7c8f563d84068002c6c3d6d}{\index{\-Stos\-\_\-lista@{\-Stos\-\_\-lista}!\-Stos\-\_\-lista@{\-Stos\-\_\-lista}}
+\index{\-Stos\-\_\-lista@{\-Stos\-\_\-lista}!Stos_lista@{\-Stos\-\_\-lista}}
+\subsubsection[{\-Stos\-\_\-lista}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Stos\-\_\-lista\-::\-Stos\-\_\-lista} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_stos__lista_ac7f453eea7c8f563d84068002c6c3d6d}
+\-Kostruktor ten ma za zadanie tworzyc stos. 
+
+\-Definicja w linii 10 pliku stos\-\_\-lista.\-cpp.
+
+\hypertarget{class_stos__lista_a2ea239a1b5c70eec5b5ae7fc770bf15a}{\index{\-Stos\-\_\-lista@{\-Stos\-\_\-lista}!$\sim$\-Stos\-\_\-lista@{$\sim$\-Stos\-\_\-lista}}
+\index{$\sim$\-Stos\-\_\-lista@{$\sim$\-Stos\-\_\-lista}!Stos_lista@{\-Stos\-\_\-lista}}
+\subsubsection[{$\sim$\-Stos\-\_\-lista}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Stos\-\_\-lista\-::$\sim$\-Stos\-\_\-lista} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_stos__lista_a2ea239a1b5c70eec5b5ae7fc770bf15a}
+\-Destruktor ten ma za zadanie usuwac stos z pamieci komputera. 
+
+\-Definicja w linii 15 pliku stos\-\_\-lista.\-cpp.
+
+
+
+\subsection{\-Dokumentacja funkcji składowych}
+\hypertarget{class_stos__lista_ac4a0dce20a28da4c373aeba1e3dc7524}{\index{\-Stos\-\_\-lista@{\-Stos\-\_\-lista}!\-Is\-Empty@{\-Is\-Empty}}
+\index{\-Is\-Empty@{\-Is\-Empty}!Stos_lista@{\-Stos\-\_\-lista}}
+\subsubsection[{\-Is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Stos\-\_\-lista\-::\-Is\-Empty} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_stos__lista_ac4a0dce20a28da4c373aeba1e3dc7524}
+\-Funkcja ta ma za zadanie sprawdzic czy stos jest pusty, jesli tak zwraca true, jesli nie -\/ false.
+
+\begin{DoxyReturn}{\-Zwraca}
+true 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 66 pliku stos\-\_\-lista.\-cpp.
+
+\hypertarget{class_stos__lista_a338593acee00448c8e9083b23363af63}{\index{\-Stos\-\_\-lista@{\-Stos\-\_\-lista}!\-Pop@{\-Pop}}
+\index{\-Pop@{\-Pop}!Stos_lista@{\-Stos\-\_\-lista}}
+\subsubsection[{\-Pop}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Stos\-\_\-lista\-::\-Pop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_stos__lista_a338593acee00448c8e9083b23363af63}
+\-Funkcja ta ma za zadanie zdjac pierwszy element ze szczytu stosu. 
+
+\-Definicja w linii 53 pliku stos\-\_\-lista.\-cpp.
+
+\hypertarget{class_stos__lista_a0a12a6e3e6748a789e43934793917738}{\index{\-Stos\-\_\-lista@{\-Stos\-\_\-lista}!\-Push@{\-Push}}
+\index{\-Push@{\-Push}!Stos_lista@{\-Stos\-\_\-lista}}
+\subsubsection[{\-Push}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stos\-\_\-lista\-::\-Push} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Dane}}]{wekt}
+\end{DoxyParamCaption}
+)}}\label{class_stos__lista_a0a12a6e3e6748a789e43934793917738}
+\-Funkcja ta ma za zadanie dodac element na szczyt stosu.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em wekt} & -\/ obiekt klasy \hyperlink{class_dane}{\-Dane} zawierajacy liczby, ktore maja znalezc sie na stosie. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 32 pliku stos\-\_\-lista.\-cpp.
+
+\hypertarget{class_stos__lista_adf575ec0963dc5c9e16c39503f390e77}{\index{\-Stos\-\_\-lista@{\-Stos\-\_\-lista}!\-Wielkosc\-\_\-stosu@{\-Wielkosc\-\_\-stosu}}
+\index{\-Wielkosc\-\_\-stosu@{\-Wielkosc\-\_\-stosu}!Stos_lista@{\-Stos\-\_\-lista}}
+\subsubsection[{\-Wielkosc\-\_\-stosu}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stos\-\_\-lista\-::\-Wielkosc\-\_\-stosu} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_stos__lista_adf575ec0963dc5c9e16c39503f390e77}
+\-Funkcja ta ma za zadanie podac i wyswietlic rozmiar stosu. 
+
+\-Definicja w linii 87 pliku stos\-\_\-lista.\-cpp.
+
+\hypertarget{class_stos__lista_aff392523f7f8b2bad0d8da0d62fa8bac}{\index{\-Stos\-\_\-lista@{\-Stos\-\_\-lista}!\-Wypisz@{\-Wypisz}}
+\index{\-Wypisz@{\-Wypisz}!Stos_lista@{\-Stos\-\_\-lista}}
+\subsubsection[{\-Wypisz}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stos\-\_\-lista\-::\-Wypisz} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_stos__lista_aff392523f7f8b2bad0d8da0d62fa8bac}
+\-Funkcja ta ma za zadanie wyswietlic zawartosc stosu. 
+
+\-Definicja w linii 74 pliku stos\-\_\-lista.\-cpp.
+
+
+
+\-Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{stos__lista_8hh}{stos\-\_\-lista.\-hh}\item 
+\hyperlink{stos__lista_8cpp}{stos\-\_\-lista.\-cpp}\end{DoxyCompactItemize}

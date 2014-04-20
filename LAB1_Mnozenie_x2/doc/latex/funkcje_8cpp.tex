@@ -1,0 +1,147 @@
+\hypertarget{funkcje_8cpp}{\section{\-Dokumentacja pliku funkcje.\-cpp}
+\label{funkcje_8cpp}\index{funkcje.\-cpp@{funkcje.\-cpp}}
+}
+
+
+\-Zawiera definicje funkcji uzytych w programie.  
+
+
+{\ttfamily \#include \char`\"{}sortowanie.\-hh\char`\"{}}\*
+\-Wykres zależności załączania dla funkcje.\-cpp\-:
+\subsection*{\-Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+istream \& \hyperlink{funkcje_8cpp_a399582d6055e12e20bbd4e3b7c96e0d1}{operator$>$$>$} (istream \&in, \hyperlink{class_dane}{\-Dane} \&wekt)
+\item 
+ostream \& \hyperlink{funkcje_8cpp_a84cb63c4164f3189c8fefd91e9c21135}{operator$<$$<$} (ostream \&out, const \hyperlink{class_dane}{\-Dane} \&wekt)
+\item 
+void \hyperlink{funkcje_8cpp_a26b47c1c0a853ec6e39c299da7eff8b3}{\-Zapis} (double czas\-\_\-sredni, int ilosc\-\_\-powt, int ilosc\-\_\-elementow)
+\begin{DoxyCompactList}\small\item\em \-Funkcja zapisujaca do pliku. \end{DoxyCompactList}\item 
+double \hyperlink{funkcje_8cpp_ac1e549037ac5915fb1018a206697594d}{\-Uruchom} (int ilosc\-\_\-powtorzen, \hyperlink{class_dane}{\-Dane} wektor1, \hyperlink{class_dane}{\-Dane} wektor2)
+\begin{DoxyCompactList}\small\item\em \-Funkcja uruchamiajaca algorytm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+
+
+\-Definicja w pliku \hyperlink{funkcje_8cpp_source}{funkcje.\-cpp}.
+
+
+
+\subsection{\-Dokumentacja funkcji}
+\hypertarget{funkcje_8cpp_a84cb63c4164f3189c8fefd91e9c21135}{\index{funkcje.\-cpp@{funkcje.\-cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!funkcje.cpp@{funkcje.\-cpp}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{const {\bf \-Dane} \&}]{wekt}
+\end{DoxyParamCaption}
+)}}\label{funkcje_8cpp_a84cb63c4164f3189c8fefd91e9c21135}
+\-Przeciazony operator pozwalajacy na wypisywanie wartosci pol obiektow klasy \hyperlink{class_dane}{\-Dane}.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt out}  & {\em out} & -\/ \-Przekazywany przez referencje strumien danych wyjsciowych. \\
+\hline
+\mbox{\tt out}  & {\em wekt} & -\/ \-Obiekt klasy \hyperlink{class_dane}{\-Dane}, przekazywany przez referencje, ktorego pola maja zostac wypisane. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 25 pliku funkcje.\-cpp.
+
+\hypertarget{funkcje_8cpp_a399582d6055e12e20bbd4e3b7c96e0d1}{\index{funkcje.\-cpp@{funkcje.\-cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!funkcje.cpp@{funkcje.\-cpp}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{in, }
+\item[{{\bf \-Dane} \&}]{wekt}
+\end{DoxyParamCaption}
+)}}\label{funkcje_8cpp_a399582d6055e12e20bbd4e3b7c96e0d1}
+\-Przeciazony operator pozwalajacy na wpisywanie wartosci do pol obiektow klasy \hyperlink{class_dane}{\-Dane}.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em in} & -\/ \-Przekazywany przez referencje strumien danych wejsciowych. \\
+\hline
+\mbox{\tt out}  & {\em wekt} & -\/ \-Obiekt klasy \hyperlink{class_dane}{\-Dane}, ktorego pola maja zostac uzupelnione danymi wjesciowymi. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 10 pliku funkcje.\-cpp.
+
+\hypertarget{funkcje_8cpp_ac1e549037ac5915fb1018a206697594d}{\index{funkcje.\-cpp@{funkcje.\-cpp}!\-Uruchom@{\-Uruchom}}
+\index{\-Uruchom@{\-Uruchom}!funkcje.cpp@{funkcje.\-cpp}}
+\subsubsection[{\-Uruchom}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Uruchom} (
+\begin{DoxyParamCaption}
+\item[{int}]{ilosc\-\_\-powtorzen, }
+\item[{{\bf \-Dane}}]{wektor1, }
+\item[{{\bf \-Dane}}]{wektor2}
+\end{DoxyParamCaption}
+)}}\label{funkcje_8cpp_ac1e549037ac5915fb1018a206697594d}
+\-Funkcja majaca na celu uruchomienie algorytmu zadana ilosc razy, zmierzenie czasu jego dzialania i porownanie wyniku z plikiem wzorcowym.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em ilosc\-\_\-powtorzen} & -\/ \-Ilosc powtorzen wykonania algorytmu. \\
+\hline
+\mbox{\tt in}  & {\em wektor1} & -\/ \-Obiekt klasy \hyperlink{class_dane}{\-Dane} zawierajacy dane, na ktorych maja byc wykonane operacje przez algorytm. \\
+\hline
+\mbox{\tt in}  & {\em wektor2} & -\/ \-Obiekt klasy \hyperlink{class_dane}{\-Dane} zawierajacy dane pobrane z pliku wzorcowego, w celu porownania wynikow. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+czas -\/ \-Czas wykonania algorytmu. 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 196 pliku funkcje.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\hypertarget{funkcje_8cpp_a26b47c1c0a853ec6e39c299da7eff8b3}{\index{funkcje.\-cpp@{funkcje.\-cpp}!\-Zapis@{\-Zapis}}
+\index{\-Zapis@{\-Zapis}!funkcje.cpp@{funkcje.\-cpp}}
+\subsubsection[{\-Zapis}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Zapis} (
+\begin{DoxyParamCaption}
+\item[{double}]{czas\-\_\-sredni, }
+\item[{int}]{ilosc\-\_\-powt, }
+\item[{int}]{ilosc\-\_\-elementow}
+\end{DoxyParamCaption}
+)}}\label{funkcje_8cpp_a26b47c1c0a853ec6e39c299da7eff8b3}
+\-Funkcja majaca na celu zapisanie informacji o srednim czasie wykonywania algorytmu, ilosci powtorzen jego wykonania oraz ilosci elementow, na ktorych zostala wykonana operacja do pliku csv.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em czas\-\_\-sredni} & -\/ \-Sredni czas jednorazowego wykonania algorytmu. \\
+\hline
+\mbox{\tt in}  & {\em ilosc\-\_\-powt} & -\/ \-Ilosc powtorzen wykonania algorytmu. \\
+\hline
+\mbox{\tt in}  & {\em ilosc\-\_\-elementow} & -\/ ilosc elementow, na ktorych wykonano operacje. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 185 pliku funkcje.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+

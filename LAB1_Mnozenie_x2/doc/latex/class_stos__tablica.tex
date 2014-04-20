@@ -1,0 +1,126 @@
+\hypertarget{class_stos__tablica}{\section{\-Dokumentacja klasy \-Stos\-\_\-tablica}
+\label{class_stos__tablica}\index{\-Stos\-\_\-tablica@{\-Stos\-\_\-tablica}}
+}
+
+
+\-Klasa definiujaca stos zaimplementowana przy pomocy tablicy.  
+
+
+
+
+{\ttfamily \#include $<$stos\-\_\-tablica.\-hh$>$}
+
+\subsection*{\-Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_stos__tablica_a09994f8361fb437e3f733d562e421d80}{\-Stos\-\_\-tablica} ()
+\begin{DoxyCompactList}\small\item\em \-Konstruktor. \end{DoxyCompactList}\item 
+\hyperlink{class_stos__tablica_acbdc34c47a2018bea8159bd0d8fbaff6}{$\sim$\-Stos\-\_\-tablica} ()
+\begin{DoxyCompactList}\small\item\em \-Destruktor. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos__tablica_a85be440694b870657ea478d523dfa549}{\-Push} (\hyperlink{class_dane}{\-Dane} wekt)
+\begin{DoxyCompactList}\small\item\em \-Dodaje elementy do stosu. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos__tablica_a46b67fa79b06ebdf263d58c5dea10a77}{\-Wypisz} ()
+\begin{DoxyCompactList}\small\item\em \-Wyswietla stos. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos__tablica_a2ccb3734d9c77e29f336fb141a9f559a}{\-Pop} ()
+\begin{DoxyCompactList}\small\item\em \-Zdejmuje element ze stosu. \end{DoxyCompactList}\item 
+bool \hyperlink{class_stos__tablica_a4457f168285c5fdee3d12939cd1e5f08}{\-Is\-Empty} () const 
+\begin{DoxyCompactList}\small\item\em \-Sprawdza czy stos jest pusty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+\-Klasa ta zawiera pole trzy pola\-: wskaznik na tablice elementow oraz dwa pola typu int. \-Pierwsze z nich przechowujace wartosc szczytowego elementu stosu, a drugie zawiera informacje orozmiarze tablicy. 
+
+\-Definicja w linii 19 pliku stos\-\_\-tablica.\-hh.
+
+
+
+\subsection{\-Dokumentacja konstruktora i destruktora}
+\hypertarget{class_stos__tablica_a09994f8361fb437e3f733d562e421d80}{\index{\-Stos\-\_\-tablica@{\-Stos\-\_\-tablica}!\-Stos\-\_\-tablica@{\-Stos\-\_\-tablica}}
+\index{\-Stos\-\_\-tablica@{\-Stos\-\_\-tablica}!Stos_tablica@{\-Stos\-\_\-tablica}}
+\subsubsection[{\-Stos\-\_\-tablica}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Stos\-\_\-tablica\-::\-Stos\-\_\-tablica} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_stos__tablica_a09994f8361fb437e3f733d562e421d80}
+\-Kostruktor ten ma za zadanie tworzyc stos. 
+
+\-Definicja w linii 10 pliku stos\-\_\-tablica.\-cpp.
+
+\hypertarget{class_stos__tablica_acbdc34c47a2018bea8159bd0d8fbaff6}{\index{\-Stos\-\_\-tablica@{\-Stos\-\_\-tablica}!$\sim$\-Stos\-\_\-tablica@{$\sim$\-Stos\-\_\-tablica}}
+\index{$\sim$\-Stos\-\_\-tablica@{$\sim$\-Stos\-\_\-tablica}!Stos_tablica@{\-Stos\-\_\-tablica}}
+\subsubsection[{$\sim$\-Stos\-\_\-tablica}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Stos\-\_\-tablica\-::$\sim$\-Stos\-\_\-tablica} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_stos__tablica_acbdc34c47a2018bea8159bd0d8fbaff6}
+\-Destruktor ten ma za zadanie usuwac stos z pamieci komputera. 
+
+\-Definicja w linii 17 pliku stos\-\_\-tablica.\-cpp.
+
+
+
+\subsection{\-Dokumentacja funkcji składowych}
+\hypertarget{class_stos__tablica_a4457f168285c5fdee3d12939cd1e5f08}{\index{\-Stos\-\_\-tablica@{\-Stos\-\_\-tablica}!\-Is\-Empty@{\-Is\-Empty}}
+\index{\-Is\-Empty@{\-Is\-Empty}!Stos_tablica@{\-Stos\-\_\-tablica}}
+\subsubsection[{\-Is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Stos\-\_\-tablica\-::\-Is\-Empty} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_stos__tablica_a4457f168285c5fdee3d12939cd1e5f08}
+\-Funkcja ta ma za zadanie sprawdzic czy stos jest pusty, jesli tak zwraca true, jesli nie -\/ false.
+
+\begin{DoxyReturn}{\-Zwraca}
+true 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 61 pliku stos\-\_\-tablica.\-cpp.
+
+\hypertarget{class_stos__tablica_a2ccb3734d9c77e29f336fb141a9f559a}{\index{\-Stos\-\_\-tablica@{\-Stos\-\_\-tablica}!\-Pop@{\-Pop}}
+\index{\-Pop@{\-Pop}!Stos_tablica@{\-Stos\-\_\-tablica}}
+\subsubsection[{\-Pop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stos\-\_\-tablica\-::\-Pop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_stos__tablica_a2ccb3734d9c77e29f336fb141a9f559a}
+\-Funkcja ta ma za zadanie zdjac pierwszy element ze szczytu stosu oraz zmniejszyc wielkosc tablicy przechowujacej elementy stosu. \-Zmniejszenie o polowe nastepuje w momencie, gdy ilosc elementow jest mniejsza niz polowa wielkosci tablicy. 
+
+\-Definicja w linii 46 pliku stos\-\_\-tablica.\-cpp.
+
+\hypertarget{class_stos__tablica_a85be440694b870657ea478d523dfa549}{\index{\-Stos\-\_\-tablica@{\-Stos\-\_\-tablica}!\-Push@{\-Push}}
+\index{\-Push@{\-Push}!Stos_tablica@{\-Stos\-\_\-tablica}}
+\subsubsection[{\-Push}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stos\-\_\-tablica\-::\-Push} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Dane}}]{wekt}
+\end{DoxyParamCaption}
+)}}\label{class_stos__tablica_a85be440694b870657ea478d523dfa549}
+\-Funkcja ta ma za zadanie dodac element na szczyt stosu.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em wekt} & -\/ obiekt klasy \hyperlink{class_dane}{\-Dane} zawierajacy liczby, ktore maja znalezc sie na stosie. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 22 pliku stos\-\_\-tablica.\-cpp.
+
+\hypertarget{class_stos__tablica_a46b67fa79b06ebdf263d58c5dea10a77}{\index{\-Stos\-\_\-tablica@{\-Stos\-\_\-tablica}!\-Wypisz@{\-Wypisz}}
+\index{\-Wypisz@{\-Wypisz}!Stos_tablica@{\-Stos\-\_\-tablica}}
+\subsubsection[{\-Wypisz}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stos\-\_\-tablica\-::\-Wypisz} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_stos__tablica_a46b67fa79b06ebdf263d58c5dea10a77}
+\-Funkcja ta ma za zadanie wyswietlic zawartosc stosu. 
+
+\-Definicja w linii 70 pliku stos\-\_\-tablica.\-cpp.
+
+
+
+\-Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{stos__tablica_8hh}{stos\-\_\-tablica.\-hh}\item 
+\hyperlink{stos__tablica_8cpp}{stos\-\_\-tablica.\-cpp}\end{DoxyCompactItemize}

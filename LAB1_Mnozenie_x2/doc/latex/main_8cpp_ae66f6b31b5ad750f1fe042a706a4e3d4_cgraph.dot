@@ -1,0 +1,20 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Dane::Wczytywanie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_dane.html#a9866194fa136e3ae90a72124fd2dc8cc",tooltip="Wczytuje dane z pliku."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Uruchom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8hh.html#ac1e549037ac5915fb1018a206697594d",tooltip="Funkcja uruchamiajaca algorytm."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="sort_quicksort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sortowanie_8hh.html#af2d29a44df2d1914771a907db2a9cedc",tooltip="Realizuje sortowanie sybkie."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Dane::Zamien_elementy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_dane.html#a684a0900c65b3e3174cd3200463be874",tooltip="Wykonuje operacje zamiany miejscami dwoch elementow wektora."];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Dane::Porownanie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_dane.html#a83f86229196e9c4349433e18e89b2e3d",tooltip="Porownuje dwa obiekty klasy Dane."];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Zapis",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8hh.html#a26b47c1c0a853ec6e39c299da7eff8b3",tooltip="Funkcja zapisujaca do pliku."];
+}

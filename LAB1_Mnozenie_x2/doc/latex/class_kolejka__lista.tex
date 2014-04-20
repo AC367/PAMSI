@@ -1,0 +1,144 @@
+\hypertarget{class_kolejka__lista}{\section{\-Dokumentacja klasy \-Kolejka\-\_\-lista}
+\label{class_kolejka__lista}\index{\-Kolejka\-\_\-lista@{\-Kolejka\-\_\-lista}}
+}
+
+
+\-Klasa definiujaca kolejke zaimplementowana przy pomocy listy.  
+
+
+
+
+{\ttfamily \#include $<$kolejka\-\_\-lista.\-hh$>$}
+
+\subsection*{\-Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries \-Element\-\_\-kolejki}
+\begin{DoxyCompactList}\small\item\em \-Klasa definiujaca elementy kolejki. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_kolejka__lista_a3e63e0b83cb517c96f4f7dd4d76f0b4a}{\-Enqueue} (\hyperlink{class_dane}{\-Dane} wekt)
+\begin{DoxyCompactList}\small\item\em \-Dodaje elementy do kolejki. \end{DoxyCompactList}\item 
+void \hyperlink{class_kolejka__lista_a3f8aa633abaf480d1481743ac8c018e8}{\-Dequeue} ()
+\begin{DoxyCompactList}\small\item\em \-Zabiera elementy z kolejki. \end{DoxyCompactList}\item 
+void \hyperlink{class_kolejka__lista_a585d53932d7b03c12e8b15ca85dbc461}{\-Wyswietl} ()
+\begin{DoxyCompactList}\small\item\em \-Wyswietla kolejke. \end{DoxyCompactList}\item 
+void \hyperlink{class_kolejka__lista_abfa4fa22942429969deb67e1b72eeba7}{\-Size} ()
+\begin{DoxyCompactList}\small\item\em \-Podaje rozmiar kolejki. \end{DoxyCompactList}\item 
+bool \hyperlink{class_kolejka__lista_ae6334aa04280714bc907fc1c6d7b0ffd}{\-Is\-Empty} ()
+\begin{DoxyCompactList}\small\item\em \-Sprawdza czy kolejka jest pusta. \end{DoxyCompactList}\item 
+\hyperlink{class_kolejka__lista_a7208c60729540ca7b9099987dda7bc7b}{\-Kolejka\-\_\-lista} ()
+\begin{DoxyCompactList}\small\item\em \-Konstruktor. \end{DoxyCompactList}\item 
+\hyperlink{class_kolejka__lista_af84680ce033e41ef9688e432a0934fa9}{$\sim$\-Kolejka\-\_\-lista} ()
+\begin{DoxyCompactList}\small\item\em \-Destruktor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+\-Klasa ta zawiera wewnwtrzna klase definiujaca element kolejki zawierajacy informacje o przechowywanej wartosci oraz wskaznik na nastepny element. 
+
+\-Definicja w linii 15 pliku kolejka\-\_\-lista.\-hh.
+
+
+
+\subsection{\-Dokumentacja konstruktora i destruktora}
+\hypertarget{class_kolejka__lista_a7208c60729540ca7b9099987dda7bc7b}{\index{\-Kolejka\-\_\-lista@{\-Kolejka\-\_\-lista}!\-Kolejka\-\_\-lista@{\-Kolejka\-\_\-lista}}
+\index{\-Kolejka\-\_\-lista@{\-Kolejka\-\_\-lista}!Kolejka_lista@{\-Kolejka\-\_\-lista}}
+\subsubsection[{\-Kolejka\-\_\-lista}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Kolejka\-\_\-lista\-::\-Kolejka\-\_\-lista} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_kolejka__lista_a7208c60729540ca7b9099987dda7bc7b}
+\-Kostruktor ten ma za zadanie tworzyc kolejke. 
+
+\-Definicja w linii 14 pliku kolejka\-\_\-lista.\-cpp.
+
+\hypertarget{class_kolejka__lista_af84680ce033e41ef9688e432a0934fa9}{\index{\-Kolejka\-\_\-lista@{\-Kolejka\-\_\-lista}!$\sim$\-Kolejka\-\_\-lista@{$\sim$\-Kolejka\-\_\-lista}}
+\index{$\sim$\-Kolejka\-\_\-lista@{$\sim$\-Kolejka\-\_\-lista}!Kolejka_lista@{\-Kolejka\-\_\-lista}}
+\subsubsection[{$\sim$\-Kolejka\-\_\-lista}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Kolejka\-\_\-lista\-::$\sim$\-Kolejka\-\_\-lista} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_kolejka__lista_af84680ce033e41ef9688e432a0934fa9}
+\-Destruktor ten ma za zadanie usuwac kolejke z pamieci komputera. 
+
+\-Definicja w linii 19 pliku kolejka\-\_\-lista.\-cpp.
+
+
+
+\subsection{\-Dokumentacja funkcji składowych}
+\hypertarget{class_kolejka__lista_a3f8aa633abaf480d1481743ac8c018e8}{\index{\-Kolejka\-\_\-lista@{\-Kolejka\-\_\-lista}!\-Dequeue@{\-Dequeue}}
+\index{\-Dequeue@{\-Dequeue}!Kolejka_lista@{\-Kolejka\-\_\-lista}}
+\subsubsection[{\-Dequeue}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Kolejka\-\_\-lista\-::\-Dequeue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_kolejka__lista_a3f8aa633abaf480d1481743ac8c018e8}
+\-Funkcja ta ma za zadanie zabrac pierwszy element z kolejki. 
+
+\-Definicja w linii 57 pliku kolejka\-\_\-lista.\-cpp.
+
+\hypertarget{class_kolejka__lista_a3e63e0b83cb517c96f4f7dd4d76f0b4a}{\index{\-Kolejka\-\_\-lista@{\-Kolejka\-\_\-lista}!\-Enqueue@{\-Enqueue}}
+\index{\-Enqueue@{\-Enqueue}!Kolejka_lista@{\-Kolejka\-\_\-lista}}
+\subsubsection[{\-Enqueue}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Kolejka\-\_\-lista\-::\-Enqueue} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Dane}}]{wekt}
+\end{DoxyParamCaption}
+)}}\label{class_kolejka__lista_a3e63e0b83cb517c96f4f7dd4d76f0b4a}
+\-Funkcja ta ma za zadanie dodac element na koniec kolejki.
+
+\-Parametry\-:
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em wekt} & -\/ obiekt klasy \hyperlink{class_dane}{\-Dane} zawierajacy liczby, ktore maja znalezc sie w kolejce. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 36 pliku kolejka\-\_\-lista.\-cpp.
+
+\hypertarget{class_kolejka__lista_ae6334aa04280714bc907fc1c6d7b0ffd}{\index{\-Kolejka\-\_\-lista@{\-Kolejka\-\_\-lista}!\-Is\-Empty@{\-Is\-Empty}}
+\index{\-Is\-Empty@{\-Is\-Empty}!Kolejka_lista@{\-Kolejka\-\_\-lista}}
+\subsubsection[{\-Is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Kolejka\-\_\-lista\-::\-Is\-Empty} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_kolejka__lista_ae6334aa04280714bc907fc1c6d7b0ffd}
+\-Funkcja ta ma za zadanie sprawdzic czy kolejka jest pusta, jesli tak zwraca true, jesli nie -\/ false.
+
+\begin{DoxyReturn}{\-Zwraca}
+true 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 85 pliku kolejka\-\_\-lista.\-cpp.
+
+\hypertarget{class_kolejka__lista_abfa4fa22942429969deb67e1b72eeba7}{\index{\-Kolejka\-\_\-lista@{\-Kolejka\-\_\-lista}!\-Size@{\-Size}}
+\index{\-Size@{\-Size}!Kolejka_lista@{\-Kolejka\-\_\-lista}}
+\subsubsection[{\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Kolejka\-\_\-lista\-::\-Size} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_kolejka__lista_abfa4fa22942429969deb67e1b72eeba7}
+\-Funkcja ta ma za zadanie podac i wyswietlic rozmiar kolejki. 
+
+\-Definicja w linii 93 pliku kolejka\-\_\-lista.\-cpp.
+
+\hypertarget{class_kolejka__lista_a585d53932d7b03c12e8b15ca85dbc461}{\index{\-Kolejka\-\_\-lista@{\-Kolejka\-\_\-lista}!\-Wyswietl@{\-Wyswietl}}
+\index{\-Wyswietl@{\-Wyswietl}!Kolejka_lista@{\-Kolejka\-\_\-lista}}
+\subsubsection[{\-Wyswietl}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Kolejka\-\_\-lista\-::\-Wyswietl} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_kolejka__lista_a585d53932d7b03c12e8b15ca85dbc461}
+\-Funkcja ta ma za zadanie wyswietlic zawartosc kolejki. 
+
+\-Definicja w linii 73 pliku kolejka\-\_\-lista.\-cpp.
+
+
+
+\-Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{kolejka__lista_8hh}{kolejka\-\_\-lista.\-hh}\item 
+\hyperlink{kolejka__lista_8cpp}{kolejka\-\_\-lista.\-cpp}\end{DoxyCompactItemize}

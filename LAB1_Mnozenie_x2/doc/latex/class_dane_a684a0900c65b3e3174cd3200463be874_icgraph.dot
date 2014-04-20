@@ -1,0 +1,16 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Dane::Zamien_elementy",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="sort_quicksort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sortowanie_8cpp.html#af2d29a44df2d1914771a907db2a9cedc",tooltip="Realizuje sortowanie sybkie."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Uruchom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#ac1e549037ac5915fb1018a206697594d",tooltip="Funkcja uruchamiajaca algorytm."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip="Wywoluje odpowiednie funkcje."];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="sort_heapsort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sortowanie_8cpp.html#aa02edb4bae79f21b06cc8b32e102e42c",tooltip="Realizuje sortowanie przez kopcowanie."];
+}

@@ -1,0 +1,26 @@
+$)CIlosc elementow$)C;$)CIlosc powtorzen algorytmu$)C;$)CSredni czas wykonywania algorytmu$)C;
+$)C10$)C;$)C100$)C;$)C0$)C;$)Csekund
+$)C100$)C;$)C100$)C;$)C0.0036$)C;$)Csekund
+$)C1000$)C;$)C100$)C;$)C0.4394$)C;$)Csekund
+$)C10000$)C;$)C100$)C;$)C0$)C;$)Csekund
+$)C10$)C;$)C1$)C;$)C0$)C;$)Csekund
+$)C100$)C;$)C1$)C;$)C0$)C;$)Csekund
+$)C1000$)C;$)C1$)C;$)C0$)C;$)Csekund
+$)C10000$)C;$)C1$)C;$)C0,37$)C;$)Csekund
+$)C100000$)C;$)C1$)C;$)C42,98$)C;$)Csekund
+$)C200000$)C;$)C1$)C;$)C183,46$)C;$)Csekund
+$)C300000$)C;$)C1$)C;$)C449,34$)C;$)Csekund
+$)C500000$)C;$)C1$)C;$)C1338,72$)C;$)Csekund
+10;1;0;sekund;
+100;1;0;sekund;
+1000;1;0.02;sekund;
+10000;1;0.9;sekund;
+20000;1;3.63;sekund;
+50000;1;23.05;sekund;
+100000;1;90.83;sekund;
+200000;1;409.19;sekund;
+300000;1;800.34;sekund;
+500000;1;-1982.26;sekund;
+350000;1;1047.09;sekund;
+400000;1;1491.38;sekund;
+450000;1;1845.09;sekund;

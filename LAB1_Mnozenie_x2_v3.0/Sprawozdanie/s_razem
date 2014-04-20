@@ -1,0 +1,9 @@
+set terminal png
+set output 'razem.png'
+set title "Zebranie wszystkich wykresów na jednym"
+set xlabel "ilosc danych"
+set ylabel "czas [s]"
+set xtics 0, 100000, 450000
+set xr [0 : 450000]
+plot 'stos_tablica_o_1.txt'  using 1 : 2 smooth bezier, 'stos_tablica_2_razy.txt'  using 1 : 2 smooth bezier, 'kolejka_tablica'  using 1 : 2 smooth bezier, 'kolejka_lista.txt'  using 1 : 2 smooth bezier, 'stos_lista.txt' using 1 : 2 smooth bezier
+unset output

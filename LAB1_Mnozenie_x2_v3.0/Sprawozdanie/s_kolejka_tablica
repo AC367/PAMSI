@@ -1,0 +1,14 @@
+set terminal png
+set output 's_kolejka_tablica.png'
+set title "Zaleznosc czasu od ilosci danych - stos implementowany tablica"
+set xlabel "ilosc danych"
+set ylabel "czas [s]"
+set lmargin 10
+set rmargin 2
+set autoscale
+set grid
+set xr [0 :  450000]
+set xtics 0, 100000, 450000
+plot 'kolejka_tablica' using 1 : 2 smooth bezier lt 1
+unset output
+

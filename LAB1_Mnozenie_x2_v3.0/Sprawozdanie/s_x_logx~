@@ -1,0 +1,14 @@
+set terminal png
+set output 'x_logx.png'
+set title "Funkcja poglądowa xlog(x)"
+set xlabel "ilość danych"
+set ylabel "czas [s]"
+set lmargin 10
+set rmargin 2
+set autoscale
+set grid
+set xr [0 :  450000]
+set xtics 0, 100000, 450000
+plot x*log(x)
+unset output
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>My Project: Plik źródłowy tablica_haszujaca.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   
+   </div>
+   <div id="projectbrief">Tablica asocjacyjna v2</div>
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('tablica__haszujaca_8hh.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">tablica_haszujaca.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="tablica__haszujaca_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00002"></a>00002 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include &lt;sstream&gt;</span>
+<a name="l00004"></a>00004 
+<a name="l00012"></a>00012 <span class="keyword">using namespace </span>std;
+<a name="l00013"></a>00013 
+<a name="l00022"></a><a class="code" href="class_element.html">00022</a> <span class="keyword">class </span><a class="code" href="class_element.html" title="Klasa definiująca element umieszczany w tablicy asocjacyjnej.">Element</a>
+<a name="l00023"></a>00023 {
+<a name="l00024"></a>00024 <span class="keyword">private</span>:
+<a name="l00025"></a>00025         <span class="keywordtype">string</span> dane;
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 <span class="keyword">public</span>:
+<a name="l00028"></a><a class="code" href="class_element.html#a3c69cfe4adca29bca0ca6eac06298366">00028</a>         <span class="keywordtype">string</span> <a class="code" href="class_element.html#a3c69cfe4adca29bca0ca6eac06298366">adres</a>;
+<a name="l00029"></a><a class="code" href="class_element.html#ae689c2af2c94f3b9fb1c07e89358b3a0">00029</a>         <span class="keywordtype">bool</span> <a class="code" href="class_element.html#ae689c2af2c94f3b9fb1c07e89358b3a0">zajety</a>;
+<a name="l00030"></a><a class="code" href="class_element.html#a04ef972f58a1777f38b54df88df2fc12">00030</a>         <a class="code" href="class_element.html" title="Klasa definiująca element umieszczany w tablicy asocjacyjnej.">Element</a> *<a class="code" href="class_element.html#a04ef972f58a1777f38b54df88df2fc12">nastepny</a>;
+<a name="l00031"></a>00031         
+<a name="l00032"></a><a class="code" href="class_element.html#ab0d0e20be9a36ae676202db753faeec9">00032</a>         <a class="code" href="class_element.html" title="Klasa definiująca element umieszczany w tablicy asocjacyjnej.">Element</a>()
+<a name="l00033"></a>00033         :zajety(NULL), nastepny(NULL)
+<a name="l00034"></a>00034         {
+<a name="l00035"></a>00035         }
+<a name="l00036"></a>00036         
+<a name="l00037"></a><a class="code" href="class_element.html#a7ea87400dc1aab2d9cdf44457d24cd2a">00037</a>         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_tablica__haszujaca.html" title="Klasa definiująca tablicę haszującą realizującą implementację tablicy asocjacyjnej.">Tablica_haszujaca</a>;
+<a name="l00047"></a>00047         <span class="keyword">friend</span> ostream&amp; <a class="code" href="tablica__haszujaca_8cpp.html#a5fbcf8eef969e643764a485bc6f3a100">operator &lt;&lt;</a>(ostream&amp; ostr, <a class="code" href="class_element.html" title="Klasa definiująca element umieszczany w tablicy asocjacyjnej.">Element</a>&amp; elem);
+<a name="l00048"></a>00048 };
+<a name="l00049"></a>00049 
+<a name="l00057"></a><a class="code" href="class_tablica__haszujaca.html">00057</a> <span class="keyword">class </span><a class="code" href="class_tablica__haszujaca.html" title="Klasa definiująca tablicę haszującą realizującą implementację tablicy asocjacyjnej.">Tablica_haszujaca</a>
+<a name="l00058"></a>00058 {
+<a name="l00059"></a>00059 <span class="keyword">private</span>:
+<a name="l00060"></a>00060         <a class="code" href="class_element.html" title="Klasa definiująca element umieszczany w tablicy asocjacyjnej.">Element</a> * _element;
+<a name="l00061"></a>00061         <span class="keywordtype">int</span> rozmiar;
+<a name="l00062"></a>00062 <span class="keyword">public</span>:
+<a name="l00063"></a>00063         
+<a name="l00064"></a>00064 
+<a name="l00065"></a><a class="code" href="class_tablica__haszujaca.html#a016b821f88c7c0a2de1451c175cefbf9">00065</a>         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_element.html" title="Klasa definiująca element umieszczany w tablicy asocjacyjnej.">Element</a>;
+<a name="l00066"></a>00066         
+<a name="l00072"></a>00072         <a class="code" href="class_element.html#a7ea87400dc1aab2d9cdf44457d24cd2a">Tablica_haszujaca</a>(<span class="keywordtype">int</span> il);
+<a name="l00073"></a>00073         
+<a name="l00082"></a>00082         <a class="code" href="class_element.html" title="Klasa definiująca element umieszczany w tablicy asocjacyjnej.">Element</a>* operator [](<span class="keywordtype">string</span> <a class="code" href="class_element.html#a3c69cfe4adca29bca0ca6eac06298366">adres</a>);
+<a name="l00083"></a>00083         
+<a name="l00095"></a>00095         <span class="keywordtype">void</span> dodaj(<span class="keywordtype">string</span> <a class="code" href="class_element.html#a3c69cfe4adca29bca0ca6eac06298366">adres</a>, <span class="keywordtype">string</span> dane);
+<a name="l00096"></a>00096         
+<a name="l00105"></a>00105         <span class="keywordtype">void</span> usun(<span class="keywordtype">string</span> <a class="code" href="class_element.html#a3c69cfe4adca29bca0ca6eac06298366">adres</a>);
+<a name="l00106"></a>00106         
+<a name="l00114"></a>00114         <a class="code" href="class_element.html" title="Klasa definiująca element umieszczany w tablicy asocjacyjnej.">Element</a>* znajdz(<span class="keywordtype">string</span> <a class="code" href="class_element.html#a3c69cfe4adca29bca0ca6eac06298366">adres</a>);
+<a name="l00115"></a>00115         
+<a name="l00123"></a>00123         <span class="keywordtype">int</span> haszuj(<span class="keywordtype">string</span> <a class="code" href="class_element.html#a3c69cfe4adca29bca0ca6eac06298366">adres</a>);
+<a name="l00124"></a>00124 };
+</pre></div></div><!-- contents -->
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="tablica__haszujaca_8hh.html">tablica_haszujaca.hh</a>      </li>
+
+    <li class="footer">Wygenerowano Wed Apr 23 2014 16:40:16 dla My Project programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

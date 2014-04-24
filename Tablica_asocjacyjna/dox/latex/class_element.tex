@@ -1,0 +1,117 @@
+\hypertarget{class_element}{\section{\-Dokumentacja klasy \-Element}
+\label{class_element}\index{\-Element@{\-Element}}
+}
+
+
+\-Klasa definiująca element umieszczany w tablicy asocjacyjnej.  
+
+
+
+
+{\ttfamily \#include $<$tablica\-\_\-haszujaca.\-hh$>$}
+
+
+
+\-Diagram współpracy dla \-Element\-:
+\subsection*{\-Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_element_ab0d0e20be9a36ae676202db753faeec9}{\-Element} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_element_a3c69cfe4adca29bca0ca6eac06298366}{adres}
+\item 
+bool \hyperlink{class_element_ae689c2af2c94f3b9fb1c07e89358b3a0}{zajety}
+\item 
+\hyperlink{class_element}{\-Element} $\ast$ \hyperlink{class_element_a04ef972f58a1777f38b54df88df2fc12}{nastepny}
+\end{DoxyCompactItemize}
+\subsection*{\-Przyjaciele}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_element_a7ea87400dc1aab2d9cdf44457d24cd2a}{\-Tablica\-\_\-haszujaca}
+\item 
+ostream \& \hyperlink{class_element_a5fbcf8eef969e643764a485bc6f3a100}{operator$<$$<$} (ostream \&ostr, \hyperlink{class_element}{\-Element} \&elem)
+\begin{DoxyCompactList}\small\item\em \-Przeładowanie operatora wyjścia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+\-Klasa ta zawiera wskaźnik na następny element oraz pola przechowujące adres i dane elementu. \-Jest tu również pole, \char`\"{}zajety\char`\"{} decydujące o możliwości nadpisania danego elementu. \-Ponadto zawarte są w niej deklaracje metod oraz konstruktor. 
+
+\-Definicja w linii 22 pliku tablica\-\_\-haszujaca.\-hh.
+
+
+
+\subsection{\-Dokumentacja konstruktora i destruktora}
+\hypertarget{class_element_ab0d0e20be9a36ae676202db753faeec9}{\index{\-Element@{\-Element}!\-Element@{\-Element}}
+\index{\-Element@{\-Element}!Element@{\-Element}}
+\subsubsection[{\-Element}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Element\-::\-Element} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_element_ab0d0e20be9a36ae676202db753faeec9}
+
+
+\-Definicja w linii 32 pliku tablica\-\_\-haszujaca.\-hh.
+
+
+
+\subsection{\-Dokumentacja przyjaciół i funkcji związanych}
+\hypertarget{class_element_a5fbcf8eef969e643764a485bc6f3a100}{\index{\-Element@{\-Element}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Element@{\-Element}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{ostr, }
+\item[{{\bf \-Element} \&}]{elem}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{class_element_a5fbcf8eef969e643764a485bc6f3a100}
+\-Ten przeładowany operator wyjścia odpowiada za podwanie na standardowe wyjście zawartości obiektu klasy \hyperlink{class_element}{\-Element}.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt out}  & {\em ostr} & -\/ strumień wyjściowy. \\
+\hline
+\mbox{\tt in}  & {\em elem} & -\/ drukowany obiekt. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 65 pliku tablica\-\_\-haszujaca.\-cpp.
+
+\hypertarget{class_element_a7ea87400dc1aab2d9cdf44457d24cd2a}{\index{\-Element@{\-Element}!\-Tablica\-\_\-haszujaca@{\-Tablica\-\_\-haszujaca}}
+\index{\-Tablica\-\_\-haszujaca@{\-Tablica\-\_\-haszujaca}!Element@{\-Element}}
+\subsubsection[{\-Tablica\-\_\-haszujaca}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf \-Tablica\-\_\-haszujaca}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{class_element_a7ea87400dc1aab2d9cdf44457d24cd2a}
+
+
+\-Definicja w linii 37 pliku tablica\-\_\-haszujaca.\-hh.
+
+
+
+\subsection{\-Dokumentacja atrybutów składowych}
+\hypertarget{class_element_a3c69cfe4adca29bca0ca6eac06298366}{\index{\-Element@{\-Element}!adres@{adres}}
+\index{adres@{adres}!Element@{\-Element}}
+\subsubsection[{adres}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-Element\-::adres}}}\label{class_element_a3c69cfe4adca29bca0ca6eac06298366}
+
+
+\-Definicja w linii 28 pliku tablica\-\_\-haszujaca.\-hh.
+
+\hypertarget{class_element_a04ef972f58a1777f38b54df88df2fc12}{\index{\-Element@{\-Element}!nastepny@{nastepny}}
+\index{nastepny@{nastepny}!Element@{\-Element}}
+\subsubsection[{nastepny}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Element}$\ast$ {\bf \-Element\-::nastepny}}}\label{class_element_a04ef972f58a1777f38b54df88df2fc12}
+
+
+\-Definicja w linii 30 pliku tablica\-\_\-haszujaca.\-hh.
+
+\hypertarget{class_element_ae689c2af2c94f3b9fb1c07e89358b3a0}{\index{\-Element@{\-Element}!zajety@{zajety}}
+\index{zajety@{zajety}!Element@{\-Element}}
+\subsubsection[{zajety}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Element\-::zajety}}}\label{class_element_ae689c2af2c94f3b9fb1c07e89358b3a0}
+
+
+\-Definicja w linii 29 pliku tablica\-\_\-haszujaca.\-hh.
+
+
+
+\-Dokumentacja dla tej klasy została wygenerowana z pliku\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tablica__haszujaca_8hh}{tablica\-\_\-haszujaca.\-hh}\end{DoxyCompactItemize}

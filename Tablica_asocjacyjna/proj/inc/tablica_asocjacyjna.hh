@@ -10,7 +10,7 @@
 using namespace std;
 
 /*!
- * \brief Klasa definiujaca kolejke zaimplementowana przy pomocy tablicy.
+ * \brief Klasa definiujaca tablice asocjacyjna zaimplementowana przy pomocy wektora.
  * 
  * Klasa ta zawiera wewnętrzną strukturę _Dane, która odpowiada za
  * przechowywanie adresu oraz zawartości określonego pola w tablicy

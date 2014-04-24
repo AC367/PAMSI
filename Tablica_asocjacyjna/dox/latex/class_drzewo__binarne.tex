@@ -1,0 +1,221 @@
+\hypertarget{class_drzewo__binarne}{\section{\-Dokumentacja klasy \-Drzewo\-\_\-binarne}
+\label{class_drzewo__binarne}\index{\-Drzewo\-\_\-binarne@{\-Drzewo\-\_\-binarne}}
+}
+
+
+\-Klasa definiująca drzewo binarne realizujące implementację tablicy asocjacyjnej.  
+
+
+
+
+{\ttfamily \#include $<$drzewo\-\_\-binarne.\-hh$>$}
+
+
+
+\-Diagram współpracy dla \-Drzewo\-\_\-binarne\-:
+\subsection*{\-Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_drzewo__binarne_1_1galaz}{galaz}
+\begin{DoxyCompactList}\small\item\em \-Struktura realizująca \char`\"{}gałęzie\char`\"{} drzewa binarnego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_drzewo__binarne_a9a57a4711e635e2eb9032b6619ce63fb}{\-Drzewo\-\_\-binarne} ()
+\begin{DoxyCompactList}\small\item\em \-Konstruktor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_drzewo__binarne_aa9e767a3f55ca4d93e5eab7d8d27633d}{\-Czy\-\_\-puste} () const 
+\begin{DoxyCompactList}\small\item\em \-Czy drzewo jest puste. \end{DoxyCompactList}\item 
+void \hyperlink{class_drzewo__binarne_a2afc7a05aa63660125f5677c3aa5cfe5}{wyswietl\-\_\-kolejno} ()
+\begin{DoxyCompactList}\small\item\em \-Wyświetla zawartość. \end{DoxyCompactList}\item 
+void \hyperlink{class_drzewo__binarne_a67ce1de738303b5e88c0771cd4aabe1f}{kolejno} (\hyperlink{struct_drzewo__binarne_1_1galaz}{galaz} $\ast$gal)
+\begin{DoxyCompactList}\small\item\em \-Pobiera kolejne wartości. \end{DoxyCompactList}\item 
+void \hyperlink{class_drzewo__binarne_a760bf194d205fc3e2f3fbadf15239e27}{dodaj} (string adres, string d)
+\begin{DoxyCompactList}\small\item\em \-Dodaje elementy. \end{DoxyCompactList}\item 
+void \hyperlink{class_drzewo__binarne_a67361052da854238bd9113e5a88bd184}{usun} (string adres)
+\begin{DoxyCompactList}\small\item\em \-Usuwa elementy. \end{DoxyCompactList}\item 
+bool \hyperlink{class_drzewo__binarne_abcb8fc1deadbc07c98e21edb46b80cea}{czy\-\_\-jest} (string adres)
+\begin{DoxyCompactList}\small\item\em \-Sprawdza istnienie elementu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_drzewo__binarne_1_1galaz}{galaz} $\ast$ \hyperlink{class_drzewo__binarne_ac338d9a6b97981369e3729d11918ed8d}{korzen}
+\item 
+int \hyperlink{class_drzewo__binarne_a8c37bbd6488cb39a09f5a0af872941d7}{rozmiar}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+\-Klasa ta zawiera wewnętrzną strukturę galaz, która odpowiada za przechowywanie adresu oraz zawartości określonego pola oraz wskaźniki na jego lewą i prawą odnogę. \-Ponadto zawarte są w niej deklarace metod oraz konstruktor. 
+
+\-Definicja w linii 20 pliku drzewo\-\_\-binarne.\-hh.
+
+
+
+\subsection{\-Dokumentacja konstruktora i destruktora}
+\hypertarget{class_drzewo__binarne_a9a57a4711e635e2eb9032b6619ce63fb}{\index{\-Drzewo\-\_\-binarne@{\-Drzewo\-\_\-binarne}!\-Drzewo\-\_\-binarne@{\-Drzewo\-\_\-binarne}}
+\index{\-Drzewo\-\_\-binarne@{\-Drzewo\-\_\-binarne}!Drzewo_binarne@{\-Drzewo\-\_\-binarne}}
+\subsubsection[{\-Drzewo\-\_\-binarne}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Drzewo\-\_\-binarne\-::\-Drzewo\-\_\-binarne} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_drzewo__binarne_a9a57a4711e635e2eb9032b6619ce63fb}
+\-Konstruktor odpowiedzialny za inicjowanie pól obiektu typu \hyperlink{class_drzewo__binarne}{\-Drzewo\-\_\-binarne}. 
+
+\-Definicja w linii 49 pliku drzewo\-\_\-binarne.\-hh.
+
+
+
+\subsection{\-Dokumentacja funkcji składowych}
+\hypertarget{class_drzewo__binarne_abcb8fc1deadbc07c98e21edb46b80cea}{\index{\-Drzewo\-\_\-binarne@{\-Drzewo\-\_\-binarne}!czy\-\_\-jest@{czy\-\_\-jest}}
+\index{czy\-\_\-jest@{czy\-\_\-jest}!Drzewo_binarne@{\-Drzewo\-\_\-binarne}}
+\subsubsection[{czy\-\_\-jest}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Drzewo\-\_\-binarne\-::czy\-\_\-jest} (
+\begin{DoxyParamCaption}
+\item[{string}]{adres}
+\end{DoxyParamCaption}
+)}}\label{class_drzewo__binarne_abcb8fc1deadbc07c98e21edb46b80cea}
+\-Metoda ta ma za zadanie sprawdzić czy element o podanym adresie występuje w tablicy asocjacyjnej.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em adres} & -\/ szukany adres.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+true -\/ gdy element o podanym adresie znajduje się w tablicy. false -\/ gdy elementu o podanym adresie nie ma w tablicy. 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 188 pliku drzewo\-\_\-binarne.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
+\hypertarget{class_drzewo__binarne_aa9e767a3f55ca4d93e5eab7d8d27633d}{\index{\-Drzewo\-\_\-binarne@{\-Drzewo\-\_\-binarne}!\-Czy\-\_\-puste@{\-Czy\-\_\-puste}}
+\index{\-Czy\-\_\-puste@{\-Czy\-\_\-puste}!Drzewo_binarne@{\-Drzewo\-\_\-binarne}}
+\subsubsection[{\-Czy\-\_\-puste}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Drzewo\-\_\-binarne\-::\-Czy\-\_\-puste} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_drzewo__binarne_aa9e767a3f55ca4d93e5eab7d8d27633d}
+\-Metoda sprawdzająca czy drzewo binarne jest puste. 
+
+\-Definicja w linii 8 pliku drzewo\-\_\-binarne.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\hypertarget{class_drzewo__binarne_a760bf194d205fc3e2f3fbadf15239e27}{\index{\-Drzewo\-\_\-binarne@{\-Drzewo\-\_\-binarne}!dodaj@{dodaj}}
+\index{dodaj@{dodaj}!Drzewo_binarne@{\-Drzewo\-\_\-binarne}}
+\subsubsection[{dodaj}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Drzewo\-\_\-binarne\-::dodaj} (
+\begin{DoxyParamCaption}
+\item[{string}]{adres, }
+\item[{string}]{d}
+\end{DoxyParamCaption}
+)}}\label{class_drzewo__binarne_a760bf194d205fc3e2f3fbadf15239e27}
+\-Metoda ta ma za zadanie dodać element o podanym adresie do tablicy asocjacyjnej. \-Jeśli podany adres jest już zajęty, to wartość do niego przypisana zostanie podmieniona.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em adres} & -\/ adres, pod którym zostanie zapisany element. \\
+\hline
+\mbox{\tt in}  & {\em d} & -\/ zmienna typu string, która ma zostać zapisana w tablicy. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 13 pliku drzewo\-\_\-binarne.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
+\hypertarget{class_drzewo__binarne_a67ce1de738303b5e88c0771cd4aabe1f}{\index{\-Drzewo\-\_\-binarne@{\-Drzewo\-\_\-binarne}!kolejno@{kolejno}}
+\index{kolejno@{kolejno}!Drzewo_binarne@{\-Drzewo\-\_\-binarne}}
+\subsubsection[{kolejno}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Drzewo\-\_\-binarne\-::kolejno} (
+\begin{DoxyParamCaption}
+\item[{{\bf galaz} $\ast$}]{gal}
+\end{DoxyParamCaption}
+)}}\label{class_drzewo__binarne_a67ce1de738303b5e88c0771cd4aabe1f}
+\-Metoda ta ma za zadanie pobrać kolejne wartości z drzewa.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em gal} & -\/ gałąź, od której zaczyna się pobieranie. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 175 pliku drzewo\-\_\-binarne.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\hypertarget{class_drzewo__binarne_a67361052da854238bd9113e5a88bd184}{\index{\-Drzewo\-\_\-binarne@{\-Drzewo\-\_\-binarne}!usun@{usun}}
+\index{usun@{usun}!Drzewo_binarne@{\-Drzewo\-\_\-binarne}}
+\subsubsection[{usun}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Drzewo\-\_\-binarne\-::usun} (
+\begin{DoxyParamCaption}
+\item[{string}]{adres}
+\end{DoxyParamCaption}
+)}}\label{class_drzewo__binarne_a67361052da854238bd9113e5a88bd184}
+\-Metoda ta ma za zadanie usunąć element o podanym adresie z tablicy asocjacyjnej. \-Pod warunkiem, że dany adres istnieje.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em adres} & -\/ adres elementu, który ma zostać usunięty. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 50 pliku drzewo\-\_\-binarne.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
+\hypertarget{class_drzewo__binarne_a2afc7a05aa63660125f5677c3aa5cfe5}{\index{\-Drzewo\-\_\-binarne@{\-Drzewo\-\_\-binarne}!wyswietl\-\_\-kolejno@{wyswietl\-\_\-kolejno}}
+\index{wyswietl\-\_\-kolejno@{wyswietl\-\_\-kolejno}!Drzewo_binarne@{\-Drzewo\-\_\-binarne}}
+\subsubsection[{wyswietl\-\_\-kolejno}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Drzewo\-\_\-binarne\-::wyswietl\-\_\-kolejno} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_drzewo__binarne_a2afc7a05aa63660125f5677c3aa5cfe5}
+\-Metoda odpowiedzialna za wyświetlenie zawartości drzewa binarnego. 
+
+\-Definicja w linii 170 pliku drzewo\-\_\-binarne.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
+
+
+\subsection{\-Dokumentacja atrybutów składowych}
+\hypertarget{class_drzewo__binarne_ac338d9a6b97981369e3729d11918ed8d}{\index{\-Drzewo\-\_\-binarne@{\-Drzewo\-\_\-binarne}!korzen@{korzen}}
+\index{korzen@{korzen}!Drzewo_binarne@{\-Drzewo\-\_\-binarne}}
+\subsubsection[{korzen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf galaz}$\ast$ {\bf \-Drzewo\-\_\-binarne\-::korzen}}}\label{class_drzewo__binarne_ac338d9a6b97981369e3729d11918ed8d}
+
+
+\-Definicja w linii 38 pliku drzewo\-\_\-binarne.\-hh.
+
+\hypertarget{class_drzewo__binarne_a8c37bbd6488cb39a09f5a0af872941d7}{\index{\-Drzewo\-\_\-binarne@{\-Drzewo\-\_\-binarne}!rozmiar@{rozmiar}}
+\index{rozmiar@{rozmiar}!Drzewo_binarne@{\-Drzewo\-\_\-binarne}}
+\subsubsection[{rozmiar}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Drzewo\-\_\-binarne\-::rozmiar}}}\label{class_drzewo__binarne_a8c37bbd6488cb39a09f5a0af872941d7}
+
+
+\-Definicja w linii 42 pliku drzewo\-\_\-binarne.\-hh.
+
+
+
+\-Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{drzewo__binarne_8hh}{drzewo\-\_\-binarne.\-hh}\item 
+\hyperlink{drzewo__binarne_8cpp}{drzewo\-\_\-binarne.\-cpp}\end{DoxyCompactItemize}

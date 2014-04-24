@@ -5,5 +5,7 @@ digraph G
   rankdir="LR";
   Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="TablicaAsocjacyjna::DodajElement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tablica_asocjacyjna.html#addfeb9ac2475f95e8c43eed5dfad8866",tooltip="Metoda dodająca elementy do tablicy."];
+  Node2 [label="Uruchom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8hh.html#aa2616a2e0624bbd48b39bcaee04dc275",tooltip="Funkcja uruchamiajaca algorytm."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Zapis",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8hh.html#a0ea458e51bdb664955621a0f2dcb8c58",tooltip="Funkcja zapisujaca do pliku."];
 }

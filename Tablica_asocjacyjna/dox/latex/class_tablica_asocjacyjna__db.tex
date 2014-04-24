@@ -1,0 +1,112 @@
+\hypertarget{class_tablica_asocjacyjna__db}{\section{\-Dokumentacja klasy \-Tablica\-Asocjacyjna\-\_\-db}
+\label{class_tablica_asocjacyjna__db}\index{\-Tablica\-Asocjacyjna\-\_\-db@{\-Tablica\-Asocjacyjna\-\_\-db}}
+}
+
+
+{\ttfamily \#include $<$tablica\-\_\-asocjacyjna\-\_\-db.\-hh$>$}
+
+
+
+\-Diagram współpracy dla \-Tablica\-Asocjacyjna\-\_\-db\-:
+\subsection*{\-Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_tablica_asocjacyjna__db_adbb610341c19c92e7f31d93020407f78}{\-Rozmiar} ()
+\begin{DoxyCompactList}\small\item\em \-Metoda zwracająca informację o ilości danych w tablicy. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tablica_asocjacyjna__db_abdb71c0bef53904ba3538cfafeb1f8a0}{\-Czy\-\_\-jest} (string adres)
+\begin{DoxyCompactList}\small\item\em \-Metoda sprawdzająca istnienie elementu. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tablica_asocjacyjna__db_a7d3ecb28ec20bde2f72e94e104c40779}{\-Dodaj\-Element} (string adres\-\_\-dod, int dane)
+\begin{DoxyCompactList}\small\item\em \-Metoda dodająca elementy do tablicy. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tablica_asocjacyjna__db_a7546f49a47117ad38adcf063f4fed305}{\-Usun\-Element} (string adres)
+\begin{DoxyCompactList}\small\item\em \-Metoda usuwająca element z tablicy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_drzewo__binarne}{\-Drzewo\-\_\-binarne} \hyperlink{class_tablica_asocjacyjna__db_acbff6baa867f8ccd15b2106e0f557c95}{drzewo}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+
+
+\-Definicja w linii 4 pliku tablica\-\_\-asocjacyjna\-\_\-db.\-hh.
+
+
+
+\subsection{\-Dokumentacja funkcji składowych}
+\hypertarget{class_tablica_asocjacyjna__db_abdb71c0bef53904ba3538cfafeb1f8a0}{\index{\-Tablica\-Asocjacyjna\-\_\-db@{\-Tablica\-Asocjacyjna\-\_\-db}!\-Czy\-\_\-jest@{\-Czy\-\_\-jest}}
+\index{\-Czy\-\_\-jest@{\-Czy\-\_\-jest}!TablicaAsocjacyjna_db@{\-Tablica\-Asocjacyjna\-\_\-db}}
+\subsubsection[{\-Czy\-\_\-jest}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Tablica\-Asocjacyjna\-\_\-db\-::\-Czy\-\_\-jest} (
+\begin{DoxyParamCaption}
+\item[{string}]{adres}
+\end{DoxyParamCaption}
+)}}\label{class_tablica_asocjacyjna__db_abdb71c0bef53904ba3538cfafeb1f8a0}
+\-Metoda ta ma za zadanie sprawdzić czy w tablicy jest już zawarty element o podanym adresie.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em adres} & -\/ adres, którego istnienie w tablicy ma sprawdzić funkcja.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+true -\/ gdy element o podanym adresie znajduje się już w tablicy. false -\/ gdy elementu o podanym adresie nie ma w tablicy. 
+\end{DoxyReturn}
+\hypertarget{class_tablica_asocjacyjna__db_a7d3ecb28ec20bde2f72e94e104c40779}{\index{\-Tablica\-Asocjacyjna\-\_\-db@{\-Tablica\-Asocjacyjna\-\_\-db}!\-Dodaj\-Element@{\-Dodaj\-Element}}
+\index{\-Dodaj\-Element@{\-Dodaj\-Element}!TablicaAsocjacyjna_db@{\-Tablica\-Asocjacyjna\-\_\-db}}
+\subsubsection[{\-Dodaj\-Element}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Tablica\-Asocjacyjna\-\_\-db\-::\-Dodaj\-Element} (
+\begin{DoxyParamCaption}
+\item[{string}]{adres\-\_\-dod, }
+\item[{int}]{dane}
+\end{DoxyParamCaption}
+)}}\label{class_tablica_asocjacyjna__db_a7d3ecb28ec20bde2f72e94e104c40779}
+\-Metoda ta ma za zadanie dodać zadaną daną pod określonym adresem do tablicy.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em adres} & -\/ adres, pod którym ma zostać umieszczona dana. \\
+\hline
+\mbox{\tt in}  & {\em dane} & -\/ wartość, która ma zostać umieszczona w tablicy.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+true -\/ gdy element został dodany. false -\/ gdy elementu nie został dodany. 
+\end{DoxyReturn}
+\hypertarget{class_tablica_asocjacyjna__db_adbb610341c19c92e7f31d93020407f78}{\index{\-Tablica\-Asocjacyjna\-\_\-db@{\-Tablica\-Asocjacyjna\-\_\-db}!\-Rozmiar@{\-Rozmiar}}
+\index{\-Rozmiar@{\-Rozmiar}!TablicaAsocjacyjna_db@{\-Tablica\-Asocjacyjna\-\_\-db}}
+\subsubsection[{\-Rozmiar}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Tablica\-Asocjacyjna\-\_\-db\-::\-Rozmiar} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tablica_asocjacyjna__db_adbb610341c19c92e7f31d93020407f78}
+\hypertarget{class_tablica_asocjacyjna__db_a7546f49a47117ad38adcf063f4fed305}{\index{\-Tablica\-Asocjacyjna\-\_\-db@{\-Tablica\-Asocjacyjna\-\_\-db}!\-Usun\-Element@{\-Usun\-Element}}
+\index{\-Usun\-Element@{\-Usun\-Element}!TablicaAsocjacyjna_db@{\-Tablica\-Asocjacyjna\-\_\-db}}
+\subsubsection[{\-Usun\-Element}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Tablica\-Asocjacyjna\-\_\-db\-::\-Usun\-Element} (
+\begin{DoxyParamCaption}
+\item[{string}]{adres}
+\end{DoxyParamCaption}
+)}}\label{class_tablica_asocjacyjna__db_a7546f49a47117ad38adcf063f4fed305}
+\-Metoda ta ma za zadanie usunąć element o zadanym adresie z tablicy. \-W przypadku gdy element o takiej nazwie już istnieje zostaje on podmieniony na nowy.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em adres} & -\/ adres komórki, która ma zostać usunięta.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+true -\/ gdy element został podmieniony. false -\/ gdy elementu nie nie został usunięty. 
+\end{DoxyReturn}
+
+
+\subsection{\-Dokumentacja atrybutów składowych}
+\hypertarget{class_tablica_asocjacyjna__db_acbff6baa867f8ccd15b2106e0f557c95}{\index{\-Tablica\-Asocjacyjna\-\_\-db@{\-Tablica\-Asocjacyjna\-\_\-db}!drzewo@{drzewo}}
+\index{drzewo@{drzewo}!TablicaAsocjacyjna_db@{\-Tablica\-Asocjacyjna\-\_\-db}}
+\subsubsection[{drzewo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Drzewo\-\_\-binarne} {\bf \-Tablica\-Asocjacyjna\-\_\-db\-::drzewo}}}\label{class_tablica_asocjacyjna__db_acbff6baa867f8ccd15b2106e0f557c95}
+
+
+\-Definicja w linii 7 pliku tablica\-\_\-asocjacyjna\-\_\-db.\-hh.
+
+
+
+\-Dokumentacja dla tej klasy została wygenerowana z pliku\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tablica__asocjacyjna__db_8hh}{tablica\-\_\-asocjacyjna\-\_\-db.\-hh}\end{DoxyCompactItemize}

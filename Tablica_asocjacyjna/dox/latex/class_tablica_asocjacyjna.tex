@@ -1,0 +1,272 @@
+\hypertarget{class_tablica_asocjacyjna}{\section{\-Dokumentacja szablonu klasy \-Tablica\-Asocjacyjna$<$ \-T $>$}
+\label{class_tablica_asocjacyjna}\index{\-Tablica\-Asocjacyjna$<$ T $>$@{\-Tablica\-Asocjacyjna$<$ T $>$}}
+}
+
+
+\-Klasa definiujaca tablice asocjacyjna zaimplementowana przy pomocy wektora.  
+
+
+
+
+{\ttfamily \#include $<$tablica\-\_\-asocjacyjna.\-hh$>$}
+
+\subsection*{\-Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries \-\_\-\-Dane}
+\end{DoxyCompactItemize}
+\subsection*{\-Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{class_tablica_asocjacyjna_aa73ffd094410a190b69b0dbe294f0489}{\-Rozmiar} ()
+\begin{DoxyCompactList}\small\item\em \-Metoda zwracająca informację o ilości danych w tablicy. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tablica_asocjacyjna_a21bae8b633b7bde70eab9200de870086}{\-Czy\-\_\-jest} (string adres)
+\begin{DoxyCompactList}\small\item\em \-Metoda sprawdzająca istnienie elementu. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tablica_asocjacyjna_addfeb9ac2475f95e8c43eed5dfad8866}{\-Dodaj\-Element} (string adres, \-T dane)
+\begin{DoxyCompactList}\small\item\em \-Metoda dodająca elementy do tablicy. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tablica_asocjacyjna_afdb88bfafe2bfb4171dd5ecab799b3b3}{\-Usun\-Element} (string adres)
+\begin{DoxyCompactList}\small\item\em \-Metoda usuwająca element z tablicy. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tablica_asocjacyjna_a643d1c054d657c21db830dfe1b5232ab}{\-Zamien} (int pierwszy, int drugi)
+\begin{DoxyCompactList}\small\item\em \-Metoda zamieniająca elementy w tablicy. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tablica_asocjacyjna_a689a3a17ff3a0595ffdefb38b7a2575f}{\-Wyszukaj} (string szukany, int lewy, int \&piwot, int prawy)
+\begin{DoxyCompactList}\small\item\em \-Metoda wyszukująca elementy w tablicy. \end{DoxyCompactList}\item 
+string \hyperlink{class_tablica_asocjacyjna_a9aeec8d0066efa5efce02ef4317d3011}{\-Pobierz\-Adres} (long index)
+\begin{DoxyCompactList}\small\item\em \-Metoda pobierająca adres. \end{DoxyCompactList}\item 
+\-T \& \hyperlink{class_tablica_asocjacyjna_a6d053fdbf4d8bbabbb2f487de8cf261d}{operator\mbox{[}$\,$\mbox{]}} (string adres)
+\begin{DoxyCompactList}\small\item\em \-Przeciążenie operatora \mbox{[}\mbox{]}. \end{DoxyCompactList}\item 
+\-T \& \hyperlink{class_tablica_asocjacyjna_a21688064e4bc890b91f24dbebdab6b9d}{operator\mbox{[}$\,$\mbox{]}} (long index)
+\begin{DoxyCompactList}\small\item\em \-Przeciążenie operatora \mbox{[}\mbox{]}. \end{DoxyCompactList}\item 
+void \hyperlink{class_tablica_asocjacyjna_af08bb1f3933f46688a62f3ad77a08bbd}{sort\-\_\-quicksort} (int left, int right)
+\begin{DoxyCompactList}\small\item\em \-Realizuje sortowanie sybkie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+\subsubsection*{template$<$typename \-T$>$class Tablica\-Asocjacyjna$<$ T $>$}
+
+\-Klasa ta zawiera wewnętrzną strukturę \-\_\-\-Dane, która odpowiada za przechowywanie adresu oraz zawartości określonego pola w tablicy oraz vector, przechowujący obiekty struktury \-Dane. \-Dodatkowo w klasie znajduje się pole typu int -\/ miejsce -\/ na potrzeby wyszukiwania binarnego. 
+
+\-Definicja w linii 21 pliku tablica\-\_\-asocjacyjna.\-hh.
+
+
+
+\subsection{\-Dokumentacja funkcji składowych}
+\hypertarget{class_tablica_asocjacyjna_a21bae8b633b7bde70eab9200de870086}{\index{\-Tablica\-Asocjacyjna@{\-Tablica\-Asocjacyjna}!\-Czy\-\_\-jest@{\-Czy\-\_\-jest}}
+\index{\-Czy\-\_\-jest@{\-Czy\-\_\-jest}!TablicaAsocjacyjna@{\-Tablica\-Asocjacyjna}}
+\subsubsection[{\-Czy\-\_\-jest}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf \-Tablica\-Asocjacyjna}$<$ \-T $>$\-::{\bf \-Czy\-\_\-jest} (
+\begin{DoxyParamCaption}
+\item[{string}]{adres}
+\end{DoxyParamCaption}
+)}}\label{class_tablica_asocjacyjna_a21bae8b633b7bde70eab9200de870086}
+\-Metoda ta ma za zadanie sprawdzić czy w tablicy jest już zawarty element o podanym adresie.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em adres} & -\/ adres, którego istnienie w tablicy ma sprawdzić funkcja.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+true -\/ gdy element o podanym adresie znajduje się już w tablicy. false -\/ gdy elementu o podanym adresie nie ma w tablicy. 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 163 pliku tablica\-\_\-asocjacyjna.\-hh.
+
+\hypertarget{class_tablica_asocjacyjna_addfeb9ac2475f95e8c43eed5dfad8866}{\index{\-Tablica\-Asocjacyjna@{\-Tablica\-Asocjacyjna}!\-Dodaj\-Element@{\-Dodaj\-Element}}
+\index{\-Dodaj\-Element@{\-Dodaj\-Element}!TablicaAsocjacyjna@{\-Tablica\-Asocjacyjna}}
+\subsubsection[{\-Dodaj\-Element}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf \-Tablica\-Asocjacyjna}$<$ \-T $>$\-::{\bf \-Dodaj\-Element} (
+\begin{DoxyParamCaption}
+\item[{string}]{adres, }
+\item[{\-T}]{dane}
+\end{DoxyParamCaption}
+)}}\label{class_tablica_asocjacyjna_addfeb9ac2475f95e8c43eed5dfad8866}
+\-Metoda ta ma za zadanie dodać zadaną daną pod określonym adresem do tablicy.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em adres} & -\/ adres, pod którym ma zostać umieszczona dana. \\
+\hline
+\mbox{\tt in}  & {\em dane} & -\/ wartość, która ma zostać umieszczona w tablicy.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+true -\/ gdy element został dodany. false -\/ gdy elementu nie został dodany. 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 174 pliku tablica\-\_\-asocjacyjna.\-hh.
+
+\hypertarget{class_tablica_asocjacyjna_a6d053fdbf4d8bbabbb2f487de8cf261d}{\index{\-Tablica\-Asocjacyjna@{\-Tablica\-Asocjacyjna}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!TablicaAsocjacyjna@{\-Tablica\-Asocjacyjna}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ \-T \& {\bf \-Tablica\-Asocjacyjna}$<$ \-T $>$\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{string}]{adres}
+\end{DoxyParamCaption}
+)}}\label{class_tablica_asocjacyjna_a6d053fdbf4d8bbabbb2f487de8cf261d}
+\-Przeciążenie tego operatora zwraca wartość pola o podanym adresie.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em adres} & -\/ adres pola, które ma zostać zwrócone. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+dane -\/ wartość danego pola. 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 247 pliku tablica\-\_\-asocjacyjna.\-hh.
+
+\hypertarget{class_tablica_asocjacyjna_a21688064e4bc890b91f24dbebdab6b9d}{\index{\-Tablica\-Asocjacyjna@{\-Tablica\-Asocjacyjna}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!TablicaAsocjacyjna@{\-Tablica\-Asocjacyjna}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ \-T \& {\bf \-Tablica\-Asocjacyjna}$<$ \-T $>$\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{long}]{index}
+\end{DoxyParamCaption}
+)}}\label{class_tablica_asocjacyjna_a21688064e4bc890b91f24dbebdab6b9d}
+\-Przeciążenie tego operatora zwraca wartość pola o podanym indeksie.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em index} & -\/ indeks pola, które ma zostać zwrócone. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+dane -\/ wartość danego pola. 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 263 pliku tablica\-\_\-asocjacyjna.\-hh.
+
+\hypertarget{class_tablica_asocjacyjna_a9aeec8d0066efa5efce02ef4317d3011}{\index{\-Tablica\-Asocjacyjna@{\-Tablica\-Asocjacyjna}!\-Pobierz\-Adres@{\-Pobierz\-Adres}}
+\index{\-Pobierz\-Adres@{\-Pobierz\-Adres}!TablicaAsocjacyjna@{\-Tablica\-Asocjacyjna}}
+\subsubsection[{\-Pobierz\-Adres}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ string {\bf \-Tablica\-Asocjacyjna}$<$ \-T $>$\-::{\bf \-Pobierz\-Adres} (
+\begin{DoxyParamCaption}
+\item[{long}]{index}
+\end{DoxyParamCaption}
+)}}\label{class_tablica_asocjacyjna_a9aeec8d0066efa5efce02ef4317d3011}
+\-Metoda ta pobiera adres w postaci string z pola o zadanym indeksie.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em index} & -\/ indeks liczbowy danego pola. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+adres pola. 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 238 pliku tablica\-\_\-asocjacyjna.\-hh.
+
+\hypertarget{class_tablica_asocjacyjna_aa73ffd094410a190b69b0dbe294f0489}{\index{\-Tablica\-Asocjacyjna@{\-Tablica\-Asocjacyjna}!\-Rozmiar@{\-Rozmiar}}
+\index{\-Rozmiar@{\-Rozmiar}!TablicaAsocjacyjna@{\-Tablica\-Asocjacyjna}}
+\subsubsection[{\-Rozmiar}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ long {\bf \-Tablica\-Asocjacyjna}$<$ \-T $>$\-::{\bf \-Rozmiar} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tablica_asocjacyjna_aa73ffd094410a190b69b0dbe294f0489}
+
+
+\-Definicja w linii 157 pliku tablica\-\_\-asocjacyjna.\-hh.
+
+\hypertarget{class_tablica_asocjacyjna_af08bb1f3933f46688a62f3ad77a08bbd}{\index{\-Tablica\-Asocjacyjna@{\-Tablica\-Asocjacyjna}!sort\-\_\-quicksort@{sort\-\_\-quicksort}}
+\index{sort\-\_\-quicksort@{sort\-\_\-quicksort}!TablicaAsocjacyjna@{\-Tablica\-Asocjacyjna}}
+\subsubsection[{sort\-\_\-quicksort}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf \-Tablica\-Asocjacyjna}$<$ \-T $>$\-::{\bf sort\-\_\-quicksort} (
+\begin{DoxyParamCaption}
+\item[{int}]{left, }
+\item[{int}]{right}
+\end{DoxyParamCaption}
+)}}\label{class_tablica_asocjacyjna_af08bb1f3933f46688a62f3ad77a08bbd}
+\-Funkcja ta ma za zadanie posortowac wektor metoda quicksort.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em left} & -\/ zmienna typu int okresleslajaca poczatkowe pole sortowanej tablicy. \\
+\hline
+\mbox{\tt in}  & {\em right} & -\/ zmienna typu int okresleslajaca koncowe pole sortowanej tablicy. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 291 pliku tablica\-\_\-asocjacyjna.\-hh.
+
+\hypertarget{class_tablica_asocjacyjna_afdb88bfafe2bfb4171dd5ecab799b3b3}{\index{\-Tablica\-Asocjacyjna@{\-Tablica\-Asocjacyjna}!\-Usun\-Element@{\-Usun\-Element}}
+\index{\-Usun\-Element@{\-Usun\-Element}!TablicaAsocjacyjna@{\-Tablica\-Asocjacyjna}}
+\subsubsection[{\-Usun\-Element}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf \-Tablica\-Asocjacyjna}$<$ \-T $>$\-::{\bf \-Usun\-Element} (
+\begin{DoxyParamCaption}
+\item[{string}]{adres}
+\end{DoxyParamCaption}
+)}}\label{class_tablica_asocjacyjna_afdb88bfafe2bfb4171dd5ecab799b3b3}
+\-Metoda ta ma za zadanie usunąć element o zadanym adresie z tablicy. \-W przypadku gdy element o takiej nazwie już istnieje zostaje on podmieniony na nowy.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em adres} & -\/ adres komórki, która ma zostać usunięta.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+true -\/ gdy element został podmieniony. false -\/ gdy elementu nie nie został usunięty. 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 195 pliku tablica\-\_\-asocjacyjna.\-hh.
+
+\hypertarget{class_tablica_asocjacyjna_a689a3a17ff3a0595ffdefb38b7a2575f}{\index{\-Tablica\-Asocjacyjna@{\-Tablica\-Asocjacyjna}!\-Wyszukaj@{\-Wyszukaj}}
+\index{\-Wyszukaj@{\-Wyszukaj}!TablicaAsocjacyjna@{\-Tablica\-Asocjacyjna}}
+\subsubsection[{\-Wyszukaj}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf \-Tablica\-Asocjacyjna}$<$ \-T $>$\-::{\bf \-Wyszukaj} (
+\begin{DoxyParamCaption}
+\item[{string}]{szukany, }
+\item[{int}]{lewy, }
+\item[{int \&}]{piwot, }
+\item[{int}]{prawy}
+\end{DoxyParamCaption}
+)}}\label{class_tablica_asocjacyjna_a689a3a17ff3a0595ffdefb38b7a2575f}
+\-Metoda ta realizuje wyszukiwanie binarne w posortowanej tablicy. \-Efekt jej działania, czyli numer pola, w którym znajduje się szukany element, zapisywany jest w polu \char`\"{}miejsce\char`\"{} w klasie \hyperlink{class_tablica_asocjacyjna}{\-Tablica\-Asocjacyjna}.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em szukany} & -\/ adres szukanego pola. \\
+\hline
+\mbox{\tt in}  & {\em lewy} & -\/ lewa granica przeszukiwanej tablicy. \\
+\hline
+\mbox{\tt in}  & {\em piwot} & -\/ element dzielący tablicę. \\
+\hline
+\mbox{\tt in}  & {\em prawy} & -\/ prawa granica przeszukiwanej tablicy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+true -\/ gdy element został znaleziony. false -\/ gdy elementy nie został znaleziony. 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 211 pliku tablica\-\_\-asocjacyjna.\-hh.
+
+\hypertarget{class_tablica_asocjacyjna_a643d1c054d657c21db830dfe1b5232ab}{\index{\-Tablica\-Asocjacyjna@{\-Tablica\-Asocjacyjna}!\-Zamien@{\-Zamien}}
+\index{\-Zamien@{\-Zamien}!TablicaAsocjacyjna@{\-Tablica\-Asocjacyjna}}
+\subsubsection[{\-Zamien}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf \-Tablica\-Asocjacyjna}$<$ \-T $>$\-::{\bf \-Zamien} (
+\begin{DoxyParamCaption}
+\item[{int}]{pierwszy, }
+\item[{int}]{drugi}
+\end{DoxyParamCaption}
+)}}\label{class_tablica_asocjacyjna_a643d1c054d657c21db830dfe1b5232ab}
+\-Metoda ta ma za zadanie zamienić miejscami dwa podane elementy tablicy.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em pierwszy} & -\/ numer pola tablicy zajmowanego przez pierwszy z elementów. \\
+\hline
+\mbox{\tt in}  & {\em drugi} & -\/ numer pola tablicy zajmowanego przez drugi z elementów. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+true -\/ gdy elementy zostały zamienione miejscami. false -\/ gdy elementy nie zostały zamienione miejscami. 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 274 pliku tablica\-\_\-asocjacyjna.\-hh.
+
+
+
+\-Dokumentacja dla tej klasy została wygenerowana z pliku\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tablica__asocjacyjna_8hh}{tablica\-\_\-asocjacyjna.\-hh}\end{DoxyCompactItemize}

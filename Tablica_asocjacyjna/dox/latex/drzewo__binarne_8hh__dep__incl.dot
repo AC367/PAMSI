@@ -1,0 +1,14 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="drzewo_binarne.hh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="tablica_asocjacyjna_db.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tablica__asocjacyjna__db_8hh.html"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html",tooltip="Zawiera definicje glownej funkcji programu."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="drzewo_binarne.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$drzewo__binarne_8cpp.html",tooltip="Definicje metod klasy Drzewo_binarne."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="funkcje.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html",tooltip="Zawiera definicje funkcji uzytych w programie."];
+}

@@ -1,0 +1,195 @@
+\hypertarget{class_tablica__haszujaca}{\section{\-Dokumentacja klasy \-Tablica\-\_\-haszujaca}
+\label{class_tablica__haszujaca}\index{\-Tablica\-\_\-haszujaca@{\-Tablica\-\_\-haszujaca}}
+}
+
+
+\-Klasa definiująca tablicę haszującą realizującą implementację tablicy asocjacyjnej.  
+
+
+
+
+{\ttfamily \#include $<$tablica\-\_\-haszujaca.\-hh$>$}
+
+\subsection*{\-Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tablica__haszujaca_a10787b7333fcb7fe360ba89854b3351f}{\-Tablica\-\_\-haszujaca} (int il)
+\begin{DoxyCompactList}\small\item\em \-Kostruktor. \end{DoxyCompactList}\item 
+\hyperlink{class_element}{\-Element} $\ast$ \hyperlink{class_tablica__haszujaca_a7d0fee5b9be90c0403d74821706eaa65}{operator\mbox{[}$\,$\mbox{]}} (string adres)
+\begin{DoxyCompactList}\small\item\em \-Przeładowanie operatora \mbox{[}\mbox{]}. \end{DoxyCompactList}\item 
+void \hyperlink{class_tablica__haszujaca_af7f6a8c598a22328c585c849754492b7}{dodaj} (string adres, string dane)
+\begin{DoxyCompactList}\small\item\em \-Dodaje elementy. \end{DoxyCompactList}\item 
+void \hyperlink{class_tablica__haszujaca_afc4feffb08feba48c17f72af2f43bf03}{usun} (string adres)
+\begin{DoxyCompactList}\small\item\em \-Usuwa elementy. \end{DoxyCompactList}\item 
+\hyperlink{class_element}{\-Element} $\ast$ \hyperlink{class_tablica__haszujaca_ac166065397ac53014b3453543c800337}{znajdz} (string adres)
+\begin{DoxyCompactList}\small\item\em \-Znajduje elementy. \end{DoxyCompactList}\item 
+int \hyperlink{class_tablica__haszujaca_ac8dbd2993ea46777b616a8b3a0fc20a3}{haszuj} (string adres)
+\begin{DoxyCompactList}\small\item\em \-Tworzy klucz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Przyjaciele}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_tablica__haszujaca_a016b821f88c7c0a2de1451c175cefbf9}{\-Element}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+\-Klasa ta zawiera wskaźnik na obiekt klasy \hyperlink{class_element}{\-Element}, pole przechowujące informację o rozmairze oraz deklaracje konstruktora i metod. 
+
+\-Definicja w linii 57 pliku tablica\-\_\-haszujaca.\-hh.
+
+
+
+\subsection{\-Dokumentacja konstruktora i destruktora}
+\hypertarget{class_tablica__haszujaca_a10787b7333fcb7fe360ba89854b3351f}{\index{\-Tablica\-\_\-haszujaca@{\-Tablica\-\_\-haszujaca}!\-Tablica\-\_\-haszujaca@{\-Tablica\-\_\-haszujaca}}
+\index{\-Tablica\-\_\-haszujaca@{\-Tablica\-\_\-haszujaca}!Tablica_haszujaca@{\-Tablica\-\_\-haszujaca}}
+\subsubsection[{\-Tablica\-\_\-haszujaca}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Tablica\-\_\-haszujaca\-::\-Tablica\-\_\-haszujaca} (
+\begin{DoxyParamCaption}
+\item[{int}]{il}
+\end{DoxyParamCaption}
+)}}\label{class_tablica__haszujaca_a10787b7333fcb7fe360ba89854b3351f}
+\-Inicjuje pola obiektu klasy \hyperlink{class_tablica__haszujaca}{\-Tablica\-\_\-haszujaca}. 
+
+\-Definicja w linii 8 pliku tablica\-\_\-haszujaca.\-cpp.
+
+
+
+\subsection{\-Dokumentacja funkcji składowych}
+\hypertarget{class_tablica__haszujaca_af7f6a8c598a22328c585c849754492b7}{\index{\-Tablica\-\_\-haszujaca@{\-Tablica\-\_\-haszujaca}!dodaj@{dodaj}}
+\index{dodaj@{dodaj}!Tablica_haszujaca@{\-Tablica\-\_\-haszujaca}}
+\subsubsection[{dodaj}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Tablica\-\_\-haszujaca\-::dodaj} (
+\begin{DoxyParamCaption}
+\item[{string}]{adres, }
+\item[{string}]{dane}
+\end{DoxyParamCaption}
+)}}\label{class_tablica__haszujaca_af7f6a8c598a22328c585c849754492b7}
+\-Ta metoda ma za zadanie dodać element o określonym adresie do tablicy asocjacyjnej. \-W przypaku, gdy element o podanym adresie (lub kluczu) już istnieje następuje dopisanie kolejnej wartości do listy przypisanej danemu adresowi.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em adres} & -\/ adres pod którym ma zostać umieszczony element. \\
+\hline
+\mbox{\tt in}  & {\em dane} & -\/ wartość, która ma zostać umieszczona w tablicy. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 14 pliku tablica\-\_\-haszujaca.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
+\hypertarget{class_tablica__haszujaca_ac8dbd2993ea46777b616a8b3a0fc20a3}{\index{\-Tablica\-\_\-haszujaca@{\-Tablica\-\_\-haszujaca}!haszuj@{haszuj}}
+\index{haszuj@{haszuj}!Tablica_haszujaca@{\-Tablica\-\_\-haszujaca}}
+\subsubsection[{haszuj}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Tablica\-\_\-haszujaca\-::haszuj} (
+\begin{DoxyParamCaption}
+\item[{string}]{adres}
+\end{DoxyParamCaption}
+)}}\label{class_tablica__haszujaca_ac8dbd2993ea46777b616a8b3a0fc20a3}
+\-Ta metoda tworzy klucz (indeks) na podstawie adresu elementu.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em adres} & -\/ adres elementu. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 44 pliku tablica\-\_\-haszujaca.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\hypertarget{class_tablica__haszujaca_a7d0fee5b9be90c0403d74821706eaa65}{\index{\-Tablica\-\_\-haszujaca@{\-Tablica\-\_\-haszujaca}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Tablica_haszujaca@{\-Tablica\-\_\-haszujaca}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Element} $\ast$ \-Tablica\-\_\-haszujaca\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{string}]{adres}
+\end{DoxyParamCaption}
+)}}\label{class_tablica__haszujaca_a7d0fee5b9be90c0403d74821706eaa65}
+\-Ten przeładowany operator odpowiada za zwrócenie obiektu klasy \hyperlink{class_element}{\-Element} o podanym adresie.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em adres} & -\/ adres wywoływanego obiektu. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 59 pliku tablica\-\_\-haszujaca.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
+\hypertarget{class_tablica__haszujaca_afc4feffb08feba48c17f72af2f43bf03}{\index{\-Tablica\-\_\-haszujaca@{\-Tablica\-\_\-haszujaca}!usun@{usun}}
+\index{usun@{usun}!Tablica_haszujaca@{\-Tablica\-\_\-haszujaca}}
+\subsubsection[{usun}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Tablica\-\_\-haszujaca\-::usun} (
+\begin{DoxyParamCaption}
+\item[{string}]{adres}
+\end{DoxyParamCaption}
+)}}\label{class_tablica__haszujaca_afc4feffb08feba48c17f72af2f43bf03}
+\-Ta metoda ma zmienia zawartość pola \char`\"{}zajety\char`\"{} elementu tablicy, przez co umożliwia jego nadpisanie.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em adres} & -\/ adres usuwanego elementu. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 39 pliku tablica\-\_\-haszujaca.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
+\hypertarget{class_tablica__haszujaca_ac166065397ac53014b3453543c800337}{\index{\-Tablica\-\_\-haszujaca@{\-Tablica\-\_\-haszujaca}!znajdz@{znajdz}}
+\index{znajdz@{znajdz}!Tablica_haszujaca@{\-Tablica\-\_\-haszujaca}}
+\subsubsection[{znajdz}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Element} $\ast$ {\bf \-Tablica\-\_\-haszujaca\-::znajdz} (
+\begin{DoxyParamCaption}
+\item[{string}]{adres}
+\end{DoxyParamCaption}
+)}}\label{class_tablica__haszujaca_ac166065397ac53014b3453543c800337}
+\-Ta metoda ma za zadanie znaleźć i zwrócić obiekt o podanym adresie.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em adres} & -\/ adres szukanego elementu. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 53 pliku tablica\-\_\-haszujaca.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+
+
+\subsection{\-Dokumentacja przyjaciół i funkcji związanych}
+\hypertarget{class_tablica__haszujaca_a016b821f88c7c0a2de1451c175cefbf9}{\index{\-Tablica\-\_\-haszujaca@{\-Tablica\-\_\-haszujaca}!\-Element@{\-Element}}
+\index{\-Element@{\-Element}!Tablica_haszujaca@{\-Tablica\-\_\-haszujaca}}
+\subsubsection[{\-Element}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf \-Element}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{class_tablica__haszujaca_a016b821f88c7c0a2de1451c175cefbf9}
+
+
+\-Definicja w linii 65 pliku tablica\-\_\-haszujaca.\-hh.
+
+
+
+\-Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tablica__haszujaca_8hh}{tablica\-\_\-haszujaca.\-hh}\item 
+\hyperlink{tablica__haszujaca_8cpp}{tablica\-\_\-haszujaca.\-cpp}\end{DoxyCompactItemize}

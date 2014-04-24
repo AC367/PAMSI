@@ -1,0 +1,91 @@
+\documentclass[a4paper]{book}
+\usepackage{makeidx}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage[table]{xcolor}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\else
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\usepackage{pspicture}
+\fi
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage[T1]{fontenc}
+
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{sectsty}
+\usepackage[titles]{tocloft}
+\usepackage{doxygen}
+\lstset{language=C++,inputencoding=utf8,basicstyle=\footnotesize,breaklines=true,breakatwhitespace=true,tabsize=8,numbers=left }
+\makeindex
+\setcounter{tocdepth}{3}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\familydefault}{\sfdefault}
+\hfuzz=15pt
+\setlength{\emergencystretch}{15pt}
+\hbadness=750
+\tolerance=750
+\begin{document}
+\hypersetup{pageanchor=false,citecolor=blue}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large \-My \-Project }\\
+\vspace*{1cm}
+{\large \-Wygenerowano przez Doxygen 1.7.6.1}\\
+\vspace*{0.5cm}
+{\small Wed Apr 23 2014 16:40:17}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true,citecolor=blue}
+\chapter{\-Strona główna}
+\label{index}\hypertarget{index}{}\input{index}
+\chapter{\-Indeks klas}
+\input{annotated}
+\chapter{\-Indeks plików}
+\input{files}
+\chapter{\-Dokumentacja klas}
+\input{class_drzewo__binarne}
+\input{class_element}
+\input{struct_drzewo__binarne_1_1galaz}
+\input{class_tablica__haszujaca}
+\input{class_tablica_asocjacyjna}
+\input{class_tablica_asocjacyjna__db}
+\chapter{\-Dokumentacja plików}
+\input{drzewo__binarne_8cpp}
+\input{drzewo__binarne_8hh}
+\input{funkcje_8cpp}
+\input{funkcje_8hh}
+\input{main_8cpp}
+\input{tablica__asocjacyjna_8hh}
+\input{tablica__asocjacyjna__db_8hh}
+\input{tablica__haszujaca_8cpp}
+\input{tablica__haszujaca_8hh}
+\printindex
+\end{document}

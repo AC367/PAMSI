@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Graf: Plik źródłowy graf.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Graf
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">graf.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="graf_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00002"></a>00002 <span class="preprocessor">#include &lt;iomanip&gt;</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00004"></a>00004 
+<a name="l00005"></a>00005 <span class="keyword">using namespace </span>std;
+<a name="l00006"></a>00006 
+<a name="l00023"></a><a class="code" href="class_graf.html">00023</a> <span class="keyword">class </span><a class="code" href="class_graf.html" title="Klasa definiująca graf.">Graf</a>
+<a name="l00024"></a>00024 {
+<a name="l00025"></a>00025         <span class="keyword">public</span>:
+<a name="l00026"></a>00026         
+<a name="l00027"></a><a class="code" href="class_graf.html#a55dab6e3ffdfbddf0b90cfb2c3eb8a12">00027</a>         <span class="keywordtype">char</span> ** <a class="code" href="class_graf.html#a55dab6e3ffdfbddf0b90cfb2c3eb8a12">_tab_sasiedztwa</a>;
+<a name="l00028"></a>00028         <span class="comment">//int *_tab_wierzcholkow;</span>
+<a name="l00029"></a>00029         <span class="comment">//int _liczba_wierzcholkow;</span>
+<a name="l00030"></a>00030         
+<a name="l00038"></a><a class="code" href="struct_graf_1_1__wierzcholek.html">00038</a>         <span class="keyword">struct </span><a class="code" href="struct_graf_1_1__wierzcholek.html" title="Struktura realizująca wierzchołki grafu.">_wierzcholek</a>
+<a name="l00039"></a>00039         {
+<a name="l00040"></a><a class="code" href="struct_graf_1_1__wierzcholek.html#a157d209583d1813f1a609cfb08682ffe">00040</a>                 <span class="keywordtype">bool</span> <a class="code" href="struct_graf_1_1__wierzcholek.html#a157d209583d1813f1a609cfb08682ffe">_czy_istnieje</a>;
+<a name="l00041"></a><a class="code" href="struct_graf_1_1__wierzcholek.html#a818c370b6e8a476f6fb9f89ccac01e2f">00041</a>                 <span class="keywordtype">bool</span> <a class="code" href="struct_graf_1_1__wierzcholek.html#a818c370b6e8a476f6fb9f89ccac01e2f">_czy_odwiedzony</a>;
+<a name="l00042"></a><a class="code" href="struct_graf_1_1__wierzcholek.html#a966ecd51ba3e337c8b67587cffab7f9a">00042</a>                 <span class="keywordtype">int</span> <a class="code" href="struct_graf_1_1__wierzcholek.html#a966ecd51ba3e337c8b67587cffab7f9a">_numer</a>;
+<a name="l00043"></a>00043                 <span class="comment">//char _dane;</span>
+<a name="l00044"></a>00044         };
+<a name="l00045"></a>00045         
+<a name="l00052"></a><a class="code" href="struct_graf_1_1__krawedz.html">00052</a>         <span class="keyword">struct </span><a class="code" href="struct_graf_1_1__krawedz.html" title="Struktura realizująca krawędzie grafu.">_krawedz</a>
+<a name="l00053"></a>00053         {
+<a name="l00054"></a><a class="code" href="struct_graf_1_1__krawedz.html#adba487ff1b27ab413c139dff7ef02313">00054</a>                 <a class="code" href="struct_graf_1_1__wierzcholek.html" title="Struktura realizująca wierzchołki grafu.">_wierzcholek</a> * <a class="code" href="struct_graf_1_1__krawedz.html#adba487ff1b27ab413c139dff7ef02313">pierwszy</a>;
+<a name="l00055"></a><a class="code" href="struct_graf_1_1__krawedz.html#a089375425bc7f1cb193f02f7bae87e4a">00055</a>                 <a class="code" href="struct_graf_1_1__wierzcholek.html" title="Struktura realizująca wierzchołki grafu.">_wierzcholek</a> * <a class="code" href="struct_graf_1_1__krawedz.html#a089375425bc7f1cb193f02f7bae87e4a">drugi</a>;
+<a name="l00056"></a><a class="code" href="struct_graf_1_1__krawedz.html#a32556165c01ba902034186551780c7f4">00056</a>                 <span class="keywordtype">int</span> <a class="code" href="struct_graf_1_1__krawedz.html#a32556165c01ba902034186551780c7f4">waga</a>;
+<a name="l00057"></a>00057         };
+<a name="l00058"></a>00058         
+<a name="l00066"></a><a class="code" href="struct_graf_1_1__lista___b_f_s.html">00066</a>         <span class="keyword">struct </span><a class="code" href="struct_graf_1_1__lista___b_f_s.html" title="Struktura realizująca listę jednokierunkową dla algorytmu wyszukującego BFT.">_lista_BFS</a>
+<a name="l00067"></a>00067         {
+<a name="l00068"></a><a class="code" href="struct_graf_1_1__lista___b_f_s.html#ad101a4841ac1d7c783fc24c4ef6790c1">00068</a>                 <a class="code" href="struct_graf_1_1__lista___b_f_s.html" title="Struktura realizująca listę jednokierunkową dla algorytmu wyszukującego BFT.">_lista_BFS</a> * <a class="code" href="struct_graf_1_1__lista___b_f_s.html#ad101a4841ac1d7c783fc24c4ef6790c1">_nastepny</a>;
+<a name="l00069"></a><a class="code" href="struct_graf_1_1__lista___b_f_s.html#a35804941f3d4d18c8afc8867e2204085">00069</a>                 <span class="keywordtype">int</span> <a class="code" href="struct_graf_1_1__lista___b_f_s.html#a35804941f3d4d18c8afc8867e2204085">_dane</a>;
+<a name="l00070"></a>00070         };
+<a name="l00071"></a>00071         
+<a name="l00072"></a><a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">00072</a>         vector&lt;_wierzcholek&gt; <a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>;
+<a name="l00073"></a><a class="code" href="class_graf.html#a79c79b147cde2bb403d3aa27db8f9f22">00073</a>         vector&lt;_krawedz&gt; <a class="code" href="class_graf.html#a79c79b147cde2bb403d3aa27db8f9f22">_wektor_krawedzi</a>;
+<a name="l00074"></a>00074 
+<a name="l00082"></a>00082         <span class="keywordtype">void</span> Dodaj_wierzcholek(<span class="keywordtype">int</span> v);
+<a name="l00083"></a>00083         
+<a name="l00091"></a>00091         <span class="keywordtype">void</span> Usun_wierzcholek(<span class="keywordtype">int</span> wierzcholek);
+<a name="l00092"></a>00092         
+<a name="l00102"></a>00102         <span class="keywordtype">void</span> Dodaj_krawedz(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2, <span class="keywordtype">int</span> waga);
+<a name="l00103"></a>00103         
+<a name="l00112"></a>00112         <span class="keywordtype">void</span> Usun_krawedz(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2);
+<a name="l00113"></a>00113         
+<a name="l00126"></a>00126         <span class="keywordtype">bool</span> Czy_polaczone(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2);
+<a name="l00127"></a>00127         
+<a name="l00138"></a>00138         <span class="keywordtype">bool</span> Czy_istnieje(<span class="keywordtype">int</span> v);
+<a name="l00139"></a>00139         
+<a name="l00146"></a>00146         <span class="keywordtype">void</span> Wypisz_macierz();
+<a name="l00147"></a>00147         
+<a name="l00156"></a>00156         <span class="keywordtype">void</span> Sasiedztwo(<span class="keywordtype">int</span> v);
+<a name="l00157"></a>00157         
+<a name="l00166"></a>00166         <span class="keywordtype">void</span> DFS(<span class="keywordtype">int</span> poczatkowy, <span class="keywordtype">int</span> szukany);
+<a name="l00167"></a>00167         
+<a name="l00176"></a>00176         <span class="keywordtype">void</span> BFS(<span class="keywordtype">int</span> poczatkowy, <span class="keywordtype">int</span> szukany);
+<a name="l00177"></a>00177 };
+</pre></div></div><!-- contents -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Sun May 11 2014 14:03:26 dla Graf programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

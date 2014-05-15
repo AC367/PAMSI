@@ -14,7 +14,7 @@ void Graf::Dodaj_wierzcholek(int v)
 	_wektor_wierzcholkow[v]._czy_istnieje=true;
 	_wektor_wierzcholkow[v]._numer=v;
 	
-	if(v==0)
+	if(_wektor_wierzcholkow.size()==0)
 	{
 		_tab_sasiedztwa = new char * [_wektor_wierzcholkow.size()];    // Tworzymy tablicę wskaźników
 		for(unsigned int i = 0; i < _wektor_wierzcholkow.size(); i++)

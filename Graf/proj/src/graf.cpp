@@ -182,14 +182,14 @@ bool Graf::Czy_istnieje(int v)
 	else 
 		return false;
 }
-
+/*
 void Graf::DFS(int poczatkowy, int szukany)
 {
 	_wektor_wierzcholkow[poczatkowy]._czy_odwiedzony=true;
 	
 	if(poczatkowy==szukany)
 	{
-		cout<<"DFT: Znaleziono!"<<endl;
+		cout<<"DFS: Znaleziono!"<<endl;
 		for(int i=0; i<(int)_wektor_wierzcholkow.size(); i++)
 			_wektor_wierzcholkow[i]._czy_odwiedzony=false;
 	}
@@ -199,6 +199,48 @@ void Graf::DFS(int poczatkowy, int szukany)
 			if(_tab_sasiedztwa[poczatkowy][i]==1 && _wektor_wierzcholkow[i]._czy_odwiedzony==false)
 				DFS(i, szukany);
 	}		
+}*/
+
+int Graf::Nastepny_DFS(int v)
+{
+	int i;
+ 
+	for (i=_wektor_wierzcholkow.size()-1;i>=0;i--)
+		if ((_tab_sasiedztwa[i][v]==1)&&(_wektor_wierzcholkow[i]._czy_odwiedzony==false))
+		{
+			_wektor_wierzcholkow[i]._czy_odwiedzony=true;
+			return(i);
+		}
+	return(-1);
+}
+
+void Graf::DFS(int v, int szukany)
+{
+	int u;
+	int nastepny;
+	
+	if(v==szukany)
+	{
+		cout<<"DFS: Znaleziono! Element: "<<v<<endl;
+		for(int i=0; i<(int)_wektor_wierzcholkow.size(); i++)
+			_wektor_wierzcholkow[i]._czy_odwiedzony=false;
+	}
+	else
+	{
+	_wektor_wierzcholkow[v]._czy_odwiedzony=true;
+	nastepny=Nastepny_DFS(v);
+	while (nastepny!=-1)
+	{
+		_stos_DFS.push(nastepny);
+		nastepny=Nastepny_DFS(v);
+	}
+	if (!_stos_DFS.empty())
+	{
+		u=_stos_DFS.top();
+		_stos_DFS.pop();
+		DFS(u, szukany);
+	}
+ }
 }
 
 void Graf::BFS(int poczatkowy, int szukany)

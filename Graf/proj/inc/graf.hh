@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <vector>
+#include <stack>
 
 using namespace std;
 
@@ -69,6 +70,7 @@ class Graf
 		int _dane;
 	};
 	
+	stack<int> _stos_DFS;
 	vector<_wierzcholek> _wektor_wierzcholkow;
 	vector<_krawedz> _wektor_krawedzi;
 
@@ -154,6 +156,18 @@ class Graf
  * @param [in] v - numer wierzchołka.
  */
 	void Sasiedztwo(int v);
+	
+/*!
+ * \brief Funkcja pomocnicza dla algorytmu DFS.
+ * 
+ * Metoda ta realizuje dobieranie następnego wierzchołka dla algorytmu
+ * DFS.
+ * 
+ * @param [in] v - numer wierzchołka, od którego algorytm zaczyna przebieg.
+ * \return i - numer następnego wierzchołka.
+ * 		  -1 - gdy nie istnieje następny wierzchołek.
+ */
+	int Nastepny_DFS(int v);
 	
 /*!
  * \brief Algorytm DFS.

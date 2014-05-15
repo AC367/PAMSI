@@ -7,9 +7,14 @@
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-
-<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
@@ -75,6 +80,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
     </ul>
   </div>
 </div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('class_graf.html','');
+</script>
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Komponenty</a> &#124;
@@ -85,6 +103,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
 </div><!--header-->
 <div class="contents">
 <!-- doxytag: class="Graf" -->
+<p>Klasa definiująca graf.  
+ <a href="class_graf.html#details">Więcej...</a></p>
+
 <p><code>#include &lt;<a class="el" href="graf_8hh_source.html">graf.hh</a>&gt;</code></p>
 
 <p><a href="class_graf-members.html">Lista wszystkich składowych.</a></p>
@@ -100,25 +121,38 @@ Komponenty</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#a1d04219ee7346afb627353c9d57b8cb2">Dodaj_wierzcholek</a> (int v)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje wierzchołek.  <a href="#a1d04219ee7346afb627353c9d57b8cb2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#ad1091bfe67b16460cd64aebdcbb5b521">Usun_wierzcholek</a> (int wierzcholek)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Usuwa wierzchołek.  <a href="#ad1091bfe67b16460cd64aebdcbb5b521"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#ae12b5623e92fa86ff51d51db1804e793">Dodaj_krawedz</a> (int v1, int v2, int waga)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje krawędź.  <a href="#ae12b5623e92fa86ff51d51db1804e793"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#af2ca22dd1730ce9067e484cf21db5b3f">Usun_krawedz</a> (int v1, int v2)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Usuwa krawędź.  <a href="#af2ca22dd1730ce9067e484cf21db5b3f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#affe4be381a025ca350ccc86ff68ea9d1">Czy_polaczone</a> (int v1, int v2)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza połączenie między dwoma wierzchołkami.  <a href="#affe4be381a025ca350ccc86ff68ea9d1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#a922eadf981e7dcd36bdbbdac102ee8e7">Czy_istnieje</a> (int v)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza istnienie wierzchołka.  <a href="#a922eadf981e7dcd36bdbbdac102ee8e7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#a284d7f2e4bab1832220ce41fdef5d024">Wypisz_macierz</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Wypisuje macierz sąsiedztwa.  <a href="#a284d7f2e4bab1832220ce41fdef5d024"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#afc14626d6712964761d749568b0ec5af">Sasiedztwo</a> (int v)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza sąsiedztwo wierzchołka.  <a href="#afc14626d6712964761d749568b0ec5af"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#a305624fe0009aab3fbbcb1a849de3786">Nastepny_DFS</a> (int v)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja pomocnicza dla algorytmu DFS.  <a href="#a305624fe0009aab3fbbcb1a849de3786"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#a92a75c629930662bb43b72f0d44f8c63">DFS</a> (int poczatkowy, int szukany)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Algorytm DFS.  <a href="#a92a75c629930662bb43b72f0d44f8c63"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#aa101a5b533a42b4d9c447e8891920fe9">BFS</a> (int poczatkowy, int szukany)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Algorytm BFS.  <a href="#aa101a5b533a42b4d9c447e8891920fe9"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Atrybuty publiczne</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#a55dab6e3ffdfbddf0b90cfb2c3eb8a12">_tab_sasiedztwa</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">stack&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#aedcc17420188f632ece315f32fbe0b83">_stos_DFS</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="struct_graf_1_1__wierzcholek.html">_wierzcholek</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="struct_graf_1_1__krawedz.html">_krawedz</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#a79c79b147cde2bb403d3aa27db8f9f22">_wektor_krawedzi</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Opis szczegółowy</h2>
 <div class="textblock"><p>Klasa ta zawiera wewnętrzne struktury: <a class="el" href="struct_graf_1_1__wierzcholek.html" title="Struktura realizująca wierzchołki grafu.">_wierzcholek</a>, <a class="el" href="struct_graf_1_1__krawedz.html" title="Struktura realizująca krawędzie grafu.">_krawedz</a> oraz _lista_BFT. Dwie pierwsze odpowiadają za defniowanie wierzchołków i krawędzi grafu, a tarzecia z nich tworzy listę jednokierunkową wykorzystywaną przez algorytm BFT. W klasie <a class="el" href="class_graf.html" title="Klasa definiująca graf.">Graf</a> przechowywana jest też tablica sąsiedztwa oraz wektory krawędzi i wierzchołków. Ponadto zawarte są w niej deklarace metod. </p>
 
-<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00023">23</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00024">24</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
 </div><hr/><h2>Dokumentacja funkcji składowych</h2>
 <a class="anchor" id="aa101a5b533a42b4d9c447e8891920fe9"></a><!-- doxytag: member="Graf::BFS" ref="aa101a5b533a42b4d9c447e8891920fe9" args="(int poczatkowy, int szukany)" -->
 <div class="memitem">
@@ -144,8 +178,6 @@ Atrybuty publiczne</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Algorytm BFS. </p>
 <p>Metoda ta realizuje wyszukiwanie weirzchołka metodą BFS.</p>
 <dl class="params"><dt><b>Parametry:</b></dt><dd>
   <table class="params">
@@ -155,7 +187,7 @@ Atrybuty publiczne</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00204">204</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00246">246</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -182,8 +214,6 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Sprawdza istnienie wierzchołka. </p>
 <p>Metoda ta ma za zadanie sprawdzić czy wierzchołek o podanym numerze istnieje.</p>
 <dl class="params"><dt><b>Parametry:</b></dt><dd>
   <table class="params">
@@ -221,8 +251,6 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Sprawdza połączenie między dwoma wierzchołkami. </p>
 <p>Metoda ta ma za zadanie sprawdzić czy dane dwa wierzchołki są ze sobą połączone.</p>
 <dl class="params"><dt><b>Parametry:</b></dt><dd>
   <table class="params">
@@ -261,8 +289,6 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Algorytm DFS. </p>
 <p>Metoda ta realizuje wyszukiwanie weirzchołka metodą DFS.</p>
 <dl class="params"><dt><b>Parametry:</b></dt><dd>
   <table class="params">
@@ -272,7 +298,16 @@ Oto graf wywoływań tej funkcji:</div>
   </dd>
 </dl>
 
-<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00186">186</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00217">217</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graf_a92a75c629930662bb43b72f0d44f8c63_cgraph.png" border="0" usemap="#class_graf_a92a75c629930662bb43b72f0d44f8c63_cgraph" alt=""/></div>
+<map name="class_graf_a92a75c629930662bb43b72f0d44f8c63_cgraph" id="class_graf_a92a75c629930662bb43b72f0d44f8c63_cgraph">
+</map>
+</div>
+</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -315,8 +350,6 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Dodaje krawędź. </p>
 <p>Metoda ta ma za zadanie dodać krawędź o zadanej wadze do grafu.</p>
 <dl class="params"><dt><b>Parametry:</b></dt><dd>
   <table class="params">
@@ -354,8 +387,6 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Dodaje wierzchołek. </p>
 <p>Metoda ta ma za zadanie dodać wierzchołek o zadanym numerze do grafu.</p>
 <dl class="params"><dt><b>Parametry:</b></dt><dd>
   <table class="params">
@@ -377,6 +408,42 @@ Oto graf wywoływań tej funkcji:</div>
 
 </div>
 </div>
+<a class="anchor" id="a305624fe0009aab3fbbcb1a849de3786"></a><!-- doxytag: member="Graf::Nastepny_DFS" ref="a305624fe0009aab3fbbcb1a849de3786" args="(int v)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_graf.html#a305624fe0009aab3fbbcb1a849de3786">Graf::Nastepny_DFS</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Metoda ta realizuje dobieranie następnego wierzchołka dla algorytmu DFS.</p>
+<dl class="params"><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>- numer wierzchołka, od którego algorytm zaczyna przebieg. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Zwraca:</b></dt><dd>i - numer następnego wierzchołka. -1 - gdy nie istnieje następny wierzchołek. </dd></dl>
+
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00204">204</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graf_a305624fe0009aab3fbbcb1a849de3786_icgraph.png" border="0" usemap="#class_graf_a305624fe0009aab3fbbcb1a849de3786_icgraph" alt=""/></div>
+<map name="class_graf_a305624fe0009aab3fbbcb1a849de3786_icgraph" id="class_graf_a305624fe0009aab3fbbcb1a849de3786_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="afc14626d6712964761d749568b0ec5af"></a><!-- doxytag: member="Graf::Sasiedztwo" ref="afc14626d6712964761d749568b0ec5af" args="(int v)" -->
 <div class="memitem">
 <div class="memproto">
@@ -391,8 +458,6 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Sprawdza sąsiedztwo wierzchołka. </p>
 <p>Metoda ta ma za zadanie wypisać, z którymi wierzchołkami jest połączony wierzchołek o zadanym numerze.</p>
 <dl class="params"><dt><b>Parametry:</b></dt><dd>
   <table class="params">
@@ -429,8 +494,6 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Usuwa krawędź. </p>
 <p>Metoda ta ma za zadanie usunąć krawędź łączącą podane wierzchołki.</p>
 <dl class="params"><dt><b>Parametry:</b></dt><dd>
   <table class="params">
@@ -458,8 +521,6 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Usuwa wierzchołek. </p>
 <p>Metoda ta ma za zadanie usunąć wierzchołek o zadanym numerze z grafu.</p>
 <dl class="params"><dt><b>Parametry:</b></dt><dd>
   <table class="params">
@@ -485,8 +546,6 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Wypisuje macierz sąsiedztwa. </p>
 <p>Metoda ta ma za zadanie wypisać na standardowe wyjście zawartość macierzy sąsiedztwa. </p>
 
 <p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00144">144</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
@@ -503,6 +562,21 @@ Oto graf wywoływań tej funkcji:</div>
 </div>
 </div>
 <hr/><h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="aedcc17420188f632ece315f32fbe0b83"></a><!-- doxytag: member="Graf::_stos_DFS" ref="aedcc17420188f632ece315f32fbe0b83" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">stack&lt;int&gt; <a class="el" href="class_graf.html#aedcc17420188f632ece315f32fbe0b83">Graf::_stos_DFS</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00073">73</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a55dab6e3ffdfbddf0b90cfb2c3eb8a12"></a><!-- doxytag: member="Graf::_tab_sasiedztwa" ref="a55dab6e3ffdfbddf0b90cfb2c3eb8a12" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -514,7 +588,7 @@ Oto graf wywoływań tej funkcji:</div>
 </div>
 <div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00027">27</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00028">28</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
 
 </div>
 </div>
@@ -529,7 +603,7 @@ Oto graf wywoływań tej funkcji:</div>
 </div>
 <div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00073">73</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00075">75</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
 
 </div>
 </div>
@@ -544,7 +618,7 @@ Oto graf wywoływań tej funkcji:</div>
 </div>
 <div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00072">72</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00074">74</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
 
 </div>
 </div>
@@ -553,6 +627,7 @@ Oto graf wywoływań tej funkcji:</div>
 <li><a class="el" href="graf_8cpp_source.html">graf.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -567,13 +642,16 @@ Oto graf wywoływań tej funkcji:</div>
 </iframe>
 </div>
 
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="class_graf.html">Graf</a>      </li>
 
+    <li class="footer">Wygenerowano Thu May 15 2014 02:47:18 dla Graf programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
 
-<hr class="footer"/><address class="footer"><small>
-Wygenerowano Sun May 11 2014 14:03:26 dla Graf programem &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.7.6.1
-</small></address>
 
 </body>
 </html>

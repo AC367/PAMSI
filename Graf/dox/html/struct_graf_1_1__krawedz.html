@@ -7,9 +7,14 @@
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-
-<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
@@ -74,6 +79,103 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
       <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
     </ul>
   </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('struct_graf_1_1__krawedz.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Atrybuty publiczne</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja struktury Graf::_krawedz</div>  </div>
+</div><!--header-->
+<div class="contents">
+<!-- doxytag: class="Graf::_krawedz" -->
+<p>Struktura realizująca krawędzie grafu.  
+ <a href="struct_graf_1_1__krawedz.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="graf_8hh_source.html">graf.hh</a>&gt;</code></p>
+<div class="dynheader">
+Diagram współpracy dla Graf::_krawedz:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_graf_1_1__krawedz__coll__graph.png" border="0" usemap="#_graf_1_1__krawedz_coll__map" alt="Collaboration graph"/></div>
+<map name="_graf_1_1__krawedz_coll__map" id="_graf_1_1__krawedz_coll__map">
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
+
+<p><a href="struct_graf_1_1__krawedz-members.html">Lista wszystkich składowych.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Atrybuty publiczne</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_graf_1_1__wierzcholek.html">_wierzcholek</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_graf_1_1__krawedz.html#adba487ff1b27ab413c139dff7ef02313">pierwszy</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_graf_1_1__wierzcholek.html">_wierzcholek</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_graf_1_1__krawedz.html#a089375425bc7f1cb193f02f7bae87e4a">drugi</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_graf_1_1__krawedz.html#a32556165c01ba902034186551780c7f4">waga</a></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>Opis szczegółowy</h2>
+<div class="textblock"><p>Struktura ta zawiera wskaźniki na wierzchołki, które łączy oraz zmienną typu int przechowującą informację o wadze danej krawędzi. </p>
+
+<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00053">53</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
+</div><hr/><h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="a089375425bc7f1cb193f02f7bae87e4a"></a><!-- doxytag: member="Graf::_krawedz::drugi" ref="a089375425bc7f1cb193f02f7bae87e4a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_graf_1_1__wierzcholek.html">_wierzcholek</a>* <a class="el" href="struct_graf_1_1__krawedz.html#a089375425bc7f1cb193f02f7bae87e4a">Graf::_krawedz::drugi</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00056">56</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adba487ff1b27ab413c139dff7ef02313"></a><!-- doxytag: member="Graf::_krawedz::pierwszy" ref="adba487ff1b27ab413c139dff7ef02313" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_graf_1_1__wierzcholek.html">_wierzcholek</a>* <a class="el" href="struct_graf_1_1__krawedz.html#adba487ff1b27ab413c139dff7ef02313">Graf::_krawedz::pierwszy</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00055">55</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a32556165c01ba902034186551780c7f4"></a><!-- doxytag: member="Graf::_krawedz::waga" ref="a32556165c01ba902034186551780c7f4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="struct_graf_1_1__krawedz.html#a32556165c01ba902034186551780c7f4">Graf::_krawedz::waga</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00057">57</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej struktury została wygenerowana z pliku:<ul>
+<li><a class="el" href="graf_8hh_source.html">graf.hh</a></li>
+</ul>
+</div><!-- contents -->
+</div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -92,109 +194,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
     <ul>
       <li class="navelem"><a class="el" href="class_graf.html">Graf</a>      </li>
       <li class="navelem"><a class="el" href="struct_graf_1_1__krawedz.html">_krawedz</a>      </li>
-    </ul>
-  </div>
-</div>
-<div class="header">
-  <div class="summary">
-<a href="#pub-attribs">Atrybuty publiczne</a>  </div>
-  <div class="headertitle">
-<div class="title">Dokumentacja struktury Graf::_krawedz</div>  </div>
-</div><!--header-->
-<div class="contents">
-<!-- doxytag: class="Graf::_krawedz" -->
-<p><code>#include &lt;<a class="el" href="graf_8hh_source.html">graf.hh</a>&gt;</code></p>
-<div class="dynheader">
-Diagram współpracy dla Graf::_krawedz:</div>
-<div class="dyncontent">
-<div class="center"><img src="struct_graf_1_1__krawedz__coll__graph.png" border="0" usemap="#_graf_1_1__krawedz_coll__map" alt="Collaboration graph"/></div>
-<map name="_graf_1_1__krawedz_coll__map" id="_graf_1_1__krawedz_coll__map">
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legenda</a>]</span></center></div>
 
-<p><a href="struct_graf_1_1__krawedz-members.html">Lista wszystkich składowych.</a></p>
-<table class="memberdecls">
-<tr><td colspan="2"><h2><a name="pub-attribs"></a>
-Atrybuty publiczne</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_graf_1_1__wierzcholek.html">_wierzcholek</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_graf_1_1__krawedz.html#adba487ff1b27ab413c139dff7ef02313">pierwszy</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_graf_1_1__wierzcholek.html">_wierzcholek</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_graf_1_1__krawedz.html#a089375425bc7f1cb193f02f7bae87e4a">drugi</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_graf_1_1__krawedz.html#a32556165c01ba902034186551780c7f4">waga</a></td></tr>
-</table>
-<hr/><a name="details" id="details"></a><h2>Opis szczegółowy</h2>
-<div class="textblock"><p>Struktura ta zawiera wskaźniki na wierzchołki, które łączy oraz zmienną typu int przechowującą informację o wadze danej krawędzi. </p>
+    <li class="footer">Wygenerowano Thu May 15 2014 02:47:18 dla Graf programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
 
-<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00052">52</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
-</div><hr/><h2>Dokumentacja atrybutów składowych</h2>
-<a class="anchor" id="a089375425bc7f1cb193f02f7bae87e4a"></a><!-- doxytag: member="Graf::_krawedz::drugi" ref="a089375425bc7f1cb193f02f7bae87e4a" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_graf_1_1__wierzcholek.html">_wierzcholek</a>* <a class="el" href="struct_graf_1_1__krawedz.html#a089375425bc7f1cb193f02f7bae87e4a">Graf::_krawedz::drugi</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00055">55</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="adba487ff1b27ab413c139dff7ef02313"></a><!-- doxytag: member="Graf::_krawedz::pierwszy" ref="adba487ff1b27ab413c139dff7ef02313" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_graf_1_1__wierzcholek.html">_wierzcholek</a>* <a class="el" href="struct_graf_1_1__krawedz.html#adba487ff1b27ab413c139dff7ef02313">Graf::_krawedz::pierwszy</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00054">54</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a32556165c01ba902034186551780c7f4"></a><!-- doxytag: member="Graf::_krawedz::waga" ref="a32556165c01ba902034186551780c7f4" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="struct_graf_1_1__krawedz.html#a32556165c01ba902034186551780c7f4">Graf::_krawedz::waga</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00056">56</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
-
-</div>
-</div>
-<hr/>Dokumentacja dla tej struktury została wygenerowana z pliku:<ul>
-<li><a class="el" href="graf_8hh_source.html">graf.hh</a></li>
-</ul>
-</div><!-- contents -->
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a></div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
-</div>
-
-
-
-<hr class="footer"/><address class="footer"><small>
-Wygenerowano Sun May 11 2014 14:03:26 dla Graf programem &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.7.6.1
-</small></address>
 
 </body>
 </html>

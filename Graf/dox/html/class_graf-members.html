@@ -7,9 +7,14 @@
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-
-<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
@@ -75,12 +80,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
     </ul>
   </div>
 </div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('class_graf.html','');
+</script>
+<div id="doc-content">
 <div class="header">
   <div class="headertitle">
 <div class="title">Graf Lista składowych</div>  </div>
 </div><!--header-->
 <div class="contents">
 To jest kompletna lista składowych dla <a class="el" href="class_graf.html">Graf</a>, uwzględniająca wszystkie dziedziczone składowe.<table>
+  <tr class="memlist"><td><a class="el" href="class_graf.html#aedcc17420188f632ece315f32fbe0b83">_stos_DFS</a></td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_graf.html#a55dab6e3ffdfbddf0b90cfb2c3eb8a12">_tab_sasiedztwa</a></td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_graf.html#a79c79b147cde2bb403d3aa27db8f9f22">_wektor_krawedzi</a></td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a></td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
@@ -90,6 +109,7 @@ To jest kompletna lista składowych dla <a class="el" href="class_graf.html">Gra
   <tr class="memlist"><td><a class="el" href="class_graf.html#a92a75c629930662bb43b72f0d44f8c63">DFS</a>(int poczatkowy, int szukany)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_graf.html#ae12b5623e92fa86ff51d51db1804e793">Dodaj_krawedz</a>(int v1, int v2, int waga)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_graf.html#a1d04219ee7346afb627353c9d57b8cb2">Dodaj_wierzcholek</a>(int v)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_graf.html#a305624fe0009aab3fbbcb1a849de3786">Nastepny_DFS</a>(int v)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_graf.html#afc14626d6712964761d749568b0ec5af">Sasiedztwo</a>(int v)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_graf.html#af2ca22dd1730ce9067e484cf21db5b3f">Usun_krawedz</a>(int v1, int v2)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_graf.html#ad1091bfe67b16460cd64aebdcbb5b521">Usun_wierzcholek</a>(int wierzcholek)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
@@ -109,13 +129,16 @@ To jest kompletna lista składowych dla <a class="el" href="class_graf.html">Gra
 </iframe>
 </div>
 
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
 
+    <li class="footer">Wygenerowano Thu May 15 2014 02:47:18 dla Graf programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
 
-<hr class="footer"/><address class="footer"><small>
-Wygenerowano Sun May 11 2014 14:03:26 dla Graf programem &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.7.6.1
-</small></address>
 
 </body>
 </html>

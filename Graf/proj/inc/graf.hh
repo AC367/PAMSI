@@ -2,6 +2,8 @@
 #include <iomanip>
 #include <vector>
 #include <stack>
+#include <stdlib.h>
+#include <math.h>
 
 using namespace std;
 
@@ -38,9 +40,16 @@ class Graf
  */ 
 	struct _wierzcholek
 	{
+		_wierzcholek * _rodzic;
 		bool _czy_istnieje;
 		bool _czy_odwiedzony;
+		int _wsp_x;
+		int _wsp_y;
 		int _numer;
+		int _G;
+		int _H;
+		int _F;
+		
 		//char _dane;
 	};
 	
@@ -69,6 +78,12 @@ class Graf
 		_lista_BFS * _nastepny;
 		int _dane;
 	};
+	/*
+	struct _lista_A_star
+	{
+		_lista_A_star * _nastepny;
+		int _dane;
+	};*/
 	
 	stack<int> _stos_DFS;
 	vector<_wierzcholek> _wektor_wierzcholkow;
@@ -81,7 +96,7 @@ class Graf
  * 
  * @param [in] v - numer dodawanego wierzchołka.
  */ 
-	void Dodaj_wierzcholek(int v);
+	void Dodaj_wierzcholek(int v, int wsp_x, int wsp_y);
 	
 /*!
  * \brief Usuwa wierzchołek.
@@ -155,8 +170,8 @@ class Graf
  * 
  * @param [in] v - numer wierzchołka.
  */
-	void Sasiedztwo(int v);
-	
+//	void Sasiedztwo(int v);
+	vector<int> Sasiedztwo(int v);
 /*!
  * \brief Funkcja pomocnicza dla algorytmu DFS.
  * 
@@ -188,4 +203,27 @@ class Graf
  * @param [in] szukany - numer szukanego wierzchołka.
  */
 	void BFS(int poczatkowy, int szukany);
+	
+	void A_star(int poczatkowy, int koncowy);
+	
+	bool Czy_na_liscie(vector <int> lista, int element);
+	
+	Graf::_krawedz Znajdz_krawedz(int v1, int v2);
+	
+	void Odtworz_sciezke(int poczatkowy, int koncowy);
+	
+	int Odleglosc(int v1, int v2);
+	
+	//friend const _wierzcholek & operator = (_wierzcholek w2);
+	/*{
+		_rodzic=w2._rodzic;
+		_czy_istnieje=w2._czy_istnieje;
+		_czy_odwiedzony=w2._czy_odwiedzony;
+		_numer=w2._numer;
+		_G=w2._G;
+		_H=w2._H;
+		_F=w2._F;
+		
+		return *this;
+	}*/
 };

@@ -1,7 +1,7 @@
 __start__: obj graf
 	./graf
 
-CPPFLAGS=-Wall -pedantic -Iinc -c
+CPPFLAGS=-Wall -pedantic -Iinc -c -g
 LDFLAGS=-Wall
 
 

@@ -7,7 +7,6 @@
 
 void Graf::Dodaj_wierzcholek(int v, int wsp_x, int wsp_y)
 {	
-	//_liczba_wierzcholkow=v+1;  
 	_wierzcholek wierzcholek;
 
 	_wektor_wierzcholkow.push_back(wierzcholek);
@@ -25,9 +24,6 @@ void Graf::Dodaj_wierzcholek(int v, int wsp_x, int wsp_y)
 		for(unsigned int i = 0; i < _wektor_wierzcholkow.size(); i++) // Macierz wypełniamy zerami
 			for(unsigned int j = 0; j < _wektor_wierzcholkow.size(); j++)
 				_tab_sasiedztwa[i][j] = 0;
-	/*
-		_tab_wierzcholkow = new int [_liczba_wierzcholkow]; //tworzymy tablice wierzcholkow
-		_tab_wierzcholkow[v]=1; //element istnieje*/
 	}
 	else
 	{
@@ -43,62 +39,22 @@ void Graf::Dodaj_wierzcholek(int v, int wsp_x, int wsp_y)
 				B[i][j] = 0;
 		}
 		
-		/*cout << "   ";
-	for(unsigned int i = 0; i < _wektor_wierzcholkow.size(); i++) 
-		cout << setw(3) << i;
-	cout << endl << endl;
-	for(unsigned int i = 0; i < _wektor_wierzcholkow.size(); i++)
-	{
-		cout << setw(3) << i;
-		for(unsigned int j = 0; j < _wektor_wierzcholkow.size(); j++) 
-			cout << setw(3) << (int) B[i][j];
-		cout << endl;
-	}
-  cout << endl;*/
-		
 		for(unsigned int i = 0; i < _wektor_wierzcholkow.size()-1; i++)
 		{
-		//	B[i] = _tab_sasiedztwa[i]; //przepisuje stara tablice do pomocniczej
-			
 			for(unsigned int j = 0; j < _wektor_wierzcholkow.size()-1; j++)
 				B[i][j]=_tab_sasiedztwa[i][j];
 		}
 		
-			
-			
-		/*
-		for(unsigned int i = 0; i < _wektor_wierzcholkow.size()-1; i++) //usuwam tablice
-			delete [] _tab_sasiedztwa[i];
-		delete [] _tab_sasiedztwa;
-		*/
+	
 		_tab_sasiedztwa = new char * [_wektor_wierzcholkow.size()]; //tworze nowa tablice
 		
 		for(unsigned int i = 0; i < _wektor_wierzcholkow.size(); i++)
 		{
 			_tab_sasiedztwa[i] = new char [_wektor_wierzcholkow.size()]; //tworze wiersze
 			
-			//for(unsigned int j = 0; j < _wektor_wierzcholkow.size(); j++)
-				//_tab_sasiedztwa[i][j] = 0;
-			
 			for(unsigned int j = 0; j < _wektor_wierzcholkow.size(); j++) //przepisuje dane
 				_tab_sasiedztwa[i][j]=B[i][j];
 		}
-
-	//	for(unsigned int i = 0; i < _wektor_wierzcholkow.size(); i++) //usuwam pomocnicza tablice
-		//	delete [] B[i];
-		//delete [] B;	
-	
-	/*	tab_pom=new int[_wektor_wierzcholkow.size()];
-		
-		for(int i=0; i<_wektor_wierzcholkow.size()-1; i++)
-			tab_pom[i]=_tab_wierzcholkow[i];
-		_tab_wierzcholkow=new int [_wektor_wierzcholkow.size()];
-		
-		for(int i=0; i<_wektor_wierzcholkow.size(); i++)
-			_tab_wierzcholkow[i]=tab_pom[i];
-		_tab_wierzcholkow[v]=1;
-		
-		delete [] tab_pom;*/
 	}
 }
 
@@ -146,8 +102,6 @@ bool Graf::Czy_polaczone(int v1, int v2)
 
 void Graf::Wypisz_macierz()
 {
-	// Wypisujemy zawartość macierzy sąsiedztwa
-
 	cout << "   ";
 	for(unsigned int i = 0; i < _wektor_wierzcholkow.size(); i++) 
 		cout << setw(3) << i;
@@ -161,26 +115,10 @@ void Graf::Wypisz_macierz()
 	}
   cout << endl;
 }
-/*
-void Graf::Sasiedztwo(int v)
-{
-	int jest=0;
-	
-	for(unsigned int i=0; i<_wektor_wierzcholkow.size(); i++)
-	{
-		if(_tab_sasiedztwa[v][i]==1)
-		{
-			cout<<"Wierzcholek numer "<<v<<" sasiaduje z wierzcholkiem numer "<<i<<endl;
-			jest=1;
-		}
-	}
-	if(jest!=1)
-		cout<<"Wierzcholek numer "<<v<<" nie ma sasiadow."<<endl;
-}*/
 
 vector<int> Graf::Sasiedztwo(int v)
 {
-	int wielkosc=0, tab;
+	int wielkosc=0;
 	vector <int> pom;
 		
 	for(unsigned int i=0; i<_wektor_wierzcholkow.size(); i++)
@@ -188,26 +126,15 @@ vector<int> Graf::Sasiedztwo(int v)
 		{
 			wielkosc++;
 			pom.push_back(i);
-		}
-
-	
+		}	
 	if(wielkosc==0)
 	{
 		cout<<"Wierzcholek numer "<<v<<" nie ma sasiadow."<<endl;
-		//return 0;
+		pom[0]=-1;
+		return pom;
 	}
 	else
 	{
-		int tab[wielkosc];
-		
-		for(int i=0; i<wielkosc; i++)
-		{
-			tab[i]=pom[i];
-		/*cout<<"************************************"<<endl;
-		cout<<"tab["<<i<<"] = "<<tab[i]<<endl;
-		cout<<"pom["<<i<<"] = "<<pom[i]<<endl;
-		cout<<"************************************"<<endl;
-	*/}
 		return pom;
 	}
 }
@@ -219,24 +146,6 @@ bool Graf::Czy_istnieje(int v)
 	else 
 		return false;
 }
-/*
-void Graf::DFS(int poczatkowy, int szukany)
-{
-	_wektor_wierzcholkow[poczatkowy]._czy_odwiedzony=true;
-	
-	if(poczatkowy==szukany)
-	{
-		cout<<"DFS: Znaleziono!"<<endl;
-		for(int i=0; i<(int)_wektor_wierzcholkow.size(); i++)
-			_wektor_wierzcholkow[i]._czy_odwiedzony=false;
-	}
-	else
-	{
-		for(int i=0; i<(int)_wektor_wierzcholkow.size(); i++)
-			if(_tab_sasiedztwa[poczatkowy][i]==1 && _wektor_wierzcholkow[i]._czy_odwiedzony==false)
-				DFS(i, szukany);
-	}		
-}*/
 
 int Graf::Nastepny_DFS(int v)
 {
@@ -258,7 +167,7 @@ void Graf::DFS(int v, int szukany)
 	
 	if(v==szukany)
 	{
-		cout<<"DFS: Znaleziono! Element: "<<v<<endl;
+		//cout<<"DFS: Znaleziono! Element: "<<v<<endl;
 		for(int i=0; i<(int)_wektor_wierzcholkow.size(); i++)
 			_wektor_wierzcholkow[i]._czy_odwiedzony=false;
 	}
@@ -294,7 +203,7 @@ void Graf::BFS(int poczatkowy, int szukany)
 		{
 			if(glowa->_dane==szukany)
 			{
-				cout<<"BFS: Znaleziono! Element: "<<glowa->_dane<<endl;
+				//cout<<"BFS: Znaleziono! Element: "<<glowa->_dane<<endl;
 				for(int i=0; i<(int)_wektor_wierzcholkow.size(); i++)
 					_wektor_wierzcholkow[i]._czy_odwiedzony=false;
 				glowa=NULL;
@@ -326,83 +235,16 @@ void Graf::BFS(int poczatkowy, int szukany)
 		}	
 	}
 }
-/*
-void Graf::A_star(int poczatkowy, int koncowy)
-{
-	//_lista_BFS * Lista_otwartych = new _lista_BFS;
-	//_lista_BFS * Lista_zamknietych = new _lista_BFS;
-	//vector<int> *Lista_otwartych = new vector<int> [_wektor_wierzcholkow.size()-1];
-	vector<int> Lista_otwartych;
-	vector<int> Lista_zamknietych;
-	int q;
-	
-	Lista_otwartych.push_back(_wektor_wierzcholkow[poczatkowy]._numer);
-	
-	while(!Lista_otwartych.empty())
-	{	
-		if(Lista_otwartych.size()==1)
-		{
-			q=Lista_otwartych[0];
-			Lista_zamknietych.push_back(q);
-		}
-		else
-		{
-			for(int i=0; i<Lista_otwartych.size(); i++)
-			{
-				//for(int j=0; j<_wektor_wierzcholkow.size(); j++)
-				//{
-					//if(_wektor_wierzcholkow[j].pierwszy==q)
-				//}
-				int waga=_wektor_wierzcholkow[Lista_otwartych[i]]._G;
-				if(waga<_wektor_wierzcholkow[Lista_otwartych[i+1]]._G)
-				{
-					waga=_wektor_wierzcholkow[Lista_otwartych[i]]._G;
-					q=Lista_otwartych[i];
-				}
-			}
-		}
-		if(q==koncowy)
-		{
-			cout<<"znaleziono element "<<q<<endl;
-			break;
-		}
-		for(unsigned int i=0; i<=(sizeof(Sasiedztwo(q))/sizeof(int)); i++)
-		{
-			cout<<"PRZEBIEG: "<<i<<" WIERZCHOLEK Q: "<<q<<endl;
-			if(!Czy_na_liscie(Lista_otwartych, i) && !Czy_na_liscie(Lista_zamknietych, i))
-			{	
-				
-				Lista_otwartych.push_back(i);
-				_wektor_wierzcholkow[i]._rodzic=&_wektor_wierzcholkow[q];
-				_wektor_wierzcholkow[i]._G=Znajdz_krawedz(i, q).waga;//+_wektor_wierzcholkow[i]._rodzic->_G; ///////<--------- plus waga rodzica
-				_wektor_wierzcholkow[i]._H=i;
-				_wektor_wierzcholkow[i]._F=_wektor_wierzcholkow[i]._G+_wektor_wierzcholkow[i]._H;
-			}
-			else
-			{
-				cout<<"TUTAJ!"<<endl;
-				int n_G=Znajdz_krawedz(i, q).waga+_wektor_wierzcholkow[i]._rodzic->_G; ///////<--------- plus waga rodzica
-				
-				if(n_G<_wektor_wierzcholkow[i]._G)
-				{
-					_wektor_wierzcholkow[i]._rodzic=&_wektor_wierzcholkow[q];
-					_wektor_wierzcholkow[i]._G=n_G;
-					_wektor_wierzcholkow[i]._F=_wektor_wierzcholkow[i]._G+_wektor_wierzcholkow[i]._H;
-				}
-			}
-		}
-	}
-}*/
 
-void Graf::A_star(int poczatkowy, int koncowy)
+bool Graf::A_star(int poczatkowy, int koncowy)
 {
 	vector<int> Lista_otwartych;
 	vector<int> Lista_zamknietych;
-	//vector<int> Mapa;
-	int koszt, najnizszy_koszt, obecny=NULL;
+	
+	int koszt, najnizszy_koszt, obecny=0;
 	
 	Lista_otwartych.push_back(poczatkowy);
-	//Mapa.push_back(poczatkowy);
+	
 	
 	_wektor_wierzcholkow[poczatkowy]._G=0;
 	_wektor_wierzcholkow[poczatkowy]._H=Odleglosc(poczatkowy, koncowy);
@@ -412,25 +254,22 @@ void Graf::A_star(int poczatkowy, int koncowy)
 	{
 		obecny=Lista_otwartych[0];
 		najnizszy_koszt=_wektor_wierzcholkow[obecny]._F;
-		for(int i=0; i<Lista_otwartych.size(); i++) //szukam elementu o najmniejszym _F
+		for(unsigned int i=0; i<Lista_otwartych.size(); i++) //szukam elementu o najmniejszym _F
 		{
 			if(najnizszy_koszt>_wektor_wierzcholkow[Lista_otwartych[i]]._F)
 			{	
 				najnizszy_koszt=_wektor_wierzcholkow[Lista_otwartych[i]]._F;
 				obecny=Lista_otwartych[i];
+				
 			}
 		}
 		if(obecny==koncowy) //jesli znaleziono to przerwij
 		{
-			cout<<"Znaleziono wierzcholek: "<<obecny<<endl;
-			//cout<<"Przebyta sciezka: "<<endl;
-			//for(int i=0; i<Mapa.size(); i++)
-				//cout<<Mapa[i]<<" ";
-			cout<<endl;
-			Odtworz_sciezke(0, 8);
-			break;
+			//cout<<"Znaleziono wierzcholek: "<<obecny<<endl;
+			//cout<<endl;
+			//Odtworz_sciezke(poczatkowy, koncowy);
+			return true;
 		}
-		
 		Lista_otwartych.erase(Lista_otwartych.begin());
 		Lista_zamknietych.push_back(obecny);
 		
@@ -445,9 +284,9 @@ void Graf::A_star(int poczatkowy, int koncowy)
 				
 			koszt=_wektor_wierzcholkow[obecny]._G + Znajdz_krawedz(obecny, sasiad).waga;// szacuj koszt
 			
-			if(!Czy_na_liscie(Lista_otwartych, sasiad) || koszt<_wektor_wierzcholkow[sasiad]._G) //gdzie policzyc G dla sasiada?
+			if(!Czy_na_liscie(Lista_otwartych, sasiad) || koszt<_wektor_wierzcholkow[sasiad]._G)
 			{
-				//Mapa.push_back(obecny);
+				//cout<<"DODAJE NA LISTE: "<<_wektor_wierzcholkow[sasiad]._numer<<endl;
 				_wektor_wierzcholkow[sasiad]._G=koszt;
 				_wektor_wierzcholkow[sasiad]._H=Odleglosc(sasiad, koncowy);
 				_wektor_wierzcholkow[sasiad]._F=_wektor_wierzcholkow[sasiad]._G + _wektor_wierzcholkow[sasiad]._H;
@@ -460,29 +299,22 @@ void Graf::A_star(int poczatkowy, int koncowy)
 			}	
 		}
 	}
-	//cout<<"Nie znaleziono!"<<endl;
+	cout<<"Nie znaleziono!"<<endl;
+	return false;
 }
 
 void Graf::Odtworz_sciezke(int poczatkowy, int koncowy)
 {
 	_wierzcholek obecny=_wektor_wierzcholkow[koncowy];
 	vector<int> wektor;
-	//_wierzcholek rodzic;
 	
 	wektor.push_back(obecny._numer);
 	cout<<"Odtworzona sciezka: "<<endl;
-	while(obecny._numer!=_wektor_wierzcholkow[poczatkowy]._numer)
+	while(obecny._numer!=poczatkowy)
 	{
 		wektor.push_back(obecny._rodzic->_numer);
-	//	cout<<"Wierzcholek obecny: "<<obecny._numer<<" Rodzic: "<<obecny._rodzic->_rodzic->_numer<<endl;
-		//obecny=*obecny._rodzic;
-		obecny._rodzic=obecny._rodzic->_rodzic; // zrobic przeladowanie =
-		obecny._czy_istnieje=obecny._rodzic->_czy_istnieje;
-		obecny._czy_odwiedzony=obecny._rodzic->_czy_odwiedzony;
+		obecny._rodzic=obecny._rodzic->_rodzic;
 		obecny._numer=obecny._rodzic->_numer;
-		obecny._G=obecny._rodzic->_G;
-		obecny._H=obecny._rodzic->_H;
-		obecny._F=obecny._rodzic->_F;
 	}
 	wektor.push_back(obecny._numer);
 	for(int i=wektor.size()-1; i>=0; i--)
@@ -510,7 +342,6 @@ Graf::_krawedz Graf::Znajdz_krawedz(int v1, int v2)
 		}
 	}
 	return _wektor_krawedzi[1];
-		//dorzucic else i return
 }
 
 int Graf::Odleglosc(int v1, int v2)
@@ -519,26 +350,10 @@ int Graf::Odleglosc(int v1, int v2)
 	int x2=_wektor_wierzcholkow[v2]._wsp_x;
 	int y1=_wektor_wierzcholkow[v1]._wsp_y;
 	int y2=_wektor_wierzcholkow[v2]._wsp_y;
+	int x, y;
 	
-	return (sqrt((x1-x2)^2 + (y1-y2)^2));
+	x=x1-x2;
+	y=y1-y2;
+	
+	return (sqrt((x*x) + (y*y)));
 }
-/*
-const Graf::_wierzcholek & Graf::operator = (_wierzcholek w2);
-	{
-		_rodzic=w2._rodzic;
-		_czy_istnieje=w2._czy_istnieje;
-		_czy_odwiedzony=w2._czy_odwiedzony;
-		_numer=w2._numer;
-		_G=w2._G;
-		_H=w2._H;
-		_F=w2._F;
-		
-		return *this;
-	
-};*/
-
-/*
-int Odleglosc(int v1, int v2)
-{
-	Znajdz_krawedz(v1, v2).waga+
-}*/

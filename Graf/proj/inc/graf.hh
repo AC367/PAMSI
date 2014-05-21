@@ -4,6 +4,8 @@
 #include <stack>
 #include <stdlib.h>
 #include <math.h>
+#include <time.h>
+#include <fstream>
 
 using namespace std;
 
@@ -28,15 +30,15 @@ class Graf
 	public:
 	
 	char ** _tab_sasiedztwa;
-	//int *_tab_wierzcholkow;
-	//int _liczba_wierzcholkow;
 	
 /*!
  * \brief Struktura realizująca wierzchołki grafu.
  * 
  * Struktura ta zawiera dwie zmienne typu bool, które przechowują informację
  * o istnieniu danego wierzchołka oraz o tym czy został on już odwiedzony przez
- * algorytm wyszukujący oraz pole przechowujące numer jego numer.
+ * algorytm wyszukujący oraz pole przechowujące jego numer. Ponadto zawarte są tu
+ * pola typu int zawierające współrzędne x i y wierzchołka oraz zmienne wykorzystywane
+ * przez algorytm A*
  */ 
 	struct _wierzcholek
 	{
@@ -49,8 +51,6 @@ class Graf
 		int _G;
 		int _H;
 		int _F;
-		
-		//char _dane;
 	};
 	
 /*!
@@ -78,12 +78,6 @@ class Graf
 		_lista_BFS * _nastepny;
 		int _dane;
 	};
-	/*
-	struct _lista_A_star
-	{
-		_lista_A_star * _nastepny;
-		int _dane;
-	};*/
 	
 	stack<int> _stos_DFS;
 	vector<_wierzcholek> _wektor_wierzcholkow;
@@ -92,9 +86,11 @@ class Graf
 /*!
  * \brief Dodaje wierzchołek.
  * 
- * Metoda ta ma za zadanie dodać wierzchołek o zadanym numerze do grafu.
+ * Metoda ta ma za zadanie dodać wierzchołek o zadanym numerze i współrzędnych do grafu.
  * 
  * @param [in] v - numer dodawanego wierzchołka.
+ * @param [in] wsp_x - współrzędna x dodawanego wierzchołka.
+ * @param [in] wsp_y - współrzędna y dodawanego wierzchołka.
  */ 
 	void Dodaj_wierzcholek(int v, int wsp_x, int wsp_y);
 	
@@ -165,12 +161,12 @@ class Graf
 /*!
  * \brief Sprawdza sąsiedztwo wierzchołka.
  * 
- * Metoda ta ma za zadanie wypisać, z którymi wierzchołkami jest połączony
- * wierzchołek o zadanym numerze.
+ * Metoda ta ma za zadanie zwrócić wektor indeksów wierzchołków, z którymi 
+ * połączony jest wierzchołek o zadanym numerze.
  * 
  * @param [in] v - numer wierzchołka.
+ * \return pom - wektor indeksów wierzchołków sąsiadujących z wierzchołkiem v.
  */
-//	void Sasiedztwo(int v);
 	vector<int> Sasiedztwo(int v);
 /*!
  * \brief Funkcja pomocnicza dla algorytmu DFS.
@@ -203,15 +199,68 @@ class Graf
  * @param [in] szukany - numer szukanego wierzchołka.
  */
 	void BFS(int poczatkowy, int szukany);
+
+/*!
+ * \brief Realizuje algorytm A*
+ * 
+ * Funkcja ta ma za zadanie, przy użyciu algorytmu A*, wyszukać najkrótszą 
+ * drogę w grafie pomiędzy zadanymi wierzchołkami.
+ * 
+ * @param [in] poczatkowy - element, od którego zaczynamy przeszukiwanie.
+ * @param [in] szukany - element docelowy.
+ *
+ * \return true - gdy znaleziono element.
+ * 		   false - gdy nie znaleziono elementu.
+ */ 	
+	bool A_star(int poczatkowy, int koncowy);
 	
-	void A_star(int poczatkowy, int koncowy);
-	
+/*!
+ * \brief Sprawdza zawartość wektora.
+ * 
+ * Metoda ta ma za zadanie sprawdzić czy dany element typu int
+ * znajduje się w podanym wektorze.
+ * 
+ * @param [in] element - element, którego obecność chcemy potwierdzić.
+ * @param [in] lista - przeszukiwany wektor.
+ * 
+ * \return true - gdy element znajduje się w wektorze.
+ * 		   false - gdy element nie znajduje się w wektorze.
+ */ 
 	bool Czy_na_liscie(vector <int> lista, int element);
-	
+
+/*!
+ * \brief Wyszukuje krawędź.
+ * 
+ * Metoda ta ma za zadanie wyszukać w wektorze krawędzi, krawędź łączącą
+ * dwa zadane wierzchołki
+ * 
+ * @param [in] v1 - pierwszy wierzchołek.
+ * @param [in] v2 - drugi wierzchołek.
+ * 
+ * \return obiekt typu _krawedz odpowiadający krawędzi łączącej zadane wierzchołki.
+ */ 
 	Graf::_krawedz Znajdz_krawedz(int v1, int v2);
 	
+/*!
+ * \brief Odtwarza ścieżkę algorytmu A*.
+ * 
+ * Metoda ta ma za zadanie odtworzyc najkrótszą ścieżkę w grafie znalezioną przez
+ * algorytm A*.
+ * 
+ * @param [in] poczatkowy - wierzchołek początkowy.
+ * @param [in] koncowy - wierzchołek początkowy.
+ */ 
 	void Odtworz_sciezke(int poczatkowy, int koncowy);
 	
+/*!
+ * \brief Liczy odległość między wierzchołkami.
+ * 
+ * Metoda ta ma za zadanie obliczyć odległość w linii prostej pomiędzy
+ * dwoma wierzchołkami na podstawie ich współrzędnych.
+ * 
+ * @param [in] v1 - pierwszy wierzchołek.
+ * @param [in] v2 - drugi wierzchołek.
+ */ 
 	int Odleglosc(int v1, int v2);
 	
 	//friend const _wierzcholek & operator = (_wierzcholek w2);

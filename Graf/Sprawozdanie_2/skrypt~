@@ -1,0 +1,9 @@
+set terminal png
+set output 'DFS.png'
+set title "Zależność czasu od ilosci powtórzeń"
+set xlabel "ilosc powtórzeń"
+set ylabel "czas [s]"
+set xrange [0 :  100000] 
+set grid
+plot 'A_star' using 1 : 2 smooth bezier, 'DFS' using 1 : 2 smooth bezier, 'BFS' using 1 : 2 smooth bezier
+

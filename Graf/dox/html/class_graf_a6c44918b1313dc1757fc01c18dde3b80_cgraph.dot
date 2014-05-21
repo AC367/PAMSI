@@ -1,0 +1,15 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Graf::A_star",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Graf::Odleglosc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_graf.html#a497d04cd3e5fe9d6b1d98f13ef64d989",tooltip="Liczy odległość między wierzchołkami."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Graf::Sasiedztwo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_graf.html#a046d281f1698f8072bf60e4da71bc675",tooltip="Sprawdza sąsiedztwo wierzchołka."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Graf::Znajdz_krawedz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_graf.html#aa15a3c01cfdf981650654ebaed04e4e1",tooltip="Wyszukuje krawędź."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Graf::Czy_na_liscie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_graf.html#a849aea670db767445a6c98eefa5ee43e",tooltip="Sprawdza zawartość wektora."];
+}

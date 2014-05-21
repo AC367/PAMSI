@@ -14,11 +14,7 @@
 <script type="text/javascript">
   $(document).ready(initResizable);
 </script>
-<link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() { searchBox.OnSelectItem(0); });
-</script>
+
 
 </head>
 <body>
@@ -46,30 +42,11 @@
 </div>
 
 <!-- Wygenerowano przez Doxygen 1.7.6.1 -->
-<script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
-</script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
       <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
       <li><a href="files.html"><span>Pliki</span></a></li>
-      <li>
-        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.png"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
-          </span>
-        </div>
-      </li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -102,11 +79,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
 <div id="doc-content">
 <div class="contents">
 &#160;<ul>
+<li>A_star()
+: <a class="el" href="class_graf.html#a6c44918b1313dc1757fc01c18dde3b80">Graf</a>
+</li>
 <li>BFS()
 : <a class="el" href="class_graf.html#aa101a5b533a42b4d9c447e8891920fe9">Graf</a>
 </li>
 <li>Czy_istnieje()
 : <a class="el" href="class_graf.html#a922eadf981e7dcd36bdbbdac102ee8e7">Graf</a>
+</li>
+<li>Czy_na_liscie()
+: <a class="el" href="class_graf.html#a849aea670db767445a6c98eefa5ee43e">Graf</a>
 </li>
 <li>Czy_polaczone()
 : <a class="el" href="class_graf.html#affe4be381a025ca350ccc86ff68ea9d1">Graf</a>
@@ -118,13 +101,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
 : <a class="el" href="class_graf.html#ae12b5623e92fa86ff51d51db1804e793">Graf</a>
 </li>
 <li>Dodaj_wierzcholek()
-: <a class="el" href="class_graf.html#a1d04219ee7346afb627353c9d57b8cb2">Graf</a>
+: <a class="el" href="class_graf.html#a2e9f4052ea562478c80b43d786c9068a">Graf</a>
 </li>
 <li>Nastepny_DFS()
 : <a class="el" href="class_graf.html#a305624fe0009aab3fbbcb1a849de3786">Graf</a>
 </li>
+<li>Odleglosc()
+: <a class="el" href="class_graf.html#a497d04cd3e5fe9d6b1d98f13ef64d989">Graf</a>
+</li>
+<li>Odtworz_sciezke()
+: <a class="el" href="class_graf.html#aa4c11c9a82e3b4a786f5327cc6d17d80">Graf</a>
+</li>
 <li>Sasiedztwo()
-: <a class="el" href="class_graf.html#afc14626d6712964761d749568b0ec5af">Graf</a>
+: <a class="el" href="class_graf.html#a046d281f1698f8072bf60e4da71bc675">Graf</a>
 </li>
 <li>Usun_krawedz()
 : <a class="el" href="class_graf.html#af2ca22dd1730ce9067e484cf21db5b3f">Graf</a>
@@ -135,27 +124,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
 <li>Wypisz_macierz()
 : <a class="el" href="class_graf.html#a284d7f2e4bab1832220ce41fdef5d024">Graf</a>
 </li>
+<li>Znajdz_krawedz()
+: <a class="el" href="class_graf.html#aa15a3c01cfdf981650654ebaed04e4e1">Graf</a>
+</li>
 </ul>
 </div><!-- contents -->
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a></div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
-</div>
-
 </div>
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Wygenerowano Thu May 15 2014 02:47:18 dla Graf programem
+    <li class="footer">Wygenerowano Wed May 21 2014 15:54:34 dla Graf programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

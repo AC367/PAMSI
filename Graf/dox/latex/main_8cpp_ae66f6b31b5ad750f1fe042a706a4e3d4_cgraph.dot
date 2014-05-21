@@ -5,15 +5,9 @@ digraph G
   rankdir="LR";
   Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
-  Node2 [label="Graf::Dodaj_wierzcholek",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_graf.html#a1d04219ee7346afb627353c9d57b8cb2",tooltip="Dodaje wierzchołek."];
+  Node2 [label="Graf::Dodaj_wierzcholek",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_graf.html#a2e9f4052ea562478c80b43d786c9068a",tooltip="Dodaje wierzchołek."];
   Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
   Node3 [label="Graf::Dodaj_krawedz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_graf.html#ae12b5623e92fa86ff51d51db1804e793",tooltip="Dodaje krawędź."];
   Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
-  Node4 [label="Graf::Wypisz_macierz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_graf.html#a284d7f2e4bab1832220ce41fdef5d024",tooltip="Wypisuje macierz sąsiedztwa."];
-  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
-  Node5 [label="Graf::DFS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_graf.html#a92a75c629930662bb43b72f0d44f8c63",tooltip="Algorytm DFS."];
-  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
-  Node6 [label="Graf::Nastepny_DFS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_graf.html#a305624fe0009aab3fbbcb1a849de3786",tooltip="Funkcja pomocnicza dla algorytmu DFS."];
-  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
-  Node7 [label="Graf::BFS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_graf.html#aa101a5b533a42b4d9c447e8891920fe9",tooltip="Algorytm BFS."];
+  Node4 [label="Graf::BFS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_graf.html#aa101a5b533a42b4d9c447e8891920fe9",tooltip="Algorytm BFS."];
 }

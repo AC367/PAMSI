@@ -22,7 +22,7 @@ struct \hyperlink{struct_graf_1_1__wierzcholek}{\-\_\-wierzcholek}
 \subsection*{\-Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{class_graf_a1d04219ee7346afb627353c9d57b8cb2}{\-Dodaj\-\_\-wierzcholek} (int v)
+void \hyperlink{class_graf_a2e9f4052ea562478c80b43d786c9068a}{\-Dodaj\-\_\-wierzcholek} (int v, int wsp\-\_\-x, int wsp\-\_\-y)
 \begin{DoxyCompactList}\small\item\em \-Dodaje wierzchołek. \end{DoxyCompactList}\item 
 void \hyperlink{class_graf_ad1091bfe67b16460cd64aebdcbb5b521}{\-Usun\-\_\-wierzcholek} (int wierzcholek)
 \begin{DoxyCompactList}\small\item\em \-Usuwa wierzchołek. \end{DoxyCompactList}\item 
@@ -36,14 +36,24 @@ bool \hyperlink{class_graf_a922eadf981e7dcd36bdbbdac102ee8e7}{\-Czy\-\_\-istniej
 \begin{DoxyCompactList}\small\item\em \-Sprawdza istnienie wierzchołka. \end{DoxyCompactList}\item 
 void \hyperlink{class_graf_a284d7f2e4bab1832220ce41fdef5d024}{\-Wypisz\-\_\-macierz} ()
 \begin{DoxyCompactList}\small\item\em \-Wypisuje macierz sąsiedztwa. \end{DoxyCompactList}\item 
-void \hyperlink{class_graf_afc14626d6712964761d749568b0ec5af}{\-Sasiedztwo} (int v)
+vector$<$ int $>$ \hyperlink{class_graf_a046d281f1698f8072bf60e4da71bc675}{\-Sasiedztwo} (int v)
 \begin{DoxyCompactList}\small\item\em \-Sprawdza sąsiedztwo wierzchołka. \end{DoxyCompactList}\item 
 int \hyperlink{class_graf_a305624fe0009aab3fbbcb1a849de3786}{\-Nastepny\-\_\-\-D\-F\-S} (int v)
 \begin{DoxyCompactList}\small\item\em \-Funkcja pomocnicza dla algorytmu \-D\-F\-S. \end{DoxyCompactList}\item 
 void \hyperlink{class_graf_a92a75c629930662bb43b72f0d44f8c63}{\-D\-F\-S} (int poczatkowy, int szukany)
 \begin{DoxyCompactList}\small\item\em \-Algorytm \-D\-F\-S. \end{DoxyCompactList}\item 
 void \hyperlink{class_graf_aa101a5b533a42b4d9c447e8891920fe9}{\-B\-F\-S} (int poczatkowy, int szukany)
-\begin{DoxyCompactList}\small\item\em \-Algorytm \-B\-F\-S. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \-Algorytm \-B\-F\-S. \end{DoxyCompactList}\item 
+bool \hyperlink{class_graf_a6c44918b1313dc1757fc01c18dde3b80}{\-A\-\_\-star} (int poczatkowy, int koncowy)
+\begin{DoxyCompactList}\small\item\em \-Realizuje algorytm \-A$\ast$. \end{DoxyCompactList}\item 
+bool \hyperlink{class_graf_a849aea670db767445a6c98eefa5ee43e}{\-Czy\-\_\-na\-\_\-liscie} (vector$<$ int $>$ lista, int element)
+\begin{DoxyCompactList}\small\item\em \-Sprawdza zawartość wektora. \end{DoxyCompactList}\item 
+\hyperlink{struct_graf_1_1__krawedz}{\-Graf\-::\-\_\-krawedz} \hyperlink{class_graf_aa15a3c01cfdf981650654ebaed04e4e1}{\-Znajdz\-\_\-krawedz} (int v1, int v2)
+\begin{DoxyCompactList}\small\item\em \-Wyszukuje krawędź. \end{DoxyCompactList}\item 
+void \hyperlink{class_graf_aa4c11c9a82e3b4a786f5327cc6d17d80}{\-Odtworz\-\_\-sciezke} (int poczatkowy, int koncowy)
+\begin{DoxyCompactList}\small\item\em \-Odtwarza ścieżkę algorytmu \-A$\ast$. \end{DoxyCompactList}\item 
+int \hyperlink{class_graf_a497d04cd3e5fe9d6b1d98f13ef64d989}{\-Odleglosc} (int v1, int v2)
+\begin{DoxyCompactList}\small\item\em \-Liczy odległość między wierzchołkami. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{\-Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
@@ -60,11 +70,40 @@ vector$<$ \hyperlink{struct_graf_1_1__krawedz}{\-\_\-krawedz} $>$ \hyperlink{cla
 \subsection{\-Opis szczegółowy}
 \-Klasa ta zawiera wewnętrzne struktury\-: \hyperlink{struct_graf_1_1__wierzcholek}{\-\_\-wierzcholek}, \hyperlink{struct_graf_1_1__krawedz}{\-\_\-krawedz} oraz \-\_\-lista\-\_\-\-B\-F\-T. \-Dwie pierwsze odpowiadają za defniowanie wierzchołków i krawędzi grafu, a tarzecia z nich tworzy listę jednokierunkową wykorzystywaną przez algorytm \-B\-F\-T. \-W klasie \hyperlink{class_graf}{\-Graf} przechowywana jest też tablica sąsiedztwa oraz wektory krawędzi i wierzchołków. \-Ponadto zawarte są w niej deklarace metod. 
 
-\-Definicja w linii 24 pliku graf.\-hh.
+\-Definicja w linii 28 pliku graf.\-hh.
 
 
 
 \subsection{\-Dokumentacja funkcji składowych}
+\hypertarget{class_graf_a6c44918b1313dc1757fc01c18dde3b80}{\index{\-Graf@{\-Graf}!\-A\-\_\-star@{\-A\-\_\-star}}
+\index{\-A\-\_\-star@{\-A\-\_\-star}!Graf@{\-Graf}}
+\subsubsection[{\-A\-\_\-star}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Graf\-::\-A\-\_\-star} (
+\begin{DoxyParamCaption}
+\item[{int}]{poczatkowy, }
+\item[{int}]{koncowy}
+\end{DoxyParamCaption}
+)}}\label{class_graf_a6c44918b1313dc1757fc01c18dde3b80}
+\-Funkcja ta ma za zadanie, przy użyciu algorytmu \-A$\ast$, wyszukać najkrótszą drogę w grafie pomiędzy zadanymi wierzchołkami.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em poczatkowy} & -\/ element, od którego zaczynamy przeszukiwanie. \\
+\hline
+\mbox{\tt in}  & {\em szukany} & -\/ element docelowy.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+true -\/ gdy znaleziono element. false -\/ gdy nie znaleziono elementu. 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 239 pliku graf.\-cpp.
+
+
+
+\-Oto graf wywołań dla tej funkcji\-:
+
+
 \hypertarget{class_graf_aa101a5b533a42b4d9c447e8891920fe9}{\index{\-Graf@{\-Graf}!\-B\-F\-S@{\-B\-F\-S}}
 \index{\-B\-F\-S@{\-B\-F\-S}!Graf@{\-Graf}}
 \subsubsection[{\-B\-F\-S}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Graf\-::\-B\-F\-S} (
@@ -84,7 +123,7 @@ vector$<$ \hyperlink{struct_graf_1_1__krawedz}{\-\_\-krawedz} $>$ \hyperlink{cla
 \end{DoxyParams}
 
 
-\-Definicja w linii 246 pliku graf.\-cpp.
+\-Definicja w linii 192 pliku graf.\-cpp.
 
 
 
@@ -110,7 +149,36 @@ true -\/ gdy istnieje. false -\/ gdy nie istnieje.
 \end{DoxyReturn}
 
 
-\-Definicja w linii 178 pliku graf.\-cpp.
+\-Definicja w linii 142 pliku graf.\-cpp.
+
+\hypertarget{class_graf_a849aea670db767445a6c98eefa5ee43e}{\index{\-Graf@{\-Graf}!\-Czy\-\_\-na\-\_\-liscie@{\-Czy\-\_\-na\-\_\-liscie}}
+\index{\-Czy\-\_\-na\-\_\-liscie@{\-Czy\-\_\-na\-\_\-liscie}!Graf@{\-Graf}}
+\subsubsection[{\-Czy\-\_\-na\-\_\-liscie}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Graf\-::\-Czy\-\_\-na\-\_\-liscie} (
+\begin{DoxyParamCaption}
+\item[{vector$<$ int $>$}]{lista, }
+\item[{int}]{element}
+\end{DoxyParamCaption}
+)}}\label{class_graf_a849aea670db767445a6c98eefa5ee43e}
+\-Metoda ta ma za zadanie sprawdzić czy dany element typu int znajduje się w podanym wektorze.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em element} & -\/ element, którego obecność chcemy potwierdzić. \\
+\hline
+\mbox{\tt in}  & {\em lista} & -\/ przeszukiwany wektor.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+true -\/ gdy element znajduje się w wektorze. false -\/ gdy element nie znajduje się w wektorze. 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 325 pliku graf.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
 
 \hypertarget{class_graf_affe4be381a025ca350ccc86ff68ea9d1}{\index{\-Graf@{\-Graf}!\-Czy\-\_\-polaczone@{\-Czy\-\_\-polaczone}}
 \index{\-Czy\-\_\-polaczone@{\-Czy\-\_\-polaczone}!Graf@{\-Graf}}
@@ -134,7 +202,7 @@ true -\/ gdy są połączone false -\/ gdy nie są połączone
 \end{DoxyReturn}
 
 
-\-Definicja w linii 136 pliku graf.\-cpp.
+\-Definicja w linii 95 pliku graf.\-cpp.
 
 \hypertarget{class_graf_a92a75c629930662bb43b72f0d44f8c63}{\index{\-Graf@{\-Graf}!\-D\-F\-S@{\-D\-F\-S}}
 \index{\-D\-F\-S@{\-D\-F\-S}!Graf@{\-Graf}}
@@ -155,16 +223,11 @@ true -\/ gdy są połączone false -\/ gdy nie są połączone
 \end{DoxyParams}
 
 
-\-Definicja w linii 217 pliku graf.\-cpp.
+\-Definicja w linii 163 pliku graf.\-cpp.
 
 
 
 \-Oto graf wywołań dla tej funkcji\-:
-
-
-
-
-\-Oto graf wywoływań tej funkcji\-:
 
 
 \hypertarget{class_graf_ae12b5623e92fa86ff51d51db1804e793}{\index{\-Graf@{\-Graf}!\-Dodaj\-\_\-krawedz@{\-Dodaj\-\_\-krawedz}}
@@ -189,25 +252,31 @@ true -\/ gdy są połączone false -\/ gdy nie są połączone
 \end{DoxyParams}
 
 
-\-Definicja w linii 108 pliku graf.\-cpp.
+\-Definicja w linii 66 pliku graf.\-cpp.
 
 
 
 \-Oto graf wywoływań tej funkcji\-:
 
 
-\hypertarget{class_graf_a1d04219ee7346afb627353c9d57b8cb2}{\index{\-Graf@{\-Graf}!\-Dodaj\-\_\-wierzcholek@{\-Dodaj\-\_\-wierzcholek}}
+\hypertarget{class_graf_a2e9f4052ea562478c80b43d786c9068a}{\index{\-Graf@{\-Graf}!\-Dodaj\-\_\-wierzcholek@{\-Dodaj\-\_\-wierzcholek}}
 \index{\-Dodaj\-\_\-wierzcholek@{\-Dodaj\-\_\-wierzcholek}!Graf@{\-Graf}}
 \subsubsection[{\-Dodaj\-\_\-wierzcholek}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Graf\-::\-Dodaj\-\_\-wierzcholek} (
 \begin{DoxyParamCaption}
-\item[{int}]{v}
+\item[{int}]{v, }
+\item[{int}]{wsp\-\_\-x, }
+\item[{int}]{wsp\-\_\-y}
 \end{DoxyParamCaption}
-)}}\label{class_graf_a1d04219ee7346afb627353c9d57b8cb2}
-\-Metoda ta ma za zadanie dodać wierzchołek o zadanym numerze do grafu.
+)}}\label{class_graf_a2e9f4052ea562478c80b43d786c9068a}
+\-Metoda ta ma za zadanie dodać wierzchołek o zadanym numerze i współrzędnych do grafu.
 
 
 \begin{DoxyParams}[1]{\-Parametry}
 \mbox{\tt in}  & {\em v} & -\/ numer dodawanego wierzchołka. \\
+\hline
+\mbox{\tt in}  & {\em wsp\-\_\-x} & -\/ współrzędna x dodawanego wierzchołka. \\
+\hline
+\mbox{\tt in}  & {\em wsp\-\_\-y} & -\/ współrzędna y dodawanego wierzchołka. \\
 \hline
 \end{DoxyParams}
 
@@ -238,30 +307,85 @@ i -\/ numer następnego wierzchołka. -\/1 -\/ gdy nie istnieje następny wierzc
 \end{DoxyReturn}
 
 
-\-Definicja w linii 204 pliku graf.\-cpp.
+\-Definicja w linii 150 pliku graf.\-cpp.
 
 
 
 \-Oto graf wywoływań tej funkcji\-:
 
 
-\hypertarget{class_graf_afc14626d6712964761d749568b0ec5af}{\index{\-Graf@{\-Graf}!\-Sasiedztwo@{\-Sasiedztwo}}
+\hypertarget{class_graf_a497d04cd3e5fe9d6b1d98f13ef64d989}{\index{\-Graf@{\-Graf}!\-Odleglosc@{\-Odleglosc}}
+\index{\-Odleglosc@{\-Odleglosc}!Graf@{\-Graf}}
+\subsubsection[{\-Odleglosc}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Graf\-::\-Odleglosc} (
+\begin{DoxyParamCaption}
+\item[{int}]{v1, }
+\item[{int}]{v2}
+\end{DoxyParamCaption}
+)}}\label{class_graf_a497d04cd3e5fe9d6b1d98f13ef64d989}
+\-Metoda ta ma za zadanie obliczyć odległość w linii prostej pomiędzy dwoma wierzchołkami na podstawie ich współrzędnych.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em v1} & -\/ pierwszy wierzchołek. \\
+\hline
+\mbox{\tt in}  & {\em v2} & -\/ drugi wierzchołek. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 347 pliku graf.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
+
+\hypertarget{class_graf_aa4c11c9a82e3b4a786f5327cc6d17d80}{\index{\-Graf@{\-Graf}!\-Odtworz\-\_\-sciezke@{\-Odtworz\-\_\-sciezke}}
+\index{\-Odtworz\-\_\-sciezke@{\-Odtworz\-\_\-sciezke}!Graf@{\-Graf}}
+\subsubsection[{\-Odtworz\-\_\-sciezke}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Graf\-::\-Odtworz\-\_\-sciezke} (
+\begin{DoxyParamCaption}
+\item[{int}]{poczatkowy, }
+\item[{int}]{koncowy}
+\end{DoxyParamCaption}
+)}}\label{class_graf_aa4c11c9a82e3b4a786f5327cc6d17d80}
+\-Metoda ta ma za zadanie odtworzyc najkrótszą ścieżkę w grafie znalezioną przez algorytm \-A$\ast$.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em poczatkowy} & -\/ wierzchołek początkowy. \\
+\hline
+\mbox{\tt in}  & {\em koncowy} & -\/ wierzchołek początkowy. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definicja w linii 306 pliku graf.\-cpp.
+
+\hypertarget{class_graf_a046d281f1698f8072bf60e4da71bc675}{\index{\-Graf@{\-Graf}!\-Sasiedztwo@{\-Sasiedztwo}}
 \index{\-Sasiedztwo@{\-Sasiedztwo}!Graf@{\-Graf}}
-\subsubsection[{\-Sasiedztwo}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Graf\-::\-Sasiedztwo} (
+\subsubsection[{\-Sasiedztwo}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ int $>$ {\bf \-Graf\-::\-Sasiedztwo} (
 \begin{DoxyParamCaption}
 \item[{int}]{v}
 \end{DoxyParamCaption}
-)}}\label{class_graf_afc14626d6712964761d749568b0ec5af}
-\-Metoda ta ma za zadanie wypisać, z którymi wierzchołkami jest połączony wierzchołek o zadanym numerze.
+)}}\label{class_graf_a046d281f1698f8072bf60e4da71bc675}
+\-Metoda ta ma za zadanie zwrócić wektor indeksów wierzchołków, z którymi połączony jest wierzchołek o zadanym numerze.
 
 
 \begin{DoxyParams}[1]{\-Parametry}
 \mbox{\tt in}  & {\em v} & -\/ numer wierzchołka. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+pom -\/ wektor indeksów wierzchołków sąsiadujących z wierzchołkiem v. 
+\end{DoxyReturn}
 
 
-\-Definicja w linii 162 pliku graf.\-cpp.
+\-Definicja w linii 119 pliku graf.\-cpp.
+
+
+
+\-Oto graf wywoływań tej funkcji\-:
+
 
 \hypertarget{class_graf_af2ca22dd1730ce9067e484cf21db5b3f}{\index{\-Graf@{\-Graf}!\-Usun\-\_\-krawedz@{\-Usun\-\_\-krawedz}}
 \index{\-Usun\-\_\-krawedz@{\-Usun\-\_\-krawedz}!Graf@{\-Graf}}
@@ -282,7 +406,7 @@ i -\/ numer następnego wierzchołka. -\/1 -\/ gdy nie istnieje następny wierzc
 \end{DoxyParams}
 
 
-\-Definicja w linii 121 pliku graf.\-cpp.
+\-Definicja w linii 80 pliku graf.\-cpp.
 
 \hypertarget{class_graf_ad1091bfe67b16460cd64aebdcbb5b521}{\index{\-Graf@{\-Graf}!\-Usun\-\_\-wierzcholek@{\-Usun\-\_\-wierzcholek}}
 \index{\-Usun\-\_\-wierzcholek@{\-Usun\-\_\-wierzcholek}!Graf@{\-Graf}}
@@ -300,7 +424,7 @@ i -\/ numer następnego wierzchołka. -\/1 -\/ gdy nie istnieje następny wierzc
 \end{DoxyParams}
 
 
-\-Definicja w linii 103 pliku graf.\-cpp.
+\-Definicja w linii 61 pliku graf.\-cpp.
 
 \hypertarget{class_graf_a284d7f2e4bab1832220ce41fdef5d024}{\index{\-Graf@{\-Graf}!\-Wypisz\-\_\-macierz@{\-Wypisz\-\_\-macierz}}
 \index{\-Wypisz\-\_\-macierz@{\-Wypisz\-\_\-macierz}!Graf@{\-Graf}}
@@ -311,7 +435,31 @@ i -\/ numer następnego wierzchołka. -\/1 -\/ gdy nie istnieje następny wierzc
 )}}\label{class_graf_a284d7f2e4bab1832220ce41fdef5d024}
 \-Metoda ta ma za zadanie wypisać na standardowe wyjście zawartość macierzy sąsiedztwa. 
 
-\-Definicja w linii 144 pliku graf.\-cpp.
+\-Definicja w linii 103 pliku graf.\-cpp.
+
+\hypertarget{class_graf_aa15a3c01cfdf981650654ebaed04e4e1}{\index{\-Graf@{\-Graf}!\-Znajdz\-\_\-krawedz@{\-Znajdz\-\_\-krawedz}}
+\index{\-Znajdz\-\_\-krawedz@{\-Znajdz\-\_\-krawedz}!Graf@{\-Graf}}
+\subsubsection[{\-Znajdz\-\_\-krawedz}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Graf\-::\-\_\-krawedz} {\bf \-Graf\-::\-Znajdz\-\_\-krawedz} (
+\begin{DoxyParamCaption}
+\item[{int}]{v1, }
+\item[{int}]{v2}
+\end{DoxyParamCaption}
+)}}\label{class_graf_aa15a3c01cfdf981650654ebaed04e4e1}
+\-Metoda ta ma za zadanie wyszukać w wektorze krawędzi, krawędź łączącą dwa zadane wierzchołki
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em v1} & -\/ pierwszy wierzchołek. \\
+\hline
+\mbox{\tt in}  & {\em v2} & -\/ drugi wierzchołek.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+obiekt typu \hyperlink{struct_graf_1_1__krawedz}{\-\_\-krawedz} odpowiadający krawędzi łączącej zadane wierzchołki. 
+\end{DoxyReturn}
+
+
+\-Definicja w linii 334 pliku graf.\-cpp.
 
 
 
@@ -326,28 +474,28 @@ i -\/ numer następnego wierzchołka. -\/1 -\/ gdy nie istnieje następny wierzc
 \subsubsection[{\-\_\-stos\-\_\-\-D\-F\-S}]{\setlength{\rightskip}{0pt plus 5cm}stack$<$int$>$ {\bf \-Graf\-::\-\_\-stos\-\_\-\-D\-F\-S}}}\label{class_graf_aedcc17420188f632ece315f32fbe0b83}
 
 
-\-Definicja w linii 73 pliku graf.\-hh.
+\-Definicja w linii 82 pliku graf.\-hh.
 
 \hypertarget{class_graf_a55dab6e3ffdfbddf0b90cfb2c3eb8a12}{\index{\-Graf@{\-Graf}!\-\_\-tab\-\_\-sasiedztwa@{\-\_\-tab\-\_\-sasiedztwa}}
 \index{\-\_\-tab\-\_\-sasiedztwa@{\-\_\-tab\-\_\-sasiedztwa}!Graf@{\-Graf}}
 \subsubsection[{\-\_\-tab\-\_\-sasiedztwa}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$$\ast$ {\bf \-Graf\-::\-\_\-tab\-\_\-sasiedztwa}}}\label{class_graf_a55dab6e3ffdfbddf0b90cfb2c3eb8a12}
 
 
-\-Definicja w linii 28 pliku graf.\-hh.
+\-Definicja w linii 32 pliku graf.\-hh.
 
 \hypertarget{class_graf_a79c79b147cde2bb403d3aa27db8f9f22}{\index{\-Graf@{\-Graf}!\-\_\-wektor\-\_\-krawedzi@{\-\_\-wektor\-\_\-krawedzi}}
 \index{\-\_\-wektor\-\_\-krawedzi@{\-\_\-wektor\-\_\-krawedzi}!Graf@{\-Graf}}
 \subsubsection[{\-\_\-wektor\-\_\-krawedzi}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf \-\_\-krawedz}$>$ {\bf \-Graf\-::\-\_\-wektor\-\_\-krawedzi}}}\label{class_graf_a79c79b147cde2bb403d3aa27db8f9f22}
 
 
-\-Definicja w linii 75 pliku graf.\-hh.
+\-Definicja w linii 84 pliku graf.\-hh.
 
 \hypertarget{class_graf_a6156d0fd54662028922b4134a92cb357}{\index{\-Graf@{\-Graf}!\-\_\-wektor\-\_\-wierzcholkow@{\-\_\-wektor\-\_\-wierzcholkow}}
 \index{\-\_\-wektor\-\_\-wierzcholkow@{\-\_\-wektor\-\_\-wierzcholkow}!Graf@{\-Graf}}
 \subsubsection[{\-\_\-wektor\-\_\-wierzcholkow}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf \-\_\-wierzcholek}$>$ {\bf \-Graf\-::\-\_\-wektor\-\_\-wierzcholkow}}}\label{class_graf_a6156d0fd54662028922b4134a92cb357}
 
 
-\-Definicja w linii 74 pliku graf.\-hh.
+\-Definicja w linii 83 pliku graf.\-hh.
 
 
 

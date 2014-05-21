@@ -14,11 +14,7 @@
 <script type="text/javascript">
   $(document).ready(initResizable);
 </script>
-<link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() { searchBox.OnSelectItem(0); });
-</script>
+
 
 </head>
 <body>
@@ -46,30 +42,11 @@
 </div>
 
 <!-- Wygenerowano przez Doxygen 1.7.6.1 -->
-<script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
-</script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
       <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
       <li><a href="files.html"><span>Pliki</span></a></li>
-      <li>
-        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.png"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
-          </span>
-        </div>
-      </li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -120,8 +97,8 @@ Komponenty</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Struktura realizująca wierzchołki grafu.  <a href="struct_graf_1_1__wierzcholek.html#details">Więcej...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#a1d04219ee7346afb627353c9d57b8cb2">Dodaj_wierzcholek</a> (int v)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje wierzchołek.  <a href="#a1d04219ee7346afb627353c9d57b8cb2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#a2e9f4052ea562478c80b43d786c9068a">Dodaj_wierzcholek</a> (int v, int wsp_x, int wsp_y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje wierzchołek.  <a href="#a2e9f4052ea562478c80b43d786c9068a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#ad1091bfe67b16460cd64aebdcbb5b521">Usun_wierzcholek</a> (int wierzcholek)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Usuwa wierzchołek.  <a href="#ad1091bfe67b16460cd64aebdcbb5b521"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#ae12b5623e92fa86ff51d51db1804e793">Dodaj_krawedz</a> (int v1, int v2, int waga)</td></tr>
@@ -134,14 +111,24 @@ Metody publiczne</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza istnienie wierzchołka.  <a href="#a922eadf981e7dcd36bdbbdac102ee8e7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#a284d7f2e4bab1832220ce41fdef5d024">Wypisz_macierz</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Wypisuje macierz sąsiedztwa.  <a href="#a284d7f2e4bab1832220ce41fdef5d024"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#afc14626d6712964761d749568b0ec5af">Sasiedztwo</a> (int v)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza sąsiedztwo wierzchołka.  <a href="#afc14626d6712964761d749568b0ec5af"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#a046d281f1698f8072bf60e4da71bc675">Sasiedztwo</a> (int v)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza sąsiedztwo wierzchołka.  <a href="#a046d281f1698f8072bf60e4da71bc675"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#a305624fe0009aab3fbbcb1a849de3786">Nastepny_DFS</a> (int v)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja pomocnicza dla algorytmu DFS.  <a href="#a305624fe0009aab3fbbcb1a849de3786"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#a92a75c629930662bb43b72f0d44f8c63">DFS</a> (int poczatkowy, int szukany)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Algorytm DFS.  <a href="#a92a75c629930662bb43b72f0d44f8c63"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#aa101a5b533a42b4d9c447e8891920fe9">BFS</a> (int poczatkowy, int szukany)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Algorytm BFS.  <a href="#aa101a5b533a42b4d9c447e8891920fe9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#a6c44918b1313dc1757fc01c18dde3b80">A_star</a> (int poczatkowy, int koncowy)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Realizuje algorytm A*.  <a href="#a6c44918b1313dc1757fc01c18dde3b80"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#a849aea670db767445a6c98eefa5ee43e">Czy_na_liscie</a> (vector&lt; int &gt; lista, int element)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza zawartość wektora.  <a href="#a849aea670db767445a6c98eefa5ee43e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_graf_1_1__krawedz.html">Graf::_krawedz</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#aa15a3c01cfdf981650654ebaed04e4e1">Znajdz_krawedz</a> (int v1, int v2)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Wyszukuje krawędź.  <a href="#aa15a3c01cfdf981650654ebaed04e4e1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#aa4c11c9a82e3b4a786f5327cc6d17d80">Odtworz_sciezke</a> (int poczatkowy, int koncowy)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Odtwarza ścieżkę algorytmu A*.  <a href="#aa4c11c9a82e3b4a786f5327cc6d17d80"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#a497d04cd3e5fe9d6b1d98f13ef64d989">Odleglosc</a> (int v1, int v2)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Liczy odległość między wierzchołkami.  <a href="#a497d04cd3e5fe9d6b1d98f13ef64d989"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Atrybuty publiczne</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graf.html#a55dab6e3ffdfbddf0b90cfb2c3eb8a12">_tab_sasiedztwa</a></td></tr>
@@ -152,8 +139,55 @@ Atrybuty publiczne</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Opis szczegółowy</h2>
 <div class="textblock"><p>Klasa ta zawiera wewnętrzne struktury: <a class="el" href="struct_graf_1_1__wierzcholek.html" title="Struktura realizująca wierzchołki grafu.">_wierzcholek</a>, <a class="el" href="struct_graf_1_1__krawedz.html" title="Struktura realizująca krawędzie grafu.">_krawedz</a> oraz _lista_BFT. Dwie pierwsze odpowiadają za defniowanie wierzchołków i krawędzi grafu, a tarzecia z nich tworzy listę jednokierunkową wykorzystywaną przez algorytm BFT. W klasie <a class="el" href="class_graf.html" title="Klasa definiująca graf.">Graf</a> przechowywana jest też tablica sąsiedztwa oraz wektory krawędzi i wierzchołków. Ponadto zawarte są w niej deklarace metod. </p>
 
-<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00024">24</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00028">28</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
 </div><hr/><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="a6c44918b1313dc1757fc01c18dde3b80"></a><!-- doxytag: member="Graf::A_star" ref="a6c44918b1313dc1757fc01c18dde3b80" args="(int poczatkowy, int koncowy)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_graf.html#a6c44918b1313dc1757fc01c18dde3b80">Graf::A_star</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>poczatkowy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>koncowy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Funkcja ta ma za zadanie, przy użyciu algorytmu A*, wyszukać najkrótszą drogę w grafie pomiędzy zadanymi wierzchołkami.</p>
+<dl class="params"><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">poczatkowy</td><td>- element, od którego zaczynamy przeszukiwanie. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">szukany</td><td>- element docelowy.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Zwraca:</b></dt><dd>true - gdy znaleziono element. false - gdy nie znaleziono elementu. </dd></dl>
+
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00239">239</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graf_a6c44918b1313dc1757fc01c18dde3b80_cgraph.png" border="0" usemap="#class_graf_a6c44918b1313dc1757fc01c18dde3b80_cgraph" alt=""/></div>
+<map name="class_graf_a6c44918b1313dc1757fc01c18dde3b80_cgraph" id="class_graf_a6c44918b1313dc1757fc01c18dde3b80_cgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="aa101a5b533a42b4d9c447e8891920fe9"></a><!-- doxytag: member="Graf::BFS" ref="aa101a5b533a42b4d9c447e8891920fe9" args="(int poczatkowy, int szukany)" -->
 <div class="memitem">
 <div class="memproto">
@@ -187,7 +221,7 @@ Atrybuty publiczne</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00246">246</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00192">192</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -223,7 +257,54 @@ Oto graf wywoływań tej funkcji:</div>
 </dl>
 <dl class="return"><dt><b>Zwraca:</b></dt><dd>true - gdy istnieje. false - gdy nie istnieje. </dd></dl>
 
-<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00178">178</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00142">142</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a849aea670db767445a6c98eefa5ee43e"></a><!-- doxytag: member="Graf::Czy_na_liscie" ref="a849aea670db767445a6c98eefa5ee43e" args="(vector&lt; int &gt; lista, int element)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_graf.html#a849aea670db767445a6c98eefa5ee43e">Graf::Czy_na_liscie</a> </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>lista</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>element</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Metoda ta ma za zadanie sprawdzić czy dany element typu int znajduje się w podanym wektorze.</p>
+<dl class="params"><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">element</td><td>- element, którego obecność chcemy potwierdzić. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lista</td><td>- przeszukiwany wektor.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Zwraca:</b></dt><dd>true - gdy element znajduje się w wektorze. false - gdy element nie znajduje się w wektorze. </dd></dl>
+
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00325">325</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graf_a849aea670db767445a6c98eefa5ee43e_icgraph.png" border="0" usemap="#class_graf_a849aea670db767445a6c98eefa5ee43e_icgraph" alt=""/></div>
+<map name="class_graf_a849aea670db767445a6c98eefa5ee43e_icgraph" id="class_graf_a849aea670db767445a6c98eefa5ee43e_icgraph">
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -261,7 +342,7 @@ Oto graf wywoływań tej funkcji:</div>
 </dl>
 <dl class="return"><dt><b>Zwraca:</b></dt><dd>true - gdy są połączone false - gdy nie są połączone </dd></dl>
 
-<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00136">136</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00095">95</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
 
 </div>
 </div>
@@ -298,22 +379,13 @@ Oto graf wywoływań tej funkcji:</div>
   </dd>
 </dl>
 
-<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00217">217</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00163">163</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_graf_a92a75c629930662bb43b72f0d44f8c63_cgraph.png" border="0" usemap="#class_graf_a92a75c629930662bb43b72f0d44f8c63_cgraph" alt=""/></div>
 <map name="class_graf_a92a75c629930662bb43b72f0d44f8c63_cgraph" id="class_graf_a92a75c629930662bb43b72f0d44f8c63_cgraph">
-</map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Oto graf wywoływań tej funkcji:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_graf_a92a75c629930662bb43b72f0d44f8c63_icgraph.png" border="0" usemap="#class_graf_a92a75c629930662bb43b72f0d44f8c63_icgraph" alt=""/></div>
-<map name="class_graf_a92a75c629930662bb43b72f0d44f8c63_icgraph" id="class_graf_a92a75c629930662bb43b72f0d44f8c63_icgraph">
 </map>
 </div>
 </p>
@@ -360,7 +432,7 @@ Oto graf wywoływań tej funkcji:</div>
   </dd>
 </dl>
 
-<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00108">108</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00066">66</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -373,24 +445,42 @@ Oto graf wywoływań tej funkcji:</div>
 
 </div>
 </div>
-<a class="anchor" id="a1d04219ee7346afb627353c9d57b8cb2"></a><!-- doxytag: member="Graf::Dodaj_wierzcholek" ref="a1d04219ee7346afb627353c9d57b8cb2" args="(int v)" -->
+<a class="anchor" id="a2e9f4052ea562478c80b43d786c9068a"></a><!-- doxytag: member="Graf::Dodaj_wierzcholek" ref="a2e9f4052ea562478c80b43d786c9068a" args="(int v, int wsp_x, int wsp_y)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_graf.html#a1d04219ee7346afb627353c9d57b8cb2">Graf::Dodaj_wierzcholek</a> </td>
+          <td class="memname">void <a class="el" href="class_graf.html#a2e9f4052ea562478c80b43d786c9068a">Graf::Dodaj_wierzcholek</a> </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>v</em></td><td>)</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>wsp_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>wsp_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Metoda ta ma za zadanie dodać wierzchołek o zadanym numerze do grafu.</p>
+<p>Metoda ta ma za zadanie dodać wierzchołek o zadanym numerze i współrzędnych do grafu.</p>
 <dl class="params"><dt><b>Parametry:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>- numer dodawanego wierzchołka. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">wsp_x</td><td>- współrzędna x dodawanego wierzchołka. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">wsp_y</td><td>- współrzędna y dodawanego wierzchołka. </td></tr>
   </table>
   </dd>
 </dl>
@@ -400,8 +490,8 @@ Oto graf wywoływań tej funkcji:</div>
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_graf_a1d04219ee7346afb627353c9d57b8cb2_icgraph.png" border="0" usemap="#class_graf_a1d04219ee7346afb627353c9d57b8cb2_icgraph" alt=""/></div>
-<map name="class_graf_a1d04219ee7346afb627353c9d57b8cb2_icgraph" id="class_graf_a1d04219ee7346afb627353c9d57b8cb2_icgraph">
+<div class="center"><img src="class_graf_a2e9f4052ea562478c80b43d786c9068a_icgraph.png" border="0" usemap="#class_graf_a2e9f4052ea562478c80b43d786c9068a_icgraph" alt=""/></div>
+<map name="class_graf_a2e9f4052ea562478c80b43d786c9068a_icgraph" id="class_graf_a2e9f4052ea562478c80b43d786c9068a_icgraph">
 </map>
 </div>
 </p>
@@ -431,7 +521,7 @@ Oto graf wywoływań tej funkcji:</div>
 </dl>
 <dl class="return"><dt><b>Zwraca:</b></dt><dd>i - numer następnego wierzchołka. -1 - gdy nie istnieje następny wierzchołek. </dd></dl>
 
-<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00204">204</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00150">150</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -444,12 +534,95 @@ Oto graf wywoływań tej funkcji:</div>
 
 </div>
 </div>
-<a class="anchor" id="afc14626d6712964761d749568b0ec5af"></a><!-- doxytag: member="Graf::Sasiedztwo" ref="afc14626d6712964761d749568b0ec5af" args="(int v)" -->
+<a class="anchor" id="a497d04cd3e5fe9d6b1d98f13ef64d989"></a><!-- doxytag: member="Graf::Odleglosc" ref="a497d04cd3e5fe9d6b1d98f13ef64d989" args="(int v1, int v2)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_graf.html#afc14626d6712964761d749568b0ec5af">Graf::Sasiedztwo</a> </td>
+          <td class="memname">int <a class="el" href="class_graf.html#a497d04cd3e5fe9d6b1d98f13ef64d989">Graf::Odleglosc</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Metoda ta ma za zadanie obliczyć odległość w linii prostej pomiędzy dwoma wierzchołkami na podstawie ich współrzędnych.</p>
+<dl class="params"><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">v1</td><td>- pierwszy wierzchołek. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v2</td><td>- drugi wierzchołek. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00347">347</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graf_a497d04cd3e5fe9d6b1d98f13ef64d989_icgraph.png" border="0" usemap="#class_graf_a497d04cd3e5fe9d6b1d98f13ef64d989_icgraph" alt=""/></div>
+<map name="class_graf_a497d04cd3e5fe9d6b1d98f13ef64d989_icgraph" id="class_graf_a497d04cd3e5fe9d6b1d98f13ef64d989_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa4c11c9a82e3b4a786f5327cc6d17d80"></a><!-- doxytag: member="Graf::Odtworz_sciezke" ref="aa4c11c9a82e3b4a786f5327cc6d17d80" args="(int poczatkowy, int koncowy)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_graf.html#aa4c11c9a82e3b4a786f5327cc6d17d80">Graf::Odtworz_sciezke</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>poczatkowy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>koncowy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Metoda ta ma za zadanie odtworzyc najkrótszą ścieżkę w grafie znalezioną przez algorytm A*.</p>
+<dl class="params"><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">poczatkowy</td><td>- wierzchołek początkowy. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">koncowy</td><td>- wierzchołek początkowy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00306">306</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a046d281f1698f8072bf60e4da71bc675"></a><!-- doxytag: member="Graf::Sasiedztwo" ref="a046d281f1698f8072bf60e4da71bc675" args="(int v)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; int &gt; <a class="el" href="class_graf.html#a046d281f1698f8072bf60e4da71bc675">Graf::Sasiedztwo</a> </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>v</em></td><td>)</td>
@@ -458,15 +631,25 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div>
 <div class="memdoc">
-<p>Metoda ta ma za zadanie wypisać, z którymi wierzchołkami jest połączony wierzchołek o zadanym numerze.</p>
+<p>Metoda ta ma za zadanie zwrócić wektor indeksów wierzchołków, z którymi połączony jest wierzchołek o zadanym numerze.</p>
 <dl class="params"><dt><b>Parametry:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>- numer wierzchołka. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="return"><dt><b>Zwraca:</b></dt><dd>pom - wektor indeksów wierzchołków sąsiadujących z wierzchołkiem v. </dd></dl>
 
-<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00162">162</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00119">119</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graf_a046d281f1698f8072bf60e4da71bc675_icgraph.png" border="0" usemap="#class_graf_a046d281f1698f8072bf60e4da71bc675_icgraph" alt=""/></div>
+<map name="class_graf_a046d281f1698f8072bf60e4da71bc675_icgraph" id="class_graf_a046d281f1698f8072bf60e4da71bc675_icgraph">
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -503,7 +686,7 @@ Oto graf wywoływań tej funkcji:</div>
   </dd>
 </dl>
 
-<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00121">121</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00080">80</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
 
 </div>
 </div>
@@ -529,7 +712,7 @@ Oto graf wywoływań tej funkcji:</div>
   </dd>
 </dl>
 
-<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00103">103</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00061">61</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
 
 </div>
 </div>
@@ -548,13 +731,51 @@ Oto graf wywoływań tej funkcji:</div>
 <div class="memdoc">
 <p>Metoda ta ma za zadanie wypisać na standardowe wyjście zawartość macierzy sąsiedztwa. </p>
 
-<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00144">144</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00103">103</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa15a3c01cfdf981650654ebaed04e4e1"></a><!-- doxytag: member="Graf::Znajdz_krawedz" ref="aa15a3c01cfdf981650654ebaed04e4e1" args="(int v1, int v2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_graf_1_1__krawedz.html">Graf::_krawedz</a> <a class="el" href="class_graf.html#aa15a3c01cfdf981650654ebaed04e4e1">Graf::Znajdz_krawedz</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Metoda ta ma za zadanie wyszukać w wektorze krawędzi, krawędź łączącą dwa zadane wierzchołki</p>
+<dl class="params"><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">v1</td><td>- pierwszy wierzchołek. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v2</td><td>- drugi wierzchołek.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Zwraca:</b></dt><dd>obiekt typu <a class="el" href="struct_graf_1_1__krawedz.html" title="Struktura realizująca krawędzie grafu.">_krawedz</a> odpowiadający krawędzi łączącej zadane wierzchołki. </dd></dl>
+
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00334">334</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_graf_a284d7f2e4bab1832220ce41fdef5d024_icgraph.png" border="0" usemap="#class_graf_a284d7f2e4bab1832220ce41fdef5d024_icgraph" alt=""/></div>
-<map name="class_graf_a284d7f2e4bab1832220ce41fdef5d024_icgraph" id="class_graf_a284d7f2e4bab1832220ce41fdef5d024_icgraph">
+<div class="center"><img src="class_graf_aa15a3c01cfdf981650654ebaed04e4e1_icgraph.png" border="0" usemap="#class_graf_aa15a3c01cfdf981650654ebaed04e4e1_icgraph" alt=""/></div>
+<map name="class_graf_aa15a3c01cfdf981650654ebaed04e4e1_icgraph" id="class_graf_aa15a3c01cfdf981650654ebaed04e4e1_icgraph">
 </map>
 </div>
 </p>
@@ -573,7 +794,7 @@ Oto graf wywoływań tej funkcji:</div>
 </div>
 <div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00073">73</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00082">82</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
 
 </div>
 </div>
@@ -588,7 +809,7 @@ Oto graf wywoływań tej funkcji:</div>
 </div>
 <div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00028">28</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00032">32</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
 
 </div>
 </div>
@@ -603,7 +824,7 @@ Oto graf wywoływań tej funkcji:</div>
 </div>
 <div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00075">75</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00084">84</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
 
 </div>
 </div>
@@ -618,7 +839,7 @@ Oto graf wywoływań tej funkcji:</div>
 </div>
 <div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00074">74</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8hh_source.html#l00083">83</a> pliku <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
 
 </div>
 </div>
@@ -628,25 +849,11 @@ Oto graf wywoływań tej funkcji:</div>
 </ul>
 </div><!-- contents -->
 </div>
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a></div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
-</div>
-
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="class_graf.html">Graf</a>      </li>
 
-    <li class="footer">Wygenerowano Thu May 15 2014 02:47:18 dla Graf programem
+    <li class="footer">Wygenerowano Wed May 21 2014 15:54:34 dla Graf programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

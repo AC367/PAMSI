@@ -13,4 +13,12 @@ digraph G
   Node5 [label="vector",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
   Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node6 [label="stack",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="stdlib.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="math.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="time.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="fstream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
 }

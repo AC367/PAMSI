@@ -14,11 +14,7 @@
 <script type="text/javascript">
   $(document).ready(initResizable);
 </script>
-<link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() { searchBox.OnSelectItem(0); });
-</script>
+
 
 </head>
 <body>
@@ -46,30 +42,11 @@
 </div>
 
 <!-- Wygenerowano przez Doxygen 1.7.6.1 -->
-<script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
-</script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
       <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
       <li><a href="files.html"><span>Pliki</span></a></li>
-      <li>
-        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.png"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
-          </span>
-        </div>
-      </li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -103,37 +80,28 @@ To jest kompletna lista składowych dla <a class="el" href="class_graf.html">Gra
   <tr class="memlist"><td><a class="el" href="class_graf.html#a55dab6e3ffdfbddf0b90cfb2c3eb8a12">_tab_sasiedztwa</a></td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_graf.html#a79c79b147cde2bb403d3aa27db8f9f22">_wektor_krawedzi</a></td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a></td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_graf.html#a6c44918b1313dc1757fc01c18dde3b80">A_star</a>(int poczatkowy, int koncowy)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_graf.html#aa101a5b533a42b4d9c447e8891920fe9">BFS</a>(int poczatkowy, int szukany)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_graf.html#a922eadf981e7dcd36bdbbdac102ee8e7">Czy_istnieje</a>(int v)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_graf.html#a849aea670db767445a6c98eefa5ee43e">Czy_na_liscie</a>(vector&lt; int &gt; lista, int element)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_graf.html#affe4be381a025ca350ccc86ff68ea9d1">Czy_polaczone</a>(int v1, int v2)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_graf.html#a92a75c629930662bb43b72f0d44f8c63">DFS</a>(int poczatkowy, int szukany)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_graf.html#ae12b5623e92fa86ff51d51db1804e793">Dodaj_krawedz</a>(int v1, int v2, int waga)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_graf.html#a1d04219ee7346afb627353c9d57b8cb2">Dodaj_wierzcholek</a>(int v)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_graf.html#a2e9f4052ea562478c80b43d786c9068a">Dodaj_wierzcholek</a>(int v, int wsp_x, int wsp_y)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_graf.html#a305624fe0009aab3fbbcb1a849de3786">Nastepny_DFS</a>(int v)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_graf.html#afc14626d6712964761d749568b0ec5af">Sasiedztwo</a>(int v)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_graf.html#a497d04cd3e5fe9d6b1d98f13ef64d989">Odleglosc</a>(int v1, int v2)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_graf.html#aa4c11c9a82e3b4a786f5327cc6d17d80">Odtworz_sciezke</a>(int poczatkowy, int koncowy)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_graf.html#a046d281f1698f8072bf60e4da71bc675">Sasiedztwo</a>(int v)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_graf.html#af2ca22dd1730ce9067e484cf21db5b3f">Usun_krawedz</a>(int v1, int v2)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_graf.html#ad1091bfe67b16460cd64aebdcbb5b521">Usun_wierzcholek</a>(int wierzcholek)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_graf.html#a284d7f2e4bab1832220ce41fdef5d024">Wypisz_macierz</a>()</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_graf.html#aa15a3c01cfdf981650654ebaed04e4e1">Znajdz_krawedz</a>(int v1, int v2)</td><td><a class="el" href="class_graf.html">Graf</a></td><td></td></tr>
 </table></div><!-- contents -->
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a></div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
-</div>
-
 </div>
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Wygenerowano Thu May 15 2014 02:47:18 dla Graf programem
+    <li class="footer">Wygenerowano Wed May 21 2014 15:54:34 dla Graf programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

@@ -10,21 +10,36 @@
 
 {\ttfamily \#include $<$graf.\-hh$>$}
 
+
+
+\-Diagram współpracy dla \-Graf\-:\-:\-\_\-wierzcholek\-:
 \subsection*{\-Atrybuty publiczne}
 \begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_graf_1_1__wierzcholek}{\-\_\-wierzcholek} $\ast$ \hyperlink{struct_graf_1_1__wierzcholek_a40e49e554e1b5071ea756d68a7ad06d0}{\-\_\-rodzic}
 \item 
 bool \hyperlink{struct_graf_1_1__wierzcholek_a157d209583d1813f1a609cfb08682ffe}{\-\_\-czy\-\_\-istnieje}
 \item 
 bool \hyperlink{struct_graf_1_1__wierzcholek_a818c370b6e8a476f6fb9f89ccac01e2f}{\-\_\-czy\-\_\-odwiedzony}
 \item 
+int \hyperlink{struct_graf_1_1__wierzcholek_a21ade81ba66bf560548f2ed5d09932e0}{\-\_\-wsp\-\_\-x}
+\item 
+int \hyperlink{struct_graf_1_1__wierzcholek_a8480b0d0566935fa8687c6dd7b8fa94a}{\-\_\-wsp\-\_\-y}
+\item 
 int \hyperlink{struct_graf_1_1__wierzcholek_a966ecd51ba3e337c8b67587cffab7f9a}{\-\_\-numer}
+\item 
+int \hyperlink{struct_graf_1_1__wierzcholek_a2a704ec25dec8c72c17449cc4b9ab8bb}{\-\_\-\-G}
+\item 
+int \hyperlink{struct_graf_1_1__wierzcholek_a70af2c227ab7c1b38106fb84c005da7e}{\-\_\-\-H}
+\item 
+int \hyperlink{struct_graf_1_1__wierzcholek_a2b1a8e8fbeb43a968c2dcfed212a4318}{\-\_\-\-F}
 \end{DoxyCompactItemize}
 
 
 \subsection{\-Opis szczegółowy}
-\-Struktura ta zawiera dwie zmienne typu bool, które przechowują informację o istnieniu danego wierzchołka oraz o tym czy został on już odwiedzony przez algorytm wyszukujący oraz pole przechowujące numer jego numer. 
+\-Struktura ta zawiera dwie zmienne typu bool, które przechowują informację o istnieniu danego wierzchołka oraz o tym czy został on już odwiedzony przez algorytm wyszukujący oraz pole przechowujące jego numer. \-Ponadto zawarte są tu pola typu int zawierające współrzędne x i y wierzchołka oraz zmienne wykorzystywane przez algorytm \-A$\ast$ 
 
-\-Definicja w linii 39 pliku graf.\-hh.
+\-Definicja w linii 43 pliku graf.\-hh.
 
 
 
@@ -34,21 +49,63 @@ int \hyperlink{struct_graf_1_1__wierzcholek_a966ecd51ba3e337c8b67587cffab7f9a}{\
 \subsubsection[{\-\_\-czy\-\_\-istnieje}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Graf\-::\-\_\-wierzcholek\-::\-\_\-czy\-\_\-istnieje}}}\label{struct_graf_1_1__wierzcholek_a157d209583d1813f1a609cfb08682ffe}
 
 
-\-Definicja w linii 41 pliku graf.\-hh.
+\-Definicja w linii 46 pliku graf.\-hh.
 
 \hypertarget{struct_graf_1_1__wierzcholek_a818c370b6e8a476f6fb9f89ccac01e2f}{\index{\-Graf\-::\-\_\-wierzcholek@{\-Graf\-::\-\_\-wierzcholek}!\-\_\-czy\-\_\-odwiedzony@{\-\_\-czy\-\_\-odwiedzony}}
 \index{\-\_\-czy\-\_\-odwiedzony@{\-\_\-czy\-\_\-odwiedzony}!Graf::_wierzcholek@{\-Graf\-::\-\_\-wierzcholek}}
 \subsubsection[{\-\_\-czy\-\_\-odwiedzony}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Graf\-::\-\_\-wierzcholek\-::\-\_\-czy\-\_\-odwiedzony}}}\label{struct_graf_1_1__wierzcholek_a818c370b6e8a476f6fb9f89ccac01e2f}
 
 
-\-Definicja w linii 42 pliku graf.\-hh.
+\-Definicja w linii 47 pliku graf.\-hh.
+
+\hypertarget{struct_graf_1_1__wierzcholek_a2b1a8e8fbeb43a968c2dcfed212a4318}{\index{\-Graf\-::\-\_\-wierzcholek@{\-Graf\-::\-\_\-wierzcholek}!\-\_\-\-F@{\-\_\-\-F}}
+\index{\-\_\-\-F@{\-\_\-\-F}!Graf::_wierzcholek@{\-Graf\-::\-\_\-wierzcholek}}
+\subsubsection[{\-\_\-\-F}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Graf\-::\-\_\-wierzcholek\-::\-\_\-\-F}}}\label{struct_graf_1_1__wierzcholek_a2b1a8e8fbeb43a968c2dcfed212a4318}
+
+
+\-Definicja w linii 53 pliku graf.\-hh.
+
+\hypertarget{struct_graf_1_1__wierzcholek_a2a704ec25dec8c72c17449cc4b9ab8bb}{\index{\-Graf\-::\-\_\-wierzcholek@{\-Graf\-::\-\_\-wierzcholek}!\-\_\-\-G@{\-\_\-\-G}}
+\index{\-\_\-\-G@{\-\_\-\-G}!Graf::_wierzcholek@{\-Graf\-::\-\_\-wierzcholek}}
+\subsubsection[{\-\_\-\-G}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Graf\-::\-\_\-wierzcholek\-::\-\_\-\-G}}}\label{struct_graf_1_1__wierzcholek_a2a704ec25dec8c72c17449cc4b9ab8bb}
+
+
+\-Definicja w linii 51 pliku graf.\-hh.
+
+\hypertarget{struct_graf_1_1__wierzcholek_a70af2c227ab7c1b38106fb84c005da7e}{\index{\-Graf\-::\-\_\-wierzcholek@{\-Graf\-::\-\_\-wierzcholek}!\-\_\-\-H@{\-\_\-\-H}}
+\index{\-\_\-\-H@{\-\_\-\-H}!Graf::_wierzcholek@{\-Graf\-::\-\_\-wierzcholek}}
+\subsubsection[{\-\_\-\-H}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Graf\-::\-\_\-wierzcholek\-::\-\_\-\-H}}}\label{struct_graf_1_1__wierzcholek_a70af2c227ab7c1b38106fb84c005da7e}
+
+
+\-Definicja w linii 52 pliku graf.\-hh.
 
 \hypertarget{struct_graf_1_1__wierzcholek_a966ecd51ba3e337c8b67587cffab7f9a}{\index{\-Graf\-::\-\_\-wierzcholek@{\-Graf\-::\-\_\-wierzcholek}!\-\_\-numer@{\-\_\-numer}}
 \index{\-\_\-numer@{\-\_\-numer}!Graf::_wierzcholek@{\-Graf\-::\-\_\-wierzcholek}}
 \subsubsection[{\-\_\-numer}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Graf\-::\-\_\-wierzcholek\-::\-\_\-numer}}}\label{struct_graf_1_1__wierzcholek_a966ecd51ba3e337c8b67587cffab7f9a}
 
 
-\-Definicja w linii 43 pliku graf.\-hh.
+\-Definicja w linii 50 pliku graf.\-hh.
+
+\hypertarget{struct_graf_1_1__wierzcholek_a40e49e554e1b5071ea756d68a7ad06d0}{\index{\-Graf\-::\-\_\-wierzcholek@{\-Graf\-::\-\_\-wierzcholek}!\-\_\-rodzic@{\-\_\-rodzic}}
+\index{\-\_\-rodzic@{\-\_\-rodzic}!Graf::_wierzcholek@{\-Graf\-::\-\_\-wierzcholek}}
+\subsubsection[{\-\_\-rodzic}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-wierzcholek}$\ast$ {\bf \-Graf\-::\-\_\-wierzcholek\-::\-\_\-rodzic}}}\label{struct_graf_1_1__wierzcholek_a40e49e554e1b5071ea756d68a7ad06d0}
+
+
+\-Definicja w linii 45 pliku graf.\-hh.
+
+\hypertarget{struct_graf_1_1__wierzcholek_a21ade81ba66bf560548f2ed5d09932e0}{\index{\-Graf\-::\-\_\-wierzcholek@{\-Graf\-::\-\_\-wierzcholek}!\-\_\-wsp\-\_\-x@{\-\_\-wsp\-\_\-x}}
+\index{\-\_\-wsp\-\_\-x@{\-\_\-wsp\-\_\-x}!Graf::_wierzcholek@{\-Graf\-::\-\_\-wierzcholek}}
+\subsubsection[{\-\_\-wsp\-\_\-x}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Graf\-::\-\_\-wierzcholek\-::\-\_\-wsp\-\_\-x}}}\label{struct_graf_1_1__wierzcholek_a21ade81ba66bf560548f2ed5d09932e0}
+
+
+\-Definicja w linii 48 pliku graf.\-hh.
+
+\hypertarget{struct_graf_1_1__wierzcholek_a8480b0d0566935fa8687c6dd7b8fa94a}{\index{\-Graf\-::\-\_\-wierzcholek@{\-Graf\-::\-\_\-wierzcholek}!\-\_\-wsp\-\_\-y@{\-\_\-wsp\-\_\-y}}
+\index{\-\_\-wsp\-\_\-y@{\-\_\-wsp\-\_\-y}!Graf::_wierzcholek@{\-Graf\-::\-\_\-wierzcholek}}
+\subsubsection[{\-\_\-wsp\-\_\-y}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Graf\-::\-\_\-wierzcholek\-::\-\_\-wsp\-\_\-y}}}\label{struct_graf_1_1__wierzcholek_a8480b0d0566935fa8687c6dd7b8fa94a}
+
+
+\-Definicja w linii 49 pliku graf.\-hh.
 
 
 

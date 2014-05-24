@@ -14,7 +14,11 @@
 <script type="text/javascript">
   $(document).ready(initResizable);
 </script>
-
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
 
 </head>
 <body>
@@ -42,11 +46,30 @@
 </div>
 
 <!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
       <li><a href="annotated.html"><span>Klasy</span></a></li>
       <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -338,7 +361,7 @@
 <a name="l00267"></a>00267                 {
 <a name="l00268"></a>00268                         <span class="comment">//cout&lt;&lt;&quot;Znaleziono wierzcholek: &quot;&lt;&lt;obecny&lt;&lt;endl;</span>
 <a name="l00269"></a>00269                         <span class="comment">//cout&lt;&lt;endl;</span>
-<a name="l00270"></a>00270                         <span class="comment">//Odtworz_sciezke(poczatkowy, koncowy);</span>
+<a name="l00270"></a>00270                         <a class="code" href="class_graf.html#aa4c11c9a82e3b4a786f5327cc6d17d80" title="Odtwarza ścieżkę algorytmu A*.">Odtworz_sciezke</a>(poczatkowy, koncowy);
 <a name="l00271"></a>00271                         <span class="keywordflow">return</span> <span class="keyword">true</span>;
 <a name="l00272"></a>00272                 }
 <a name="l00273"></a>00273                 Lista_otwartych.erase(Lista_otwartych.begin());
@@ -357,84 +380,97 @@
 <a name="l00286"></a>00286                         
 <a name="l00287"></a>00287                         <span class="keywordflow">if</span>(!<a class="code" href="class_graf.html#a849aea670db767445a6c98eefa5ee43e" title="Sprawdza zawartość wektora.">Czy_na_liscie</a>(Lista_otwartych, sasiad) || koszt&lt;<a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[sasiad]._G)
 <a name="l00288"></a>00288                         {
-<a name="l00289"></a>00289                                 <span class="comment">//cout&lt;&lt;&quot;DODAJE NA LISTE: &quot;&lt;&lt;_wektor_wierzcholkow[sasiad]._numer&lt;&lt;endl;</span>
-<a name="l00290"></a>00290                                 <a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[sasiad]._G=koszt;
-<a name="l00291"></a>00291                                 <a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[sasiad]._H=<a class="code" href="class_graf.html#a497d04cd3e5fe9d6b1d98f13ef64d989" title="Liczy odległość między wierzchołkami.">Odleglosc</a>(sasiad, koncowy);
-<a name="l00292"></a>00292                                 <a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[sasiad]._F=<a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[sasiad]._G + <a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[sasiad]._H;
-<a name="l00293"></a>00293                                 <a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[sasiad]._rodzic=&amp;<a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[obecny];
-<a name="l00294"></a>00294 
-<a name="l00295"></a>00295                                 <span class="keywordflow">if</span>(!<a class="code" href="class_graf.html#a849aea670db767445a6c98eefa5ee43e" title="Sprawdza zawartość wektora.">Czy_na_liscie</a>(Lista_otwartych, sasiad))
-<a name="l00296"></a>00296                                 {
-<a name="l00297"></a>00297                                         Lista_otwartych.push_back(sasiad);
-<a name="l00298"></a>00298                                 }
-<a name="l00299"></a>00299                         }       
-<a name="l00300"></a>00300                 }
-<a name="l00301"></a>00301         }
-<a name="l00302"></a>00302         cout&lt;&lt;<span class="stringliteral">&quot;Nie znaleziono!&quot;</span>&lt;&lt;endl;
-<a name="l00303"></a>00303         <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00304"></a>00304 }
-<a name="l00305"></a>00305 
-<a name="l00306"></a><a class="code" href="class_graf.html#aa4c11c9a82e3b4a786f5327cc6d17d80">00306</a> <span class="keywordtype">void</span> <a class="code" href="class_graf.html#aa4c11c9a82e3b4a786f5327cc6d17d80" title="Odtwarza ścieżkę algorytmu A*.">Graf::Odtworz_sciezke</a>(<span class="keywordtype">int</span> poczatkowy, <span class="keywordtype">int</span> koncowy)
-<a name="l00307"></a>00307 {
-<a name="l00308"></a>00308         <a class="code" href="struct_graf_1_1__wierzcholek.html" title="Struktura realizująca wierzchołki grafu.">_wierzcholek</a> obecny=<a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[koncowy];
-<a name="l00309"></a>00309         vector&lt;int&gt; wektor;
-<a name="l00310"></a>00310         
-<a name="l00311"></a>00311         wektor.push_back(obecny.<a class="code" href="struct_graf_1_1__wierzcholek.html#a966ecd51ba3e337c8b67587cffab7f9a">_numer</a>);
-<a name="l00312"></a>00312         cout&lt;&lt;<span class="stringliteral">&quot;Odtworzona sciezka: &quot;</span>&lt;&lt;endl;
-<a name="l00313"></a>00313         <span class="keywordflow">while</span>(obecny.<a class="code" href="struct_graf_1_1__wierzcholek.html#a966ecd51ba3e337c8b67587cffab7f9a">_numer</a>!=poczatkowy)
-<a name="l00314"></a>00314         {
-<a name="l00315"></a>00315                 wektor.push_back(obecny.<a class="code" href="struct_graf_1_1__wierzcholek.html#a40e49e554e1b5071ea756d68a7ad06d0">_rodzic</a>-&gt;<a class="code" href="struct_graf_1_1__wierzcholek.html#a966ecd51ba3e337c8b67587cffab7f9a">_numer</a>);
-<a name="l00316"></a>00316                 obecny.<a class="code" href="struct_graf_1_1__wierzcholek.html#a40e49e554e1b5071ea756d68a7ad06d0">_rodzic</a>=obecny.<a class="code" href="struct_graf_1_1__wierzcholek.html#a40e49e554e1b5071ea756d68a7ad06d0">_rodzic</a>-&gt;<a class="code" href="struct_graf_1_1__wierzcholek.html#a40e49e554e1b5071ea756d68a7ad06d0">_rodzic</a>;
-<a name="l00317"></a>00317                 obecny.<a class="code" href="struct_graf_1_1__wierzcholek.html#a966ecd51ba3e337c8b67587cffab7f9a">_numer</a>=obecny.<a class="code" href="struct_graf_1_1__wierzcholek.html#a40e49e554e1b5071ea756d68a7ad06d0">_rodzic</a>-&gt;<a class="code" href="struct_graf_1_1__wierzcholek.html#a966ecd51ba3e337c8b67587cffab7f9a">_numer</a>;
-<a name="l00318"></a>00318         }
-<a name="l00319"></a>00319         wektor.push_back(obecny.<a class="code" href="struct_graf_1_1__wierzcholek.html#a966ecd51ba3e337c8b67587cffab7f9a">_numer</a>);
-<a name="l00320"></a>00320         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=wektor.size()-1; i&gt;=0; i--)
-<a name="l00321"></a>00321                 cout&lt;&lt;wektor[i]&lt;&lt;<span class="stringliteral">&quot; &quot;</span>;
-<a name="l00322"></a>00322         cout&lt;&lt;endl;
-<a name="l00323"></a>00323 }
-<a name="l00324"></a>00324         
-<a name="l00325"></a><a class="code" href="class_graf.html#a849aea670db767445a6c98eefa5ee43e">00325</a> <span class="keywordtype">bool</span> <a class="code" href="class_graf.html#a849aea670db767445a6c98eefa5ee43e" title="Sprawdza zawartość wektora.">Graf::Czy_na_liscie</a>(vector &lt;int&gt; lista, <span class="keywordtype">int</span> element)
-<a name="l00326"></a>00326 {
-<a name="l00327"></a>00327         <span class="keywordflow">if</span>(!lista.empty())
-<a name="l00328"></a>00328                 <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;lista.size(); i++)
-<a name="l00329"></a>00329                         <span class="keywordflow">if</span>(lista[i]==element)
-<a name="l00330"></a>00330                                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00331"></a>00331         <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00332"></a>00332 }
-<a name="l00333"></a>00333 
-<a name="l00334"></a><a class="code" href="class_graf.html#aa15a3c01cfdf981650654ebaed04e4e1">00334</a> <a class="code" href="struct_graf_1_1__krawedz.html" title="Struktura realizująca krawędzie grafu.">Graf::_krawedz</a> <a class="code" href="class_graf.html#aa15a3c01cfdf981650654ebaed04e4e1" title="Wyszukuje krawędź.">Graf::Znajdz_krawedz</a>(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2)
-<a name="l00335"></a>00335 {
-<a name="l00336"></a>00336         <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="class_graf.html#a79c79b147cde2bb403d3aa27db8f9f22">_wektor_krawedzi</a>.size(); i++)
-<a name="l00337"></a>00337         {
-<a name="l00338"></a>00338                 <span class="keywordflow">if</span>((<a class="code" href="class_graf.html#a79c79b147cde2bb403d3aa27db8f9f22">_wektor_krawedzi</a>[i].pierwszy-&gt;_numer==v1 &amp;&amp; <a class="code" href="class_graf.html#a79c79b147cde2bb403d3aa27db8f9f22">_wektor_krawedzi</a>[i].drugi-&gt;_numer==v2)
-<a name="l00339"></a>00339                 ||(<a class="code" href="class_graf.html#a79c79b147cde2bb403d3aa27db8f9f22">_wektor_krawedzi</a>[i].pierwszy-&gt;_numer==v2 &amp;&amp; <a class="code" href="class_graf.html#a79c79b147cde2bb403d3aa27db8f9f22">_wektor_krawedzi</a>[i].drugi-&gt;_numer==v1))
-<a name="l00340"></a>00340                 {
-<a name="l00341"></a>00341                         <span class="keywordflow">return</span> <a class="code" href="class_graf.html#a79c79b147cde2bb403d3aa27db8f9f22">_wektor_krawedzi</a>[i];
-<a name="l00342"></a>00342                 }
-<a name="l00343"></a>00343         }
-<a name="l00344"></a>00344         <span class="keywordflow">return</span> <a class="code" href="class_graf.html#a79c79b147cde2bb403d3aa27db8f9f22">_wektor_krawedzi</a>[1];
-<a name="l00345"></a>00345 }
-<a name="l00346"></a>00346 
-<a name="l00347"></a><a class="code" href="class_graf.html#a497d04cd3e5fe9d6b1d98f13ef64d989">00347</a> <span class="keywordtype">int</span> <a class="code" href="class_graf.html#a497d04cd3e5fe9d6b1d98f13ef64d989" title="Liczy odległość między wierzchołkami.">Graf::Odleglosc</a>(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2)
-<a name="l00348"></a>00348 {
-<a name="l00349"></a>00349         <span class="keywordtype">int</span> x1=<a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[v1]._wsp_x;
-<a name="l00350"></a>00350         <span class="keywordtype">int</span> x2=<a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[v2]._wsp_x;
-<a name="l00351"></a>00351         <span class="keywordtype">int</span> y1=<a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[v1]._wsp_y;
-<a name="l00352"></a>00352         <span class="keywordtype">int</span> y2=<a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[v2]._wsp_y;
-<a name="l00353"></a>00353         <span class="keywordtype">int</span> x, y;
-<a name="l00354"></a>00354         
-<a name="l00355"></a>00355         x=x1-x2;
-<a name="l00356"></a>00356         y=y1-y2;
-<a name="l00357"></a>00357         
-<a name="l00358"></a>00358         <span class="keywordflow">return</span> (sqrt((x*x) + (y*y)));
-<a name="l00359"></a>00359 }
+<a name="l00289"></a>00289                                 <a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[sasiad]._G=koszt;
+<a name="l00290"></a>00290                                 <a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[sasiad]._H=<a class="code" href="class_graf.html#a497d04cd3e5fe9d6b1d98f13ef64d989" title="Liczy odległość między wierzchołkami.">Odleglosc</a>(sasiad, koncowy);
+<a name="l00291"></a>00291                                 <a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[sasiad]._F=<a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[sasiad]._G + <a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[sasiad]._H;
+<a name="l00292"></a>00292                                 <a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[sasiad]._rodzic=&amp;<a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[obecny];
+<a name="l00293"></a>00293 
+<a name="l00294"></a>00294                                 <span class="keywordflow">if</span>(!<a class="code" href="class_graf.html#a849aea670db767445a6c98eefa5ee43e" title="Sprawdza zawartość wektora.">Czy_na_liscie</a>(Lista_otwartych, sasiad))
+<a name="l00295"></a>00295                                 {
+<a name="l00296"></a>00296                                         Lista_otwartych.push_back(sasiad);
+<a name="l00297"></a>00297                                 }
+<a name="l00298"></a>00298                         }       
+<a name="l00299"></a>00299                 }
+<a name="l00300"></a>00300         }
+<a name="l00301"></a>00301         <span class="comment">//cout&lt;&lt;&quot;Nie znaleziono!&quot;&lt;&lt;endl;</span>
+<a name="l00302"></a>00302         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00303"></a>00303 }
+<a name="l00304"></a>00304 
+<a name="l00305"></a><a class="code" href="class_graf.html#aa4c11c9a82e3b4a786f5327cc6d17d80">00305</a> <span class="keywordtype">void</span> <a class="code" href="class_graf.html#aa4c11c9a82e3b4a786f5327cc6d17d80" title="Odtwarza ścieżkę algorytmu A*.">Graf::Odtworz_sciezke</a>(<span class="keywordtype">int</span> poczatkowy, <span class="keywordtype">int</span> koncowy)
+<a name="l00306"></a>00306 {
+<a name="l00307"></a>00307         <a class="code" href="struct_graf_1_1__wierzcholek.html" title="Struktura realizująca wierzchołki grafu.">_wierzcholek</a> obecny=<a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[koncowy];
+<a name="l00308"></a>00308         vector&lt;int&gt; wektor;
+<a name="l00309"></a>00309         
+<a name="l00310"></a>00310         wektor.push_back(obecny.<a class="code" href="struct_graf_1_1__wierzcholek.html#a966ecd51ba3e337c8b67587cffab7f9a">_numer</a>);
+<a name="l00311"></a>00311         cout&lt;&lt;<span class="stringliteral">&quot;Odtworzona sciezka: &quot;</span>&lt;&lt;endl;
+<a name="l00312"></a>00312         <span class="keywordflow">while</span>(obecny.<a class="code" href="struct_graf_1_1__wierzcholek.html#a966ecd51ba3e337c8b67587cffab7f9a">_numer</a>!=poczatkowy)
+<a name="l00313"></a>00313         {
+<a name="l00314"></a>00314                 wektor.push_back(obecny.<a class="code" href="struct_graf_1_1__wierzcholek.html#a40e49e554e1b5071ea756d68a7ad06d0">_rodzic</a>-&gt;<a class="code" href="struct_graf_1_1__wierzcholek.html#a966ecd51ba3e337c8b67587cffab7f9a">_numer</a>);
+<a name="l00315"></a>00315                 obecny.<a class="code" href="struct_graf_1_1__wierzcholek.html#a40e49e554e1b5071ea756d68a7ad06d0">_rodzic</a>=obecny.<a class="code" href="struct_graf_1_1__wierzcholek.html#a40e49e554e1b5071ea756d68a7ad06d0">_rodzic</a>-&gt;<a class="code" href="struct_graf_1_1__wierzcholek.html#a40e49e554e1b5071ea756d68a7ad06d0">_rodzic</a>;
+<a name="l00316"></a>00316                 obecny.<a class="code" href="struct_graf_1_1__wierzcholek.html#a966ecd51ba3e337c8b67587cffab7f9a">_numer</a>=obecny.<a class="code" href="struct_graf_1_1__wierzcholek.html#a40e49e554e1b5071ea756d68a7ad06d0">_rodzic</a>-&gt;<a class="code" href="struct_graf_1_1__wierzcholek.html#a966ecd51ba3e337c8b67587cffab7f9a">_numer</a>;
+<a name="l00317"></a>00317         }
+<a name="l00318"></a>00318         wektor.push_back(obecny.<a class="code" href="struct_graf_1_1__wierzcholek.html#a966ecd51ba3e337c8b67587cffab7f9a">_numer</a>);
+<a name="l00319"></a>00319         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=wektor.size()-1; i&gt;=0; i--)
+<a name="l00320"></a>00320                 cout&lt;&lt;wektor[i]&lt;&lt;<span class="stringliteral">&quot; &quot;</span>;
+<a name="l00321"></a>00321         cout&lt;&lt;endl;
+<a name="l00322"></a>00322 }
+<a name="l00323"></a>00323         
+<a name="l00324"></a><a class="code" href="class_graf.html#a849aea670db767445a6c98eefa5ee43e">00324</a> <span class="keywordtype">bool</span> <a class="code" href="class_graf.html#a849aea670db767445a6c98eefa5ee43e" title="Sprawdza zawartość wektora.">Graf::Czy_na_liscie</a>(vector &lt;int&gt; lista, <span class="keywordtype">int</span> element)
+<a name="l00325"></a>00325 {
+<a name="l00326"></a>00326         <span class="keywordflow">if</span>(!lista.empty())
+<a name="l00327"></a>00327                 <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;lista.size(); i++)
+<a name="l00328"></a>00328                         <span class="keywordflow">if</span>(lista[i]==element)
+<a name="l00329"></a>00329                                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00330"></a>00330         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00331"></a>00331 }
+<a name="l00332"></a>00332 
+<a name="l00333"></a><a class="code" href="class_graf.html#aa15a3c01cfdf981650654ebaed04e4e1">00333</a> <a class="code" href="struct_graf_1_1__krawedz.html" title="Struktura realizująca krawędzie grafu.">Graf::_krawedz</a> <a class="code" href="class_graf.html#aa15a3c01cfdf981650654ebaed04e4e1" title="Wyszukuje krawędź.">Graf::Znajdz_krawedz</a>(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2)
+<a name="l00334"></a>00334 {
+<a name="l00335"></a>00335         <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="class_graf.html#a79c79b147cde2bb403d3aa27db8f9f22">_wektor_krawedzi</a>.size(); i++)
+<a name="l00336"></a>00336         {
+<a name="l00337"></a>00337                 <span class="keywordflow">if</span>((<a class="code" href="class_graf.html#a79c79b147cde2bb403d3aa27db8f9f22">_wektor_krawedzi</a>[i].pierwszy-&gt;_numer==v1 &amp;&amp; <a class="code" href="class_graf.html#a79c79b147cde2bb403d3aa27db8f9f22">_wektor_krawedzi</a>[i].drugi-&gt;_numer==v2)
+<a name="l00338"></a>00338                 ||(<a class="code" href="class_graf.html#a79c79b147cde2bb403d3aa27db8f9f22">_wektor_krawedzi</a>[i].pierwszy-&gt;_numer==v2 &amp;&amp; <a class="code" href="class_graf.html#a79c79b147cde2bb403d3aa27db8f9f22">_wektor_krawedzi</a>[i].drugi-&gt;_numer==v1))
+<a name="l00339"></a>00339                 {
+<a name="l00340"></a>00340                         <span class="keywordflow">return</span> <a class="code" href="class_graf.html#a79c79b147cde2bb403d3aa27db8f9f22">_wektor_krawedzi</a>[i];
+<a name="l00341"></a>00341                 }
+<a name="l00342"></a>00342         }
+<a name="l00343"></a>00343         <span class="keywordflow">return</span> <a class="code" href="class_graf.html#a79c79b147cde2bb403d3aa27db8f9f22">_wektor_krawedzi</a>[1];
+<a name="l00344"></a>00344 }
+<a name="l00345"></a>00345 
+<a name="l00346"></a><a class="code" href="class_graf.html#a497d04cd3e5fe9d6b1d98f13ef64d989">00346</a> <span class="keywordtype">int</span> <a class="code" href="class_graf.html#a497d04cd3e5fe9d6b1d98f13ef64d989" title="Liczy odległość między wierzchołkami.">Graf::Odleglosc</a>(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2)
+<a name="l00347"></a>00347 {
+<a name="l00348"></a>00348         <span class="keywordtype">int</span> x1=<a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[v1]._wsp_x;
+<a name="l00349"></a>00349         <span class="keywordtype">int</span> x2=<a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[v2]._wsp_x;
+<a name="l00350"></a>00350         <span class="keywordtype">int</span> y1=<a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[v1]._wsp_y;
+<a name="l00351"></a>00351         <span class="keywordtype">int</span> y2=<a class="code" href="class_graf.html#a6156d0fd54662028922b4134a92cb357">_wektor_wierzcholkow</a>[v2]._wsp_y;
+<a name="l00352"></a>00352         <span class="keywordtype">int</span> x, y;
+<a name="l00353"></a>00353         
+<a name="l00354"></a>00354         x=x1-x2;
+<a name="l00355"></a>00355         y=y1-y2;
+<a name="l00356"></a>00356         
+<a name="l00357"></a>00357         <span class="keywordflow">return</span> (sqrt((x*x) + (y*y)));
+<a name="l00358"></a>00358 }
 </pre></div></div><!-- contents -->
 </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="graf_8cpp.html">graf.cpp</a>      </li>
 
-    <li class="footer">Wygenerowano Wed May 21 2014 15:54:33 dla Graf programem
+    <li class="footer">Wygenerowano Sat May 24 2014 08:24:46 dla Graf programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

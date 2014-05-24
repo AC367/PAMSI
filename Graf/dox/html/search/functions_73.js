@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sasiedztwo',['Sasiedztwo',['../class_graf.html#afc14626d6712964761d749568b0ec5af',1,'Graf']]]
+  ['sasiedztwo',['Sasiedztwo',['../class_graf.html#a046d281f1698f8072bf60e4da71bc675',1,'Graf']]]
 ];

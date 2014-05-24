@@ -267,7 +267,7 @@ bool Graf::A_star(int poczatkowy, int koncowy)
 		{
 			//cout<<"Znaleziono wierzcholek: "<<obecny<<endl;
 			//cout<<endl;
-			//Odtworz_sciezke(poczatkowy, koncowy);
+			Odtworz_sciezke(poczatkowy, koncowy);
 			return true;
 		}
 		Lista_otwartych.erase(Lista_otwartych.begin());
@@ -286,7 +286,6 @@ bool Graf::A_star(int poczatkowy, int koncowy)
 			
 			if(!Czy_na_liscie(Lista_otwartych, sasiad) || koszt<_wektor_wierzcholkow[sasiad]._G)
 			{
-				//cout<<"DODAJE NA LISTE: "<<_wektor_wierzcholkow[sasiad]._numer<<endl;
 				_wektor_wierzcholkow[sasiad]._G=koszt;
 				_wektor_wierzcholkow[sasiad]._H=Odleglosc(sasiad, koncowy);
 				_wektor_wierzcholkow[sasiad]._F=_wektor_wierzcholkow[sasiad]._G + _wektor_wierzcholkow[sasiad]._H;
@@ -299,7 +298,7 @@ bool Graf::A_star(int poczatkowy, int koncowy)
 			}	
 		}
 	}
-	cout<<"Nie znaleziono!"<<endl;
+	//cout<<"Nie znaleziono!"<<endl;
 	return false;
 }
 

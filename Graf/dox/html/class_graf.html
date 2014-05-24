@@ -14,7 +14,11 @@
 <script type="text/javascript">
   $(document).ready(initResizable);
 </script>
-
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
 
 </head>
 <body>
@@ -42,11 +46,30 @@
 </div>
 
 <!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
       <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
       <li><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -186,6 +209,15 @@ Oto graf wywołań dla tej funkcji:</div>
 </div>
 </p>
 
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graf_a6c44918b1313dc1757fc01c18dde3b80_icgraph.png" border="0" usemap="#class_graf_a6c44918b1313dc1757fc01c18dde3b80_icgraph" alt=""/></div>
+<map name="class_graf_a6c44918b1313dc1757fc01c18dde3b80_icgraph" id="class_graf_a6c44918b1313dc1757fc01c18dde3b80_icgraph">
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="aa101a5b533a42b4d9c447e8891920fe9"></a><!-- doxytag: member="Graf::BFS" ref="aa101a5b533a42b4d9c447e8891920fe9" args="(int poczatkowy, int szukany)" -->
@@ -222,15 +254,6 @@ Oto graf wywołań dla tej funkcji:</div>
 </dl>
 
 <p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00192">192</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
-
-<p><div class="dynheader">
-Oto graf wywoływań tej funkcji:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_graf_aa101a5b533a42b4d9c447e8891920fe9_icgraph.png" border="0" usemap="#class_graf_aa101a5b533a42b4d9c447e8891920fe9_icgraph" alt=""/></div>
-<map name="class_graf_aa101a5b533a42b4d9c447e8891920fe9_icgraph" id="class_graf_aa101a5b533a42b4d9c447e8891920fe9_icgraph">
-</map>
-</div>
-</p>
 
 </div>
 </div>
@@ -295,7 +318,7 @@ Oto graf wywoływań tej funkcji:</div>
 </dl>
 <dl class="return"><dt><b>Zwraca:</b></dt><dd>true - gdy element znajduje się w wektorze. false - gdy element nie znajduje się w wektorze. </dd></dl>
 
-<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00325">325</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00324">324</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -567,7 +590,7 @@ Oto graf wywoływań tej funkcji:</div>
   </dd>
 </dl>
 
-<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00347">347</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00346">346</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -613,7 +636,16 @@ Oto graf wywoływań tej funkcji:</div>
   </dd>
 </dl>
 
-<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00306">306</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00305">305</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graf_aa4c11c9a82e3b4a786f5327cc6d17d80_icgraph.png" border="0" usemap="#class_graf_aa4c11c9a82e3b4a786f5327cc6d17d80_icgraph" alt=""/></div>
+<map name="class_graf_aa4c11c9a82e3b4a786f5327cc6d17d80_icgraph" id="class_graf_aa4c11c9a82e3b4a786f5327cc6d17d80_icgraph">
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -733,6 +765,15 @@ Oto graf wywoływań tej funkcji:</div>
 
 <p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00103">103</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
 
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graf_a284d7f2e4bab1832220ce41fdef5d024_icgraph.png" border="0" usemap="#class_graf_a284d7f2e4bab1832220ce41fdef5d024_icgraph" alt=""/></div>
+<map name="class_graf_a284d7f2e4bab1832220ce41fdef5d024_icgraph" id="class_graf_a284d7f2e4bab1832220ce41fdef5d024_icgraph">
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="aa15a3c01cfdf981650654ebaed04e4e1"></a><!-- doxytag: member="Graf::Znajdz_krawedz" ref="aa15a3c01cfdf981650654ebaed04e4e1" args="(int v1, int v2)" -->
@@ -769,7 +810,7 @@ Oto graf wywoływań tej funkcji:</div>
 </dl>
 <dl class="return"><dt><b>Zwraca:</b></dt><dd>obiekt typu <a class="el" href="struct_graf_1_1__krawedz.html" title="Struktura realizująca krawędzie grafu.">_krawedz</a> odpowiadający krawędzi łączącej zadane wierzchołki. </dd></dl>
 
-<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00334">334</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="graf_8cpp_source.html#l00333">333</a> pliku <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -849,11 +890,25 @@ Oto graf wywoływań tej funkcji:</div>
 </ul>
 </div><!-- contents -->
 </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="class_graf.html">Graf</a>      </li>
 
-    <li class="footer">Wygenerowano Wed May 21 2014 15:54:34 dla Graf programem
+    <li class="footer">Wygenerowano Sat May 24 2014 08:24:47 dla Graf programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

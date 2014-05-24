@@ -1,9 +1,8 @@
 set terminal png
-set output 'Razem.png'
-set title "Zależność czasu od ilosci powtórzeń"
-set xlabel "ilosc powtórzeń"
+set output 'razem_2.png'
+set title "Zależność czasu od ilosci wierzchołków"
+set xlabel "ilosc wierzchołków"
 set ylabel "czas [s]"
-set xrange [0 :  100000] 
+set xrange [0 :  8000] 
 set grid
-plot 'A_star' using 1 : 2 smooth bezier, 'DFS' using 1 : 2 smooth bezier, 'BFS' using 1 : 2 smooth bezier
-
+plot 'A_star2' using 1 : 2 smooth bezier, 'BFS_2' using 1 : 2 smooth bezier, 'DFS_2' using 1 : 2 smooth bezier

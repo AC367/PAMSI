@@ -24,7 +24,7 @@ using namespace std;
  * \param[in] ilosc_powtorzen - Ilosc powtorzen wykonania algorytmu.
  * \return czas - Czas wykonania algorytmu.
  */ 
-double Uruchom(int ilosc_elementow);
+double Uruchom(int ilosc_elementow, int ilosc_powtorzen);
 
 /*!
  * \brief Funkcja zapisujaca do pliku.

@@ -28,10 +28,12 @@
  */ 
 int main()
 {
-	int ilosc_elementow;
+	int ilosc_elementow, ilosc_powtorzen;
 	 
 	cout<<"Podaj ilosc elementow: ";
 	cin>>ilosc_elementow;
-
-	Uruchom(ilosc_elementow);
+	cout<<"Podaj ilosc powtorzen: ";
+	cin>>ilosc_powtorzen;
+	
+	Uruchom(ilosc_elementow, ilosc_powtorzen);
 }

@@ -36,7 +36,7 @@ public:
 /*!
  * \brief Metoda zwracająca informację o ilości danych w tablicy.
  */ 
-long Rozmiar();
+int Rozmiar();
 
 /*!
  * \brief Metoda sprawdzająca istnienie elementu.
@@ -154,7 +154,7 @@ void sort_quicksort(int left, int right);
 };
 
 template <typename T>
-long TablicaAsocjacyjna<T>::Rozmiar()
+int TablicaAsocjacyjna<T>::Rozmiar()
 {
 	return wektor.size();
 }
@@ -178,7 +178,6 @@ bool TablicaAsocjacyjna<T>::DodajElement(string adres, T dane)
 	if(Czy_jest(adres))
 	{
 		int a;
-		cout<<"Podana nazwa juz istnieje - elementy zostały zamienione"<<endl;
 		Wyszukaj(adres, 0, a, Rozmiar()-1);
 		wektor[miejsce].dane=dane;
 		sort_quicksort(0, Rozmiar()-1);
@@ -216,7 +215,7 @@ bool TablicaAsocjacyjna<T>::Wyszukaj(string szukany, int lewy, int& pivot, int p
 		miejsce=0;
 		return true;
 	}
-	else if(szukany==wektor[Rozmiar()-1].adres)
+	if(szukany==wektor[Rozmiar()-1].adres)
 	{
 		miejsce=Rozmiar()-1;
 		return true;
@@ -226,10 +225,10 @@ bool TablicaAsocjacyjna<T>::Wyszukaj(string szukany, int lewy, int& pivot, int p
 		miejsce=pivot;
 		return true;
 	}
-	else if(szukany<wektor[pivot].adres)
+	if(pivot==lewy||pivot==prawy)return false;
+	if(szukany<wektor[pivot].adres)
 		Wyszukaj(szukany,lewy,pivot,pivot);
-
-	else if(szukany>wektor[pivot].adres)
+	if(szukany>wektor[pivot].adres)
 		Wyszukaj(szukany,pivot,pivot,prawy);
 	return false;
 }
@@ -238,8 +237,10 @@ template <typename T>
 string TablicaAsocjacyjna<T>::PobierzAdres(long index)
 {
 	for(int i=0; i<Rozmiar(); i++)
+	{
 		if(i==index)
 		  return wektor[i].adres;
+	}
 	return "";
 }
 

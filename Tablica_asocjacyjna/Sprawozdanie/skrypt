@@ -1,0 +1,10 @@
+set terminal png
+set output 'razem2.png'
+set title "Zaleznosc czasu od ilosci danych"
+set xlabel "ilosc danych"
+set ylabel "czas [s]"
+set xrange [0 :  100000] 
+set grid
+plot 'drzewo_bin' using 1 : 2 smooth bezier, 'tablica_hasz' using 1 : 2 smooth bezier, 'wektor' using 1 : 2 smooth bezier
+
+

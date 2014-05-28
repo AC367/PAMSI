@@ -1,0 +1,13 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Uruchom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$p__plecakowy_8hh.html#a1ba8b3d77ab5e65ef5530d3e368570bf",tooltip="Funkcja uruchamiajaca algorytm."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Przedmiot::Wartosci",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_przedmiot.html#a72bb08f410dd64bcf3ea5c9aa24683e4",tooltip="Funkcja przypisująca wartości obiektom klasy Przedmiot."];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Glowna::Rozwiaz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_glowna.html#aa9f48516b27afdd8a6019c231c1de04a",tooltip="Funkcja rozwiązująca problem plecakowy."];
+}
